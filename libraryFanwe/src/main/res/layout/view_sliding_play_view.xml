@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.fanwe.library.customview.SDViewPager
+        android:id="@+id/vpg_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+        <View
+            android:id="@+id/division"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/division"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:id="@+id/ll_bot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/ll_blur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/blur"
+                android:gravity="center"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

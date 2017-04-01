@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.fanwe.live.view.SDProgressPullToRefreshRecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/recyclerView_props"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:divider="@color/live_divider_color_light" />

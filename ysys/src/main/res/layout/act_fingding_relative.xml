@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/act_fingding_relative"
+    android:layout_width="match_parent"
+    android:background="@color/bg_frag_default"
+    android:layout_height="match_parent"
+  >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="30dp"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/colorTitleTextGray"
+            android:text="让我们快速检查一下\n看看您的亲人谁有了一生一世"
+            />
+
+        <ImageView
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="90dp"
+            android:layout_width="match_parent"
+            android:background="@mipmap/bg_findingfamily"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_finding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_share_roundedrectangle_orange"
+        android:padding="10dp"
+        android:layout_marginBottom="30dp"
+        android:text="寻找亲人"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/button_text_size" />
+
+
+</RelativeLayout>

@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_frag_default">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_frag_deepen"
+        android:orientation="vertical"
+        android:paddingLeft="20dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="头像"
+                android:textColor="@color/colorTitleTextGray" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="10dp">
+
+                <com.qy.ysys.yishengyishi.views.customviews.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/iv_heard"
+                    android:layout_width="@dimen/icon_head_middle_width"
+                    android:layout_height="@dimen/icon_head_middle_height"
+                    android:src="@mipmap/ic_head" />
+
+                <ImageView
+                    android:layout_width="@dimen/icon_left_width"
+                    android:layout_height="@dimen/icon_left_height"
+                    android:paddingLeft="10dp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titlebar_separator_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0.5dp"
+            android:background="@color/colorTitleBarSeparator" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="@string/text_me_myname"
+                android:textColor="@color/colorTitleTextGray" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="金花"
+                    android:textColor="@color/colorTitleTextGray" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titlebar_separator_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0.5dp"
+            android:background="@color/colorTitleBarSeparator" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="@string/text_me_mynickname"
+                android:textColor="@color/colorTitleTextGray" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="亲亲小baby"
+                    android:textColor="@color/colorTitleTextGray" />
+
+                <ImageView
+                    android:layout_width="@dimen/icon_left_width"
+                    android:layout_height="@dimen/icon_left_height"
+                    android:layout_marginLeft="5dp"
+                    android:background="@mipmap/ic_arrow_right_gray"
+                    android:padding="3dp" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titlebar_separator_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0.5dp"
+            android:background="@color/colorTitleBarSeparator" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="@string/text_me_mybirthday"
+                android:textColor="@color/colorTitleTextGray" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="1968-9-2"
+                    android:textColor="@color/colorTitleTextGray" />
+
+                <ImageView
+                    android:layout_width="@dimen/icon_left_width"
+                    android:layout_height="@dimen/icon_left_height"
+                    android:layout_marginLeft="5dp"
+                    android:background="@mipmap/ic_arrow_right_gray"
+                    android:padding="3dp" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titlebar_separator_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0.5dp"
+            android:background="@color/colorTitleBarSeparator" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="@string/text_me_mynativeplace"
+                android:textColor="@color/colorTitleTextGray" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="中国 香港"
+                    android:textColor="@color/colorTitleTextGray" />
+
+                <ImageView
+                    android:layout_width="@dimen/icon_left_width"
+                    android:layout_height="@dimen/icon_left_height"
+                    android:layout_marginLeft="5dp"
+                    android:background="@mipmap/ic_arrow_right_gray"
+                    android:padding="3dp" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titlebar_separator_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0.5dp"
+            android:background="@color/colorTitleBarSeparator" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="@string/text_me_myprofession"
+                android:textColor="@color/colorTitleTextGray" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="演员"
+                    android:textColor="@color/colorTitleTextGray" />
+
+                <ImageView
+                    android:layout_width="@dimen/icon_left_width"
+                    android:layout_height="@dimen/icon_left_height"
+                    android:layout_marginLeft="5dp"
+                    android:background="@mipmap/ic_arrow_right_gray"
+                    android:padding="3dp" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titlebar_separator_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0.5dp"
+            android:background="@color/colorTitleBarSeparator" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="@string/text_me_mywish"
+                android:textColor="@color/colorTitleTextGray" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="找个老公"
+                    android:textColor="@color/colorTitleTextGray" />
+
+                <ImageView
+                    android:layout_width="@dimen/icon_left_width"
+                    android:layout_height="@dimen/icon_left_height"
+                    android:layout_marginLeft="5dp"
+                    android:background="@mipmap/ic_arrow_right_gray"
+                    android:padding="3dp" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titlebar_separator_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0.5dp"
+            android:background="@color/colorTitleBarSeparator" />
+
+    </LinearLayout>
+</ScrollView>

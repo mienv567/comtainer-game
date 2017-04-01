@@ -1,0 +1,51 @@
+<resources>
+
+    <!-- 标题栏高度 -->
+    <!--<dimen name="height_title_bar">46dp</dimen>-->
+    <dimen name="height_title_bar">46dp</dimen>
+
+    <!-- 边框宽度 -->
+    <dimen name="width_stroke">1px</dimen>
+    <!-- 圆角半径 -->
+    <dimen name="corner">5dp</dimen>
+
+    <!-- 标题栏文字大小 -->
+    <dimen name="text_size_title_bar">18sp</dimen>
+    <!-- 标题栏较小的文字大小 -->
+    <dimen name="text_size_sub_title_bar">16sp</dimen>
+    <!-- 标题栏item的最小宽度 -->
+    <dimen name="min_width_title_item">45dp</dimen>
+    <!-- 标题栏icon图标的宽度 -->
+    <dimen name="width_title_item_image">20dp</dimen>
+    <!-- 标题栏icon图标的高度 -->
+    <dimen name="height_title_item_image">20dp</dimen>
+
+    <!-- 标题文字大小 -->
+    <dimen name="text_size_title">16sp</dimen>
+    <!-- 内容文字大小 -->
+    <dimen name="text_size_content">13sp</dimen>
+
+    <!-- item标题文字大小 -->
+    <dimen name="text_size_item_title">15sp</dimen>
+    <!-- item内容文字大小 -->
+    <dimen name="text_size_item_content">12sp</dimen>
+    <!-- 输入框高度 -->
+    <dimen name="height_edit">45dp</dimen>
+    <!-- 按钮高度 -->
+    <dimen name="height_button">45dp</dimen>
+
+    <dimen name="height_dialog_item">45dp</dimen>
+    <dimen name="height_dialog_progress">70dp</dimen>
+
+    <dimen name="text_size_dialog_button">14sp</dimen>
+    <dimen name="text_size_dialog_title">16sp</dimen>
+
+    <dimen name="picker_default_text_size">12sp</dimen>
+    <dimen name="picker_toolbar_height">40dp</dimen>
+    <dimen name="picker_dialog_height">190dp</dimen>
+    <dimen name="textview_default_padding">5dp</dimen>
+    <dimen name="picker_line_width">1dp</dimen>
+    <dimen name="picker_line_mar">15dp</dimen>
+    <dimen name="picker_height">230dp</dimen>
+
+</resources>

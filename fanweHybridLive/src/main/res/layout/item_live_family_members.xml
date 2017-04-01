@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_white_gray"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="12dp">
+
+    <include layout="@layout/item_user_head"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/item_name_sex_level"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_signature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/text_content"
+            android:maxEms="12"
+            android:text="@string/loading"
+            android:textSize="12sp"
+            android:singleLine="true"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txv_agree"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_orange_rectangle_radius"
+        android:text="同意"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/txv_refuse"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_green_rectangle_radius"
+        android:text="拒绝"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/txv_del"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_orange_rectangle_radius"
+        android:text="踢出家族"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"/>
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 主题颜色 -->
+    <color name="main_color">#FB6F08</color>
+    <!-- 主题颜色按下颜色 -->
+    <color name="main_color_press">#ffcc66</color>
+
+    <!-- activity或者fragment等通用背景颜色 -->
+    <color name="bg_activity">#f7f7f7</color>
+    <!-- 标题栏颜色 -->
+    <color name="bg_title_bar">@color/main_color</color>
+    <!-- 标题栏按下颜色 -->
+    <color name="bg_title_bar_pressed">@color/main_color_press</color>
+
+    <!-- 标题栏文字颜色 -->
+    <color name="text_title_bar">@color/white</color>
+
+    <!-- 标题文字颜色 -->
+    <color name="text_title">#575757</color>
+    <!-- 内容文字颜色 -->
+    <color name="text_content">#595757</color>
+    <!-- 内容文字深的颜色 -->
+    <color name="text_content_deep">#777777</color>
+
+    <!-- item标题文字颜色 -->
+    <color name="text_item_title">@color/text_title</color>
+    <!-- item内容文字颜色 -->
+    <color name="text_item_content">#a8a8a8</color>
+    <!-- item内容文字深的颜色 -->
+    <color name="text_item_content_deep">@color/text_content_deep</color>
+
+    <!-- 输入框hint颜色 -->
+    <color name="text_hint">#cbcbcb</color>
+
+    <!-- 分割线颜色 -->
+    <color name="stroke">@color/stroke_deep</color>
+    <!-- 分割线颜色 深 -->
+    <color name="stroke_deep">#e5e5e5</color>
+    <!--礼物分割线-->
+    <color name="division">#3b3b3b</color>
+    <!-- 灰色按下颜色 -->
+    <color name="gray_press">#e5e5e5</color>
+    <!-- 蓝色按下颜色 -->
+    <color name="blue_press">#2ca6e0</color>
+    <!-- 选择器被选择字体颜色-->
+    <color name="text_picker_selected">#e60012</color>
+
+    <!--状态栏背景-->
+    <color name="statusbar_bg">#EA5520</color>
+
+
+</resources>

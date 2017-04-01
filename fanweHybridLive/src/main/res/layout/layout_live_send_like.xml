@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView_like"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <TextView
+            android:id="@+id/tv_available_like"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/available_like_today"
+            android:textColor="@color/live_orange" />
+
+        <TextView
+            android:id="@+id/tv_send_like"
+            style="@style/btn_base"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_gravity="end|center"
+            android:background="@drawable/selector_live_button"
+            android:minWidth="56dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/send"
+            android:textColor="@color/black_d"
+            android:textSize="15sp" />
+    </FrameLayout>
+</LinearLayout>

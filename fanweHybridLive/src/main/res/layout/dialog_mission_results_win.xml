@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/ic_win_bg"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ic_mission_result_ribbon_red" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/congratulations"
+        android:textColor="@android:color/white"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="任务完成!"
+            android:textColor="@color/live_text_color_light"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选手将获得任务值"
+            android:textColor="@color/live_text_color_light"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tv_player_gain_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+30"
+            android:textColor="#f03436"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/tv_assistant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="场外粉丝 获得"
+            android:textColor="#f03436"
+            android:textSize="10sp" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_default_head" />
+
+            <TextView
+                android:id="@+id/tv_honor_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="x3"
+                android:textColor="@color/live_text_color_light" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="60dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/selector_orange_rect_corners_half_circle"
+            android:text="确定"
+            android:textSize="12sp" />
+    </LinearLayout>
+</RelativeLayout>

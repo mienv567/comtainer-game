@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">麻辣Live</string>
+
+    <!-- 是否开启竞拍模式 -->
+    <bool name="show_hide_pai_view">false</bool>
+    <!-- 是否直接打开webview MainActivity -->
+    <bool name="is_open_webview_main">false</bool>
+
+    <!--初始化页面延迟毫秒数-->
+    <integer name="init_delayed_time">3000</integer>
+    <!-- 启动页轮播广告是否开启  关闭 false 开启  true  -->
+    <bool name="is_open_adv">false</bool>
+    <!-- drawable-xxdpi 目录中adv_img_命名的轮播广告图片-->
+    <string-array name="adv_img_array">
+        <item>adv_img_1</item>
+        <item>adv_img_2</item>
+        <item>adv_img_3</item>
+    </string-array>
+    <!-- 是否使用原生Activity错误页面 -->
+    <bool name="is_use_no_network_activity">false</bool>
+
+    <!-- 友盟推送配置 -->
+    <string name="umeng_appkey">57b05f87e0f55a1574001f97</string>
+    <string name="umeng_message_secret_push">d3ea0a646fd5cda4b5c7d4203e8a9e38</string>
+    <!--腾讯地图key-->
+    <string name="tencent_map_key">MTNBZ-IZ6K5-BL5ID-Q2X7L-YM42J-GYFN4</string>
+    <!-- QQ 微信 新浪KEY配置 -->
+    <string name="wx_app_id">wxeca227c58f1cd14c</string>
+    <string name="wx_app_secret">cdb9fee2043097c2376f5e2a61c1c5d0</string>
+    <string name="qq_auth_scheme">tencent1105588451</string>
+    <string name="qq_app_id">1105588451</string>
+    <string name="qq_app_key">iRePgTjX2tGllyoG</string>
+    <string name="sina_app_key">1122031260</string>
+    <string name="sina_app_secret">8527433b753c19c5033bae095ab3ae2d</string>
+    <!--互动直播配置-->
+    <string name="app_id_tencent_live">1400012039</string>
+    <string name="account_type">6244</string>
+
+</resources><!--
+app混合开发框架
+
+一期
+1、推送SDK (友盟)，打开 推送 内容后，可以定位到指定的界面
+2、禁用webview中的，选择，复制功能
+3、禁止webView：上下滑动屏幕 webView.scrollView.bounces = NO;
+4、webveiw 缓存开启
+5、webveiw 网络连接错误时，加载本地assert目录下文件（error.html）
+6、升级检查 （使用的旧的升级检查方式）
+7、h5登陆成功后，保留登陆信息到app(用户ID，密码)；重新打开app时, h5做自动登陆功能； h5退出时，清空app的保留信息
+8、重新打开app，展示空白页问题
+
+二期
+1、分享sdk
+2、支付sdk
+3、首次使用向导页
+
+1.3
+添加友盟聊天SDK
+修改手撕BUG
+-->

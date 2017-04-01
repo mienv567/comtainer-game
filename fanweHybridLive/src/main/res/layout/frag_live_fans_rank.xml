@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.fanwe.live.view.SDProgressPullToRefreshListView
+        android:id="@+id/lv_rank_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/live_text_color_light"
+        android:dividerHeight="1dp"
+        android:scrollbars="none" />
+
+    <TextView
+        android:id="@+id/tv_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/no_rank_data_recently"
+        android:textColor="@color/live_text_color_light"
+        android:textSize="16sp" />
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_family"
+        android:icon="@mipmap/icon_pengyouquan"
+        android:title="@string/menu_box_bar" />
+    <item
+        android:id="@+id/menu_chat"
+        android:icon="@mipmap/ic_chat"
+        android:title="@string/menu_chat" />
+    <item
+        android:id="@+id/menu_memoirs"
+        android:icon="@mipmap/ic_memoirs"
+        android:title="@string/menu_memoirs" />
+    <item
+        android:id="@+id/menu_genealogy"
+        android:icon="@mipmap/ic_book"
+        android:title="@string/menu_genealogy" />
+    <item
+        android:id="@+id/menu_me"
+        android:icon="@mipmap/ic_me"
+        android:title="@string/menu_me" />
+
+</menu>

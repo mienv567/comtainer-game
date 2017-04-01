@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:background="@drawable/shape_live_dialog_corners_10dp_translucent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="10dp"
+                android:text="@string/do_task"
+                android:textColor="@color/live_text_color_light" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/base_stroke_1dp"
+            android:background="@color/live_text_color_light" />
+
+        <EditText
+            android:id="@+id/et_search_goods"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_edit_gray_corners_half_circle"
+            android:drawableLeft="@drawable/ic_edit_search_gray"
+            android:drawablePadding="5dp"
+            android:lines="1"
+            android:paddingBottom="2dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="2dp"
+            android:imeOptions="actionSearch"
+            android:textColor="@color/live_text_color_light"
+            android:textSize="12sp" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_props"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_btn_task_props"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:drawableLeft="@drawable/ic_task_props"
+                android:gravity="center"
+                android:paddingLeft="@dimen/base_p_m_15"
+                android:paddingRight="@dimen/base_p_m_15"
+                android:text="任务道具"
+                android:textColor="@color/home_tab_color"
+                android:textSize="@dimen/base_textsize_12" />
+
+            <View
+                android:layout_width="@dimen/base_stroke_1dp"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:background="@color/live_text_color_light" />
+
+            <RadioButton
+                android:id="@+id/radio_btn_life_props"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableLeft="@drawable/ic_survice_props"
+                android:gravity="center"
+                android:paddingLeft="@dimen/base_p_m_15"
+                android:paddingRight="@dimen/base_p_m_15"
+                android:text="生存道具"
+                android:textColor="@color/home_tab_color"
+                android:textSize="@dimen/base_textsize_12" />
+        </RadioGroup>
+
+        <com.fanwe.library.view.SDRecyclerView
+            android:id="@+id/rv_task_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

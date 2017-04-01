@@ -1,0 +1,18 @@
+<resources>
+
+    <style name="anim_bottom_bottom" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/dialog_enter_sliding_from_bottom</item>
+        <item name="@android:windowExitAnimation">@anim/dialog_exit_sliding_to_bottom</item>
+    </style>
+
+    <style name="anim_top_top" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/dialog_enter_sliding_from_top</item>
+        <item name="@android:windowExitAnimation">@anim/dialog_exit_sliding_to_top</item>
+    </style>
+
+    <style name="anim_right_right" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/dialog_enter_sliding_from_right</item>
+        <item name="@android:windowExitAnimation">@anim/dialog_exit_sliding_to_right</item>
+    </style>
+
+</resources>

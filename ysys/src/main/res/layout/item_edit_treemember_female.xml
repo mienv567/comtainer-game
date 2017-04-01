@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_female"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/bg_share_roundedrectangle_lightblue_addmenber2"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:background="@drawable/bg_share_roundedrectangle_lightblue_addmenber3"
+            android:gravity="center"
+            android:text="嫂/弟妹"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <com.qy.ysys.yishengyishi.views.customviews.CircleImageView
+                android:layout_width="@dimen/icon_head_middle_width"
+                android:layout_height="@dimen/icon_head_middle_height"
+                android:src="@mipmap/ic_female_head" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:text="姓名"
+                        android:textColor="@color/colorTitleTextGray"
+                        android:textColorHint="@color/colorTitleTextGray"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/et_name"
+                        android:textColor="@color/white"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#6F3F3F" />
+
+                    <ImageView
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@mipmap/ic_book2" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@color/colorTitleBarSeparator" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:text="+86"
+                        android:textColor="@color/colorTitleTextGray"
+                        android:textColorHint="@color/colorTitleTextGray"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/et_phone"
+                        android:textColor="@color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#6F3F3F" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@color/colorTitleBarSeparator" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:src="@mipmap/ic_weixin" />
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center_vertical"
+                        android:text="微信邀请"
+                        android:textColor="@color/colorTitleTextGray"
+                        android:textColorHint="@color/colorTitleTextGray"
+                        android:textSize="12sp" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

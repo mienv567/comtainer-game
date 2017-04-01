@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:paddingTop="24dp">
+
+    <RadioGroup
+        android:id="@+id/rg_tab_activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_home"
+            style="@style/text_home_tab"
+            android:checked="true"
+            android:drawableTop="@drawable/front_page"
+            android:text="@string/front_page" />
+
+        <RadioButton
+            android:id="@+id/rb_guide"
+            style="@style/text_home_tab"
+            android:drawableTop="@drawable/guide"
+            android:text="@string/guide" />
+
+        <RadioButton
+            android:id="@+id/rb_chat"
+            style="@style/text_home_tab"
+            android:drawableTop="@drawable/chat_room"
+            android:text="@string/chat_room" />
+
+        <RadioButton
+            android:id="@+id/rb_box_bar"
+            style="@style/text_home_tab"
+            android:drawableTop="@drawable/box_bar"
+            android:text="@string/box_bar" />
+
+        <RadioButton
+            android:id="@+id/rb_mine"
+            style="@style/text_home_tab"
+            android:drawableTop="@drawable/mine"
+            android:text="@string/mine" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/fl_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rg_tab_activity_main" />
+
+
+    <View
+        android:id="@+id/v_bg_sign"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.7"
+        android:background="@color/black"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_bg_sign"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="100dp"
+        android:layout_marginTop="100dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_sign_award"
+        android:visibility="gone" />
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/left"-->
+    <!--android:layout_width="300dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_gravity="left"-->
+    <!--android:background="@color/white">-->
+
+    <!--<com.fanwe.live.appview.MenuMeView-->
+    <!--android:id="@+id/menu_me"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_width="match_parent"/>-->
+    <!--</RelativeLayout>-->
+
+
+</RelativeLayout>

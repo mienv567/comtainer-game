@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical">
+
+    <com.tencent.rtmp.ui.TXCloudVideoView
+        android:id="@+id/view_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.fanwe.live.view.LiveTouchCameraView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <include
+        android:id="@+id/rl_root_layout"
+        layout="@layout/include_live_layout_creater_new"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

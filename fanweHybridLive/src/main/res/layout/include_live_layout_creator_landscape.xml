@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="invisible">
+
+    <!-- 顶部信息 -->
+    <FrameLayout
+        android:id="@+id/fl_live_room_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"/>
+
+    <!-- 狼人杀用户信息 -->
+    <FrameLayout
+        android:id="@+id/fl_live_lrs_user_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/fl_live_room_info"
+        android:layout_marginTop="10dp"/>
+
+    <!-- 狼人杀提示信息 -->
+    <FrameLayout
+        android:id="@+id/fl_live_lrs_reminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fl_live_room_info"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+
+    <!-- 全屏tips弹幕 -->
+    <FrameLayout
+        android:id="@+id/fl_live_tips_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/fl_live_room_info"
+        android:layout_alignRight="@id/fl_live_room_info"
+        android:layout_marginTop="88dp"/>    <!-- 星星展示区 -->
+    <FrameLayout
+        android:id="@+id/fl_live_room_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"/>
+
+    <!--竞拍信息位置-->
+    <FrameLayout
+        android:id="@+id/fl_live_auction_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fl_live_room_info"
+        android:layout_marginTop="10dp"/>
+
+    <!--排名倒计时-->
+    <FrameLayout
+        android:id="@+id/fl_live_auction_rank_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/fl_live_room_info"
+        android:layout_marginTop="10dp"/>
+
+    <!-- 礼物横向弹出 -->
+    <FrameLayout
+        android:id="@+id/fl_live_gift_play"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fl_live_msg"
+        android:layout_marginBottom="40dp"/>
+
+    <!-- 弹幕 -->
+    <FrameLayout
+        android:id="@+id/fl_live_pop_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fl_live_msg"
+        android:layout_marginBottom="40dp"/>
+
+    <!-- 高级用户加入房间特效 -->
+    <FrameLayout
+        android:id="@+id/fl_live_viewer_join_room"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fl_live_msg"
+        android:layout_marginBottom="10dp"/>
+
+    <!-- 聊天信息 -->
+    <FrameLayout
+        android:id="@+id/fl_live_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fl_live_bottom_menu"/>
+
+    <!-- 聊天信息 - 狼人杀游戏公频 -->
+    <FrameLayout
+        android:id="@+id/fl_live_msg_game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fl_live_bottom_menu"/>
+
+    <!-- 聊天信息 - 狼人杀狼人频道-->
+    <FrameLayout
+        android:id="@+id/fl_live_msg_game_wolf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fl_live_bottom_menu"/>
+
+    <!-- 聊天信息 - 狼人杀进程-->
+    <FrameLayout
+        android:id="@+id/fl_live_msg_game_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fl_live_bottom_menu"/>
+
+    <!-- 聊天信息 - 狼人杀规则-->
+    <FrameLayout
+        android:id="@+id/fl_live_msg_game_rule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fl_live_bottom_menu"/>
+
+
+    <!-- 底部菜单 -->
+    <FrameLayout
+        android:id="@+id/fl_live_bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+    <!--连击球-->
+    <com.fanwe.live.view.CircleProgressBar
+        android:id="@+id/cpb"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="42dp"
+        android:visibility="invisible"
+        custom:strokeProgress="100" />
+
+    <!-- 发送消息 -->
+    <FrameLayout
+        android:id="@+id/fl_live_send_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+    <!-- 点亮心心 -->
+    <FrameLayout
+        android:id="@+id/fl_live_heart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="40dp"/>
+
+    <!-- 带数字的点亮 -->
+    <FrameLayout
+        android:id="@+id/fl_live_heart_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/fl_live_heart"
+        android:layout_marginBottom="40dp"
+        android:layout_toLeftOf="@id/fl_live_heart"/>
+
+
+    <!-- gif动画 -->
+    <FrameLayout
+        android:id="@+id/fl_live_gift_gif"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!-- 播放音乐 -->
+    <FrameLayout
+        android:id="@+id/fl_live_play_music"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+
+</RelativeLayout>

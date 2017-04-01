@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="live_ticket">麻辣币</string>
+    <string name="live_city_default">麻辣星球</string>
+    <string name="live_account_authentication">麻辣</string>
+</resources>

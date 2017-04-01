@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#fff"
+              android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:paddingTop="3sp"
+        android:paddingBottom="3sp"
+        android:background="#eee"
+        android:paddingLeft="15dp"
+        android:text="@string/account"
+        android:textColor="@color/text_gray"
+        />
+
+    <!--<ImageView-->
+    <!--android:id="@+id/iv_account_safe"-->
+    <!--android:layout_width="80dp"-->
+    <!--android:layout_height="80dp"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:layout_marginBottom="20dp"-->
+
+    <!--/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_safe_grade"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:textSize="16sp"-->
+    <!--/>-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="15dp"-->
+    <!--android:layout_marginTop="25dp"-->
+    <!--android:src="@drawable/account_safe_star"/>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="15dp"-->
+    <!--android:gravity="center_horizontal"-->
+    <!--android:text="通过以下设置可提高安全等级"-->
+    <!--android:textColor="@color/text_content"-->
+    <!--android:textSize="16sp"/>-->
+
+    <LinearLayout
+        android:id="@+id/ll_account_bind_mobilephone"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="8dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+
+            android:src="@drawable/account_safe_icon_phone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/phone_num"
+                    android:textColor="@color/text_title"/>
+
+                <TextView
+                    android:layout_marginRight="15dp"
+                    android:id="@+id/tv_band_mobilephone"
+                    android:paddingLeft="8sp"
+                    android:paddingRight="8sp"
+                    android:paddingTop="2sp"
+                    android:paddingBottom="2sp"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="1dp"
+                android:layout_height="0.6dp"
+                android:background="#c8c8c8"/>
+        </LinearLayout>
+
+        <!--<ImageView-->
+        <!--android:layout_width="15dp"-->
+        <!--android:layout_height="15dp"-->
+        <!--android:layout_margin="8dp"-->
+        <!--android:src="@drawable/ic_arrow_right_gray"/>-->
+    </LinearLayout>
+
+</LinearLayout>

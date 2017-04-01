@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:oneshot="false">
+    <item android:drawable="@drawable/img00000" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00001" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00002" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00003" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00004" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00005" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00006" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00007" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00008" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00009" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00010" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00011" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00012" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00013" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00014" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00015" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00016" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00017" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00018" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00019" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00020" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00021" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00022" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00023" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00024" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00025" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00026" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00027" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00028" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00029" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00030" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00031" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00032" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00033" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00034" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00035" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00036" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00037" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00038" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00039" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00040" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00041" android:duration="@integer/fire_work_duration" />
+    <item android:drawable="@drawable/img00042" android:duration="@integer/fire_work_duration" />
+
+</animation-list>

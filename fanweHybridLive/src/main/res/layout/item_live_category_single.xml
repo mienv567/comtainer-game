@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/category_item_width"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_one"
+        android:layout_width="@dimen/category_item_img_width_height"
+        android:layout_height="@dimen/category_item_img_width_height">
+
+        <ImageView
+            android:id="@+id/iv_head_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:layout_centerVertical="true"
+            android:src="@drawable/null_blacklist"/>
+
+        <ImageView
+            android:id="@+id/iv_hot"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:src="@drawable/null_blacklist"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingTop="2dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="2dp"
+            android:background="@drawable/layer_blur_live_ticket">
+            <ImageView
+                android:id="@+id/iv_eye"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_category_item_watcher"/>
+            <TextView
+                android:id="@+id/tv_watch_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@id/iv_eye"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:text="@string/loading"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/rl_one"
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_gender"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/null_blacklist"/>
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_gender"
+            android:layout_marginLeft="3dp"
+            android:lines="1"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:maxWidth="80dp"
+            android:layout_centerVertical="true"
+            android:textSize="12sp"
+            android:text="@string/loading"
+            android:textColor="#4e4e4e"/>
+        <TextView
+            android:id="@+id/tv_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="3dp"
+            android:layout_centerVertical="true"
+            android:textSize="10sp"
+            android:text="@string/loading"
+            android:textColor="#9a9a9a"/>
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_toLeftOf="@id/tv_city"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_location"/>
+    </RelativeLayout>
+
+</RelativeLayout>

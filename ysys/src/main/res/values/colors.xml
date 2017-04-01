@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="colorStatuBar">#272E38</color>
+    <color name="colorBnvItemChecked">#fff</color>
+    <color name="colorNavigationBackground">#101417</color>
+
+    <color name="colorTitleText">#fff</color>
+    <color name="colorTitleTextGray">#708292</color>
+    <color name="colorTitleBackground">@color/colorStatuBar</color>
+    <color name="colorTitleBarSeparator">#404753</color>
+    <color name="colorBgMobielRegister">#272E38</color>
+    <color name="white">#fff</color>
+    <color name="bg_frag_default">#272E38</color>
+    <color name="bg_frag_deepen">#242831</color>
+    <color name="bg_popup">#ad242529</color>
+    <color name="textlightblue">#97BECE</color>
+    <color name="orange">#D76541</color>
+
+    <color name="gray">#888888</color>
+
+
+    <color name="color_8290AF">#8290AF</color>
+    <color name="color_232323">#232323</color>
+    <color name="color_aeaeae">#aeaeae</color>
+    <color name="im_social_dig_name_bg">#DDDDDD</color>
+    <color name="im_font_color_text_hint">#abb1b6</color>
+    <color name="im_line_color">#dadada</color>
+    <color name="name_selector_color">#cccccc</color>
+    <color name="transparent">#00000000</color>
+    <color name="bg_no_photo">#EEEEEE</color>
+    <color name="title_bg">#373B3E</color>
+    <color name="video_bg">#ededed</color>
+
+    <!--========================-->
+    <color name="praise_item_default">#333333</color>
+    <color name="praise_item_selector_default">#cccccc</color>
+    <color name="praise_item">#8290AF</color>
+
+    <color name="default_clickable_color">#cccccc</color>
+    <color name="basic_color_primary">#373b3e</color>
+
+    <!--默认主题色-->
+    <color name="live_bg_normal">#131313</color>
+    <!--首页文字浅色-->
+    <color name="live_text_color_light">#c4c4c4</color>
+    <!--首页文字深色-->
+    <color name="live_text_color_dark">#676767</color>
+    <!--分割线颜色 浅-->
+    <color name="live_divider_color_light">#3f3f3f</color>
+    <!--分割线颜色 深-->
+    <color name="live_divider_color_dark">#1e1e1e</color>
+    <color name="transparent_black">#9a000000</color>
+    <color name="live_orange">#fabb23</color>
+
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_frag_default"
+    android:orientation="vertical">
+
+    <TextView
+        android:paddingTop="5dp"
+        android:paddingLeft="5dp"
+        android:id="@+id/tv_memoirs_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorTitleTextGray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <com.qy.ysys.yishengyishi.views.customviews.Timeline
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--<include layout="@layout/item_memoirs_default_content_default"/>-->
+            <!--<include layout="@layout/item_memoirs_default_content"/>-->
+            <!--<include layout="@layout/item_memoirs_default_content"/>-->
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

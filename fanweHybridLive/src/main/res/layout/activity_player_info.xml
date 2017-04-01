@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/live_bg_normal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:paddingLeft="22dp"
+        android:paddingRight="22dp">
+
+        <com.fanwe.library.view.CircleImageView
+            android:id="@+id/iv_player_head"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="24dp"
+            android:src="@mipmap/ic_head" />
+
+        <TextView
+            android:id="@+id/tv_player_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/iv_player_head"
+            android:layout_toRightOf="@id/iv_player_head"
+            android:paddingTop="5dp"
+            android:text="箐箐nico"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_player_name"
+            android:layout_below="@id/tv_player_name"
+            android:layout_marginTop="14dp"
+            android:lines="4"
+            android:text="像我这么吊的还有107个像我这么吊的还有107个像我这么吊的还有107个像我这么吊的还有107个像我这么吊的还有107个像我这么吊的还有107个像我这么吊的还有107个像我这么吊的还有107个像我这么吊的还有107个"
+            android:textColor="@color/live_text_color_dark"
+            android:textSize="10sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_player_name"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/tv_player_name"
+            android:paddingBottom="5dp"
+            android:src="@drawable/ic_female_bg_red" />
+
+    </RelativeLayout>
+
+    <View style="@style/horizontal_divider_dark" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:drawableLeft="@drawable/ic_video_orange"
+        android:gravity="center_vertical"
+        android:text="人物介绍视频"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:drawablePadding="10dp"
+        android:textColor="@color/live_text_color_light" />
+
+    <View style="@style/horizontal_divider_dark" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:drawableLeft="@drawable/ic_location_orange"
+        android:gravity="center_vertical"
+        android:text="当前居住环境"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:drawablePadding="10dp"
+        android:textColor="@color/live_text_color_light" />
+
+    <View style="@style/horizontal_divider_dark" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:drawableLeft="@drawable/ic_progress_orange"
+        android:gravity="center_vertical"
+        android:text="任务进度"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:drawablePadding="10dp"
+        android:textColor="@color/live_text_color_light" />
+
+    <View style="@style/horizontal_divider_dark" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:drawableLeft="@drawable/ic_fans_orange"
+        android:gravity="center_vertical"
+        android:text="头号粉丝"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:drawablePadding="10dp"
+        android:textColor="@color/live_text_color_light" />
+
+    <View style="@style/horizontal_divider_dark" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:drawableLeft="@drawable/ic_money_orange"
+        android:gravity="center_vertical"
+        android:text="拥有金币"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:drawablePadding="10dp"
+        android:textColor="@color/live_text_color_light" />
+
+    <View style="@style/horizontal_divider_dark" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:drawableLeft="@drawable/ic_diamond_orange_player_introduction"
+        android:gravity="center_vertical"
+        android:text="拥有银币"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:drawablePadding="10dp"
+        android:textColor="@color/live_text_color_light" />
+
+    <View style="@style/horizontal_divider_dark" />
+
+</LinearLayout>

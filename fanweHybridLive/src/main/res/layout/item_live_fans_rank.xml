@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/live_bg_normal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <TextView
+            android:id="@+id/tv_rank_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_live_rank_bg_gray"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:text="@string/rank_number"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <com.fanwe.library.view.CircleImageView
+            android:id="@+id/iv_user_head"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_toRightOf="@id/tv_rank_number"
+            android:src="@mipmap/ic_head" />
+
+        <ImageView
+            android:id="@+id/iv_crown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/iv_user_head"
+            android:layout_alignTop="@id/iv_user_head"
+            android:layout_marginTop="-3dp"
+            android:src="@drawable/ic_crown" />
+
+        <TextView
+            android:id="@+id/tv_player_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/iv_user_head"
+            android:layout_toRightOf="@id/iv_user_head"
+            android:lines="1"
+            android:text="好哦啊减肥!!"
+            android:textColor="@color/live_text_color_light"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_user_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_player_name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/tv_player_name"
+            android:background="@drawable/shape_rec_corner_3dp_top1"
+            android:paddingBottom="1dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="1dp"
+            android:text="LV24"
+            android:textColor="@color/text_black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_contribution_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_player_name"
+            android:layout_below="@id/tv_player_name"
+            android:drawableLeft="@drawable/ic_live_contribution_top1"
+            android:drawablePadding="5dp"
+            android:text="贡献 12345"
+            android:textColor="@color/live_text_color_dark"
+            android:textSize="12sp" />
+
+
+        <ImageView
+            android:id="@+id/iv_rank_trend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_live_rank_up" />
+
+    </RelativeLayout>
+
+</LinearLayout>

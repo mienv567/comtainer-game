@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="item_live_recharge_rule_min_height">80dp</dimen>
+    <dimen name="main_small_item_height">264dp</dimen>
+    <dimen name="main_small_item_width">152dp</dimen>
+    <dimen name="main_big_item_width">289dp</dimen>
+    <dimen name="category_more_pop_top">120dp</dimen>
+    <dimen name="menu_me_width">300dp</dimen>
+    <dimen name="create_room_category_pop_top">145dp</dimen>
+    <dimen name="category_head_item_top_height">460dp</dimen>
+    <dimen name="level_top_height">220dp</dimen>
+    <dimen name="category_item_img_width_height">150dp</dimen>
+    <dimen name="category_item_width">170dp</dimen>
+</resources>

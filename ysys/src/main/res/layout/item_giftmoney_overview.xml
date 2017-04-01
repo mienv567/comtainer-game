@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/bg_frag_deepen"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <ImageView
+        android:layout_width="@dimen/icon_left_big_width"
+        android:layout_height="@dimen/icon_left_big_height"
+        android:background="@mipmap/ic_me" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="20sp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:maxWidth="200dp"
+        android:text="xxxx的婚礼"
+        android:textColor="@color/colorTitleTextGray" />
+</LinearLayout>

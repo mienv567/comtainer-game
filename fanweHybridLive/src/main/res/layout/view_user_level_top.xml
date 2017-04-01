@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/level_top_height"
+    android:background="@drawable/bg_task">
+
+
+
+
+    <TextView
+        android:id="@+id/tv_level_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/current_level"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/tv_current_experience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tv_level_one"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/exp_loading"
+        android:textSize="12sp"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/tv_current_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tv_level_one"
+        android:layout_marginTop="5dp"
+        android:text="@string/loading"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/tv_level_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_current_level"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="@string/task_level_reward"
+        android:textSize="12sp"
+        android:textColor="@color/white"/>
+    <TextView
+        android:id="@+id/tv_down_experience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/loading"
+        android:textSize="12sp"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/tv_up_experience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/loading"
+        android:textSize="12sp"
+        android:textColor="@color/white"/>
+
+    <ImageView
+        android:id="@+id/iv_bg_level"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/bg_level_1"/>
+</RelativeLayout>

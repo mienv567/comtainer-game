@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/fl_live_room_info"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/RemoteWindowA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="onClickRemoteWindowA"
+            android:visibility="invisible">
+
+            <android.opengl.GLSurfaceView
+                android:id="@+id/RemoteGLSurfaceViewA"
+                android:layout_width="120dp"
+                android:layout_height="160dp"
+                android:visibility="invisible" />
+
+            <ImageButton
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="top|right"
+                android:onClick="onClickKickoutUserA"
+                android:src="@drawable/create_room_close" />
+            <RelativeLayout
+                android:background="#44666666"
+                android:onClick="onClickUserANickName"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_userA"
+                    android:textSize="16sp"
+                    android:textColor="#ffffff"
+
+                    android:maxWidth="70dp"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/RemoteWindowB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="onClickRemoteWindowB"
+            android:visibility="invisible">
+
+            <android.opengl.GLSurfaceView
+                android:id="@+id/RemoteGLSurfaceViewB"
+                android:layout_width="120dp"
+                android:layout_height="160dp"
+                android:visibility="invisible" />
+
+            <ImageButton
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="top|right"
+                android:onClick="onClickKickoutUserB"
+                android:src="@drawable/create_room_close" />
+            <TextView
+                android:id="@+id/tv_userB"
+                android:onClick="onClickUserBNickName"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="5dp"
+                android:textSize="16sp"
+                android:maxWidth="70dp"
+                android:lines="1"
+                android:ellipsize="end"
+                android:textColor="#ffffff"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/RemoteWindowC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="onClickRemoteWindowC"
+            android:visibility="invisible">
+
+            <android.opengl.GLSurfaceView
+                android:id="@+id/RemoteGLSurfaceViewC"
+                android:layout_width="120dp"
+                android:layout_height="160dp"
+                android:visibility="invisible" />
+
+            <ImageButton
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="top|right"
+                android:onClick="onClickKickoutUserC"
+                android:src="@drawable/create_room_close" />
+            <TextView
+                android:id="@+id/tv_userC"
+                android:onClick="onClickUserCNickName"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="5dp"
+                android:textSize="16sp"
+                android:textColor="#ffffff"
+
+                android:maxWidth="70dp"
+                android:lines="1"
+                android:ellipsize="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <!-- 顶部信息 -->
+    <FrameLayout
+        android:id="@+id/fl_live_room_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+    </FrameLayout>
+
+    <!-- 狼人杀用户信息 -->
+    <FrameLayout
+        android:id="@+id/fl_live_lrs_user_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/fl_live_room_info">
+    </FrameLayout>
+
+    <!-- 狼人杀提示信息 -->
+    <FrameLayout
+        android:id="@+id/fl_live_lrs_reminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/fl_live_room_info">
+    </FrameLayout>
+
+    <!-- 全屏tips弹幕 -->
+    <FrameLayout
+        android:id="@+id/fl_live_tips_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/fl_live_room_info"
+        android:layout_alignLeft="@id/fl_live_room_info"
+        android:layout_marginTop="88dp"
+        >
+    </FrameLayout>    <!-- 星星展示区 -->
+    <FrameLayout
+        android:id="@+id/fl_live_room_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+    </FrameLayout>
+
+    <!--竞拍信息位置-->
+    <FrameLayout
+        android:id="@+id/fl_live_auction_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fl_live_room_info"
+        android:layout_marginTop="10dp">
+    </FrameLayout>
+
+    <!--排名倒计时-->
+    <FrameLayout
+        android:id="@+id/fl_live_auction_rank_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/fl_live_room_info"
+        android:layout_marginTop="10dp">
+    </FrameLayout>
+
+    <!-- 礼物横向弹出 -->
+    <FrameLayout
+        android:id="@+id/fl_live_gift_play"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fl_live_msg"
+        android:layout_marginBottom="40dp">
+    </FrameLayout>
+
+    <!-- 弹幕 -->
+    <FrameLayout
+        android:id="@+id/fl_live_pop_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fl_live_msg"
+        android:layout_marginBottom="40dp">
+    </FrameLayout>
+
+    <!-- 高级用户加入房间特效 -->
+    <FrameLayout
+        android:id="@+id/fl_live_viewer_join_room"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fl_live_msg"
+        android:layout_marginBottom="10dp">
+    </FrameLayout>
+
+    <!-- 聊天信息 -->
+    <FrameLayout
+        android:id="@+id/fl_live_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fl_live_bottom_menu">
+    </FrameLayout>
+
+    <!-- 聊天信息 - 狼人杀游戏公频 -->
+    <FrameLayout
+        android:id="@+id/fl_live_msg_game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fl_live_bottom_menu">
+    </FrameLayout>
+
+    <!-- 聊天信息 - 狼人杀狼人频道-->
+    <FrameLayout
+        android:id="@+id/fl_live_msg_game_wolf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fl_live_bottom_menu">
+    </FrameLayout>
+
+    <!-- 聊天信息 - 狼人杀进程-->
+    <FrameLayout
+        android:id="@+id/fl_live_msg_game_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fl_live_bottom_menu">
+    </FrameLayout>
+
+    <!-- 聊天信息 - 狼人杀规则-->
+    <FrameLayout
+        android:id="@+id/fl_live_msg_game_rule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fl_live_bottom_menu">
+    </FrameLayout>
+
+
+    <!-- 底部菜单 -->
+    <FrameLayout
+        android:id="@+id/fl_live_bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+    </FrameLayout>
+
+    <!--连击球-->
+    <com.fanwe.live.view.CircleProgressBar
+        android:id="@+id/cpb"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="42dp"
+        android:visibility="invisible"
+        custom:strokeProgress="100"/>
+
+    <!-- 发送消息 -->
+    <FrameLayout
+        android:id="@+id/fl_live_send_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+    </FrameLayout>
+
+    <!-- 点亮心心 -->
+    <FrameLayout
+        android:id="@+id/fl_live_heart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="40dp">
+    </FrameLayout>
+
+    <!-- 带数字的点亮 -->
+    <FrameLayout
+        android:id="@+id/fl_live_heart_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/fl_live_heart"
+        android:layout_alignTop="@+id/fl_live_heart"
+        android:layout_marginBottom="40dp">
+    </FrameLayout>
+
+
+    <!-- gif动画 -->
+    <FrameLayout
+        android:id="@+id/fl_live_gift_gif"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
+    <!-- 播放音乐 -->
+    <FrameLayout
+        android:id="@+id/fl_live_play_music"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+    </FrameLayout>
+
+
+</RelativeLayout>

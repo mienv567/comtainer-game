@@ -1,0 +1,30 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_titlebar_height">46dp</dimen>
+    <dimen name="activity_titlebar_icon_height">20dp</dimen>
+    <dimen name="activity_titlebar_icon_width">20dp</dimen>
+    <dimen name="activity_titlebar_indicate_textsize">16sp</dimen>
+    <dimen name="activity_titlebar_title_textsize">16sp</dimen>
+    <dimen name="titlebar_separator_height">1dp</dimen>
+    <dimen name="button_text_size">22sp</dimen>
+    <dimen name="button_icon_height">23dp</dimen>
+    <dimen name="button_icon_width">23dp</dimen>
+    <dimen name="button_icon_small_height">12dp</dimen>
+    <dimen name="button_icon_small_width">12dp</dimen>
+    <dimen name="icon_left_width">14dp</dimen>
+    <dimen name="icon_left_height">14dp</dimen>
+    <dimen name="icon_left_big_width">18dp</dimen>
+    <dimen name="icon_left_big_height">18dp</dimen>
+    <dimen name="icon_head_height">80dp</dimen>
+    <dimen name="icon_head_width">80dp</dimen>
+    <dimen name="icon_head_middle_height">60dp</dimen>
+    <dimen name="icon_head_middle_width">60dp</dimen>
+    <dimen name="icon_head_small_height">40dp</dimen>
+    <dimen name="icon_head_small_width">40dp</dimen>
+    <dimen name="gudieview_width">6dp</dimen>
+    <dimen name="gudieview_heigh">6dp</dimen>
+    <dimen name="item_memoir_width_height">160dp</dimen>
+    <dimen name="box_bar_small_text_size">13sp</dimen>
+</resources>

@@ -16,6 +16,21 @@ out/
 # Gradle files
 .gradle/
 build/
+*/build/  
+  
+# IDEA  
+*.iml  
+.idea/  
+.idea/.name  
+.idea/encodings.xml  
+.idea/inspectionProfiles/Project_Default.xml  
+.idea/inspectionProfiles/profiles_settings.xml  
+.idea/misc.xml  
+.idea/modules.xml  
+.idea/scopes/scope_settings.xml  
+.idea/vcs.xml  
+.idea/workspace.xml  
+.idea/libraries
 
 # Local configuration file (sdk path, etc)
 local.properties
@@ -37,6 +52,7 @@ captures/
 
 # Keystore files
 *.jks
+*.keystore
 
 # =========================
 # Operating System Files
@@ -88,3 +104,5 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+  
+*.iws  

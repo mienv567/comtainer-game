@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#F0202020">
+
+        <ImageView
+            android:id="@+id/iv_gift"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_live_gift"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_lianmai"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_live_bottom_invite_video" />
+
+        <ImageView
+            android:id="@+id/iv_barrage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/et_msg"
+            android:padding="10dp"
+            android:src="@drawable/selector_live_up_menu_danmu" />
+
+        <EditText
+            android:id="@+id/et_msg"
+            android:layout_width="220dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/tv_charge"
+            android:background="#4C4C4C4C"
+            android:gravity="center_vertical"
+            android:hint="输入文字发送弹幕"
+            android:imeOptions="flagNoExtractUi|actionSend"
+            android:maxLines="1"
+            android:paddingLeft="5dp"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/base_textsize_12" />
+
+        <ImageView
+            android:id="@+id/tv_charge"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/tv_donate"
+            android:padding="10dp"
+            android:src="@drawable/ic_live_recharge" />
+
+        <ImageView
+            android:id="@+id/tv_donate"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/iv_more"
+            android:padding="10dp"
+            android:src="@drawable/ic_live_gift" />
+
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/iv_back"
+            android:padding="10dp"
+            android:src="@drawable/ic_live_format_list" />
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_exit_fullscreen" />
+    </RelativeLayout>
+</FrameLayout>

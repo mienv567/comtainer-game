@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_content" />
+
+   <!-- <include layout="@layout/layout_task_guide_header" />-->
+
+    <com.fanwe.live.view.SDProgressPullToRefreshRecyclerView
+        android:id="@+id/list_guide"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"/>
+
+</LinearLayout>

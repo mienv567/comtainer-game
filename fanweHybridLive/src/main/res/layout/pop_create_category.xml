@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@drawable/bg_category_more_pop">
+
+    <com.fanwe.library.view.SDRecyclerView
+        android:id="@+id/live_view"
+        android:layout_width="80dp"
+        android:layout_height="100dp"/>
+</LinearLayout>

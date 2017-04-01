@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="20dp"
+    android:background="@drawable/layer_white_corner_5dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_one"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+        <View
+            android:id="@+id/red_point"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_circle_red_point"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/red_point"
+            android:layout_marginLeft="5dp"
+            android:text="@string/now_is_living"
+            android:textColor="#4f4f4f"/>
+        <TextView
+            android:id="@+id/tv_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="#9a9a9a"
+            android:text="@string/loading"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/rl_one">
+
+        <ImageView
+            android:id="@+id/iv_head_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"
+            android:layout_centerVertical="true"
+            android:src="@drawable/null_blacklist"/>
+        <TextView
+            android:id="@+id/title_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_head_image"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:textColor="#4e4e4e"
+            android:text="@string/loading"/>
+        <TextView
+            android:id="@+id/title_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/iv_head_image"
+            android:layout_below="@id/title_one"
+            android:layout_centerVertical="true"
+            android:lines="1"
+            android:ellipsize="end"
+            android:textSize="12sp"
+            android:textColor="#9a9a9a"
+            android:text="@string/loading"/>
+    </RelativeLayout>
+
+</RelativeLayout>

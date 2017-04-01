@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/layer_gray_stroke_corner_item_top" android:state_pressed="true"/>
+    <item android:drawable="@drawable/layer_white_stroke_corner_item_top"/>
+
+</selector>

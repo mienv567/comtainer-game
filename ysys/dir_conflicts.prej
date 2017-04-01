@@ -1,0 +1,11 @@
+Trying to change property 'svn:ignore'
+but the property has already been locally changed to a different value.
+<<<<<<< (local property value)
+*.iml
+||||||| (incoming 'changed from' value)
+build.gradle
+ysys.iml
+=======
+build
+ysys.iml
+>>>>>>> (incoming 'changed to' value)

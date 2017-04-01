@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical">
+
+
+    <!--&lt;!&ndash;腾讯摄像头捕获预览view&ndash;&gt;-->
+    <!--<com.tencent.av.opengl.ui.GLRootView-->
+    <!--android:id="@+id/av_video_glview"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_centerHorizontal="true"/>-->
+
+
+    <!--七牛摄像头捕获预览view-->
+    <com.qiniu.pili.droid.streaming.widget.AspectFrameLayout
+        android:id="@+id/cameraPreview_afl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.opengl.GLSurfaceView
+            android:id="@+id/qn_video_glview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+
+    </com.qiniu.pili.droid.streaming.widget.AspectFrameLayout>
+
+
+    <!--<com.fanwe.live.view.LiveTouchCameraView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent" />-->
+
+    <include
+        android:id="@+id/rl_root_layout"
+        layout="@layout/include_live_layout_creater_new"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--&lt;!&ndash;七牛相关数据展示view&ndash;&gt;-->
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:orientation="vertical"-->
+    <!--android:padding="5dp">-->
+    <!--&lt;!&ndash;<Button&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:text="点击推流"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:onClick="startpush"&ndash;&gt;-->
+    <!--&lt;!&ndash;/>&ndash;&gt;-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_stattextview"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textSize="15sp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_statustextview"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textSize="15sp"-->
+    <!--android:textStyle="bold" />-->
+    <!--</LinearLayout>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_state"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="CREATE"-->
+    <!--android:textSize="28sp"-->
+    <!--android:layout_marginLeft="50dp"-->
+    <!--android:layout_marginTop="160dp"-->
+    <!--/>-->
+</RelativeLayout>

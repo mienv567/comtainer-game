@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical">
+
+    <!--七牛摄像头捕获预览view-->
+    <com.qiniu.pili.droid.streaming.widget.AspectFrameLayout
+        android:id="@+id/cameraPreview_afl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.opengl.GLSurfaceView
+            android:id="@+id/qn_video_glview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+
+    </com.qiniu.pili.droid.streaming.widget.AspectFrameLayout>
+
+    <include
+        android:id="@+id/rl_root_layout"
+        layout="@layout/include_live_layout_creator_landscape"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/tv_watch_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/ic_follow_number"
+        android:drawablePadding="3dp"
+        android:gravity="bottom"
+        android:text="@string/popular_number_is"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="@dimen/base_textsize_12" />
+
+    <TextView
+        android:id="@+id/tv_room_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@id/tv_watch_number"
+        android:gravity="center"
+        android:text="@string/room_id_is"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/base_textsize_12" />
+
+    <TextView
+        android:id="@+id/tv_deadline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_room_id"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@id/tv_room_id"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="选手任务倒计时:21:50:32"
+        android:visibility="invisible"/>
+
+    <com.fanwe.live.appview.room.RoomTipsMsgView
+        android:id="@+id/mtv_marque"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" />
+
+    <FrameLayout
+        android:id="@+id/flMenuContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <FrameLayout
+        android:id="@+id/RemoteWindowA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:clickable="true"
+        android:onClick="onClickRemoteWindowA"
+        android:visibility="invisible">
+
+        <android.opengl.GLSurfaceView
+            android:id="@+id/RemoteGLSurfaceViewA"
+            android:layout_width="120dp"
+            android:layout_height="160dp"
+            android:visibility="invisible" />
+
+        <ImageButton
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="top|end"
+            android:onClick="onClickKickoutUserA"
+            android:src="@drawable/create_room_close" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="5dp"
+            android:background="#44666666"
+            android:onClick="onClickUserANickName">
+
+            <TextView
+                android:id="@+id/tv_userA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lines="1"
+                android:maxWidth="70dp"
+                android:textColor="#ffffff"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/shape_live_dialog_corners_10dp_translucent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_loading_danmu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:text="正在连接弹幕服务器..."
+            android:textColor="@color/live_text_color_light"
+            android:textSize="@dimen/base_textsize_12" />
+
+        <TextView
+            android:id="@+id/tv_danmu_connect_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:textColor="@color/live_orange"
+            android:textSize="@dimen/base_textsize_12"
+            android:visibility="invisible" /><!--
+
+        <FrameLayout
+            android:id="@+id/fl_live_msg_creator"
+            android:layout_width="match_parent"
+            android:layout_height="150dp" />-->
+
+        <com.fanwe.live.appview.room.RoomMsgView
+            android:id="@+id/room_msg_view_creator"
+            android:layout_width="match_parent"
+            android:layout_height="150dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/base_stroke_1dp"
+            android:background="@color/live_text_color_light" />
+
+        <TextView
+            android:id="@+id/tv_expand_danmu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_arrow_down_gray"
+            android:drawablePadding="5dp"
+            android:padding="10dp"
+            android:text="@string/pull_back_danmu"
+            android:textColor="@color/live_text_color_light"
+            android:textSize="@dimen/base_textsize_12" />
+    </LinearLayout>
+
+    <com.fanwe.live.appview.FireWorkImageView
+        android:id="@+id/iv_fire_work"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_activity"
+    android:orientation="vertical">
+
+    <com.fanwe.live.view.SDProgressPullToRefreshScrollView
+        android:id="@+id/lv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:listSelector="#00000000">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:minHeight="30dp"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/text_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/follow_friends_live"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_recommend_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:minHeight="30dp"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/text_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/your_friends_not_live"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/lv_content_0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:listSelector="#00000000" />
+
+            <TextView
+                android:id="@+id/tv_ilike"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_room_creater_finish_confirm"
+                android:gravity="center"
+                android:minHeight="40dp"
+                android:text="@string/i_like"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:visibility="gone"/>
+
+            <ListView
+                android:id="@+id/lv_content_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:listSelector="#00000000" />
+
+            <ListView
+                android:id="@+id/lv_content_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:listSelector="#00000000" />
+        </LinearLayout>
+    </com.fanwe.live.view.SDProgressPullToRefreshScrollView>
+
+</LinearLayout>

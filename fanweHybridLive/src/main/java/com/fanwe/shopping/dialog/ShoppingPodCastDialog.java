@@ -1,0 +1,87 @@
+package com.fanwe.shopping.dialog;
+
+import android.app.Activity;
+import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.widget.LinearLayout;
+
+import com.fanwe.shopping.appview.ShoppingPodCastView;
+import com.fanwe.shopping.event.EShoppingCartDialogShowing;
+import com.fanwe.library.dialog.SDDialogBase;
+import com.fanwe.library.utils.SDViewUtil;
+import com.fanwe.live.R;
+
+import org.xutils.view.annotation.ViewInject;
+import org.xutils.x;
+
+import de.greenrobot.event.EventBus;
+
+/**
+ * Created by Administrator on 2016/9/18.
+ */
+public class ShoppingPodCastDialog extends SDDialogBase
+{
+
+    @ViewInject(R.id.ll_pod_cast)
+    private LinearLayout ll_pod_cast;
+    private ShoppingPodCastView shoppingPodCastView;
+
+    private String createrId;//主播Id
+
+    public ShoppingPodCastDialog(Activity activity , String id) {
+        super(activity);
+        createrId = id;
+        init();
+    }
+
+    private void init()
+    {
+        setCanceledOnTouchOutside(true);
+        setContentView(R.layout.dialog_pod_cast);
+        paddings(0);
+        x.view().inject(this, getContentView());
+        addPodCastView();
+    }
+
+    private void addPodCastView()
+    {
+        int screenHeight = SDViewUtil.getScreenHeight();
+        int height = (int) (0.6 * screenHeight);
+        shoppingPodCastView = new ShoppingPodCastView(getOwnerActivity(),createrId);
+        ViewGroup.LayoutParams lp = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, height);
+        ll_pod_cast.addView(shoppingPodCastView, lp);
+        eventDialogIsDismiss(true);
+    }
+
+    @Override
+    public void showBottom() {
+        super.showBottom();
+        setScreenBgLight();
+    }
+
+    /**
+     * 设置屏幕背景变亮
+     */
+    private void setScreenBgLight() {
+        WindowManager.LayoutParams lp = getWindow().getAttributes();
+        lp.alpha = 1.0f;
+        lp.dimAmount = 0f;
+        getWindow().setAttributes(lp);
+    }
+
+    @Override
+    public void dismiss() {
+        super.dismiss();
+        eventDialogIsDismiss(false);
+    }
+
+    /**
+     * 发送event事件
+     */
+    private void eventDialogIsDismiss(boolean isShow)
+    {
+        EShoppingCartDialogShowing event = new EShoppingCartDialogShowing();
+        event.isShowing = isShow;
+        EventBus.getDefault().post(event);
+    }
+}

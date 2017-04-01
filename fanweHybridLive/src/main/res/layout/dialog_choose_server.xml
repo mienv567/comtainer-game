@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ListView
+        android:id="@+id/lv_choose_server"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"></ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/cancel"
+            android:textColor="@color/main_color_second"
+            android:textSize="18sp"/>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="20dp"
+            android:background="@color/stroke_deep"/>
+
+        <Button
+            android:id="@+id/btn_confim"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/confirm"
+            android:textColor="@color/main_color_second"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+</LinearLayout>

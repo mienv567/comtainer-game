@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="category_more_pop_top">100dp</dimen>
+    <dimen name="create_room_category_pop_top">125dp</dimen>
+    <dimen name="main_small_item_height">240dp</dimen>
+    <dimen name="main_small_item_width">140dp</dimen>
+    <dimen name="category_head_item_top_height">420dp</dimen>
+    <dimen name="main_big_item_width">288dp</dimen>
+    <dimen name="menu_me_width">300dp</dimen>
+    <dimen name="level_top_height">220dp</dimen>
+    <dimen name="category_item_img_width_height">150dp</dimen>
+    <dimen name="category_item_width">170dp</dimen>
+</resources>

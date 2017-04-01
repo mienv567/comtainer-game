@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_frag_default">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="40dp"
+            android:paddingTop="20dp">
+
+            <com.qy.ysys.yishengyishi.views.customviews.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/iv_heard"
+                android:layout_width="@dimen/icon_head_width"
+                android:layout_height="@dimen/icon_head_height"
+                android:src="@mipmap/ic_head" />
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:lines="1"
+                android:maxWidth="120dp"
+                android:layout_marginTop="10dp"
+                android:text="亲亲小baby"
+                android:textColor="@color/colorTitleTextGray" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:id="@+id/ll_giftbook"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/bg_share_roundedrectangle_gray"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="23dp"
+                        android:layout_height="32dp"
+                        android:padding="5dp"
+                        android:src="@mipmap/ic_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="@string/text_giftbook"
+                        android:textColor="@color/colorTitleTextGray" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:id="@+id/ll_myinfo"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_share_roundedrectangle_gray"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/button_icon_height"
+                        android:layout_height="32dp"
+                        android:padding="5dp"
+                        android:src="@mipmap/ic_data" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="@string/text_myinfo"
+                        android:textColor="@color/colorTitleTextGray" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titlebar_separator_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0.5dp"
+            android:background="@color/colorTitleBarSeparator" />
+
+        <LinearLayout
+            android:id="@+id/ll_me_invitecode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <ImageView
+                android:layout_width="@dimen/icon_left_width"
+                android:layout_height="@dimen/icon_left_height"
+                android:src="@mipmap/ic_link" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lines="1"
+                android:paddingLeft="10dp"
+                android:text="@string/text_invitationcode"
+                android:textColor="@color/colorTitleTextGray" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titlebar_separator_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0.5dp"
+            android:background="@color/colorTitleBarSeparator" />
+
+        <LinearLayout
+            android:id="@+id/ll_me_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <ImageView
+                android:layout_width="@dimen/icon_left_width"
+                android:layout_height="@dimen/icon_left_height"
+                android:src="@mipmap/ic_fankui" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lines="1"
+                android:paddingLeft="10dp"
+                android:text="@string/text_feedback"
+                android:textColor="@color/colorTitleTextGray" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titlebar_separator_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0.5dp"
+            android:background="@color/colorTitleBarSeparator" />
+
+        <LinearLayout
+            android:id="@+id/ll_me_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <ImageView
+                android:layout_width="@dimen/icon_left_width"
+                android:layout_height="@dimen/icon_left_height"
+                android:src="@mipmap/ic_setting" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lines="1"
+                android:paddingLeft="10dp"
+                android:text="@string/text_setting"
+                android:textColor="@color/colorTitleTextGray" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titlebar_separator_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0.5dp"
+            android:background="@color/colorTitleBarSeparator" />
+
+    </LinearLayout>
+
+</ScrollView>

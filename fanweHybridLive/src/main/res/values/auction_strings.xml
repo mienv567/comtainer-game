@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 竞拍锤子秒数-->
+    <integer name="auction_btn_time">3</integer>
+</resources>

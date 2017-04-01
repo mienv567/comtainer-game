@@ -1,0 +1,143 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    //useLibrary 'org.apache.http.legacy'
+
+    compileSdkVersion 23
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        applicationId "com.malatv.zhibo"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 7
+        versionName "1.5"
+
+        multiDexEnabled true
+    }
+    //签名
+    signingConfigs {
+        release {
+            storeFile file("qyworld-keystore.jks")
+            storePassword "qyworld_keystore"
+            keyAlias "qyworld"
+            keyPassword "qyworld_keystore"
+        }
+
+        debug {
+            storeFile file("qyworld-keystore.jks")
+            storePassword "qyworld_keystore"
+            keyAlias "qyworld"
+            keyPassword "qyworld_keystore"
+        }
+
+
+    }
+
+    buildTypes {
+        debug {
+            zipAlignEnabled true
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+        release {
+            zipAlignEnabled true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            signingConfig signingConfigs.release
+        }
+    }
+
+
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    dexOptions {
+        javaMaxHeapSize "2g"
+    }
+
+    productFlavors {
+
+        //麻辣TV
+        malatv {
+            applicationId "com.malatv.zhibo"
+            versionCode 7
+            versionName "1.5"
+//            buildConfigField 'String', 'SERVER_URL_DOMAIN', '"interface.qiankeep.com"'
+//            buildConfigField 'String', 'SERVER_URL_DOMAIN', '"qy.qiankeep.com"'
+//            buildConfigField 'String', 'SERVER_URL_DOMAIN', '"192.168.1.63:8081"'
+//            buildConfigField 'String', 'SERVER_URL_DOMAIN', '"192.168.1.173:8081"'
+//            buildConfigField 'String', 'SERVER_URL_DOMAIN', '"192.168.1.52:8080"'
+            buildConfigField 'String', 'SERVER_URL_DOMAIN', '"www.qg8game.com"'
+//            buildConfigField 'String', 'SERVER_URL_DOMAIN', '"http://qyapp.qg8.com/live-web"'
+
+        }
+
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            output.outputFile = new File(output.outputFile.parent, variant.name + "_" + variant.versionName + "_" + variant.versionCode + ".apk");
+        }
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile(name: 'libraryAdapterHttp-release', ext: 'aar')
+    compile(name: 'libraryAndroidGifDrawable-release', ext: 'aar')
+    compile(name: 'libraryAndroidPercentSupportExtend-release', ext: 'aar')
+    compile(name: 'libraryAndroidPullToRefresh-release', ext: 'aar')
+    compile(name: 'libraryMapTencent-release', ext: 'aar')
+    compile(name: 'libraryPayAlipay-release', ext: 'aar')
+    compile(name: 'libraryPayBaofoo-release', ext: 'aar')
+    compile(name: 'libraryPayUnionpay-release', ext: 'aar')
+    compile(name: 'libraryPhotoViewMaster-release', ext: 'aar')
+    compile(name: 'libraryQrcodeZxing-release', ext: 'aar')
+    compile(name: 'librarySocialUmengV512-release', ext: 'aar')
+    compile(name: 'librarySpan-release', ext: 'aar')
+    compile(name: 'pickerview-release', ext: 'aar')
+    compile(name: 'PushSDK-release', ext: 'aar')
+    compile(name: 'TimePickerDialog-release', ext: 'aar')
+    compile(name: 'auth-1.1.34', ext: 'aar')
+    compile(name: 'network-1.1.34', ext: 'aar')
+    compile(name: 'usermgmt-1.1.34', ext: 'aar')
+    compile(name: 'util-1.1.34', ext: 'aar')
+    compile project(':libraryFanwe')
+    compile project(':FlycoDialog_Lib')
+    compile project(path: ':ysys')
+    compile 'com.android.support:support-v4:23.0.0'
+    compile 'com.android.support:recyclerview-v7:23.0.0'
+    compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'com.qiniu:happy-dns:0.2.8'
+    compile 'com.qiniu.pili:pili-android-qos:0.8.13'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.vk:androidsdk:1.6.8'
+    compile 'org.apache.httpcomponents:httpcore:4.4.4'
+    compile 'com.bigkoo:convenientbanner:2.0.5'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha9'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.3'
+    testCompile 'junit:junit:4.12'
+}

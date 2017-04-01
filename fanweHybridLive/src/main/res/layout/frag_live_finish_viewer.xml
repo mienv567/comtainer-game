@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.fanwe.live.view.InterceptTouchEventLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cc000000"
+    android:gravity="center_horizontal|center_vertical"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/live_finish_viewer_one"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
+    <TextView
+        android:id="@+id/tv_follow_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/live_finish_viewer_two"
+        android:textColor="@color/gray"
+        android:textSize="20sp"
+        android:visibility="gone"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_viewer_number"
+            style="@style/text_base"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_color"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/people_watched"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_follow"
+        style="@style/text_base"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_room_creater_finish_confirm"
+        android:gravity="center"
+        android:minHeight="40dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_back_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bg_room_viewer_finish_confirm"
+        android:gravity="center"
+        android:minHeight="40dp"
+        android:text="@string/comback_to_main_page"
+        android:textColor="@color/gray"
+        android:textSize="17sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="10dp" >
+    </LinearLayout>
+
+</com.fanwe.live.view.InterceptTouchEventLinearLayout>

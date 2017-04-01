@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <TextView
+            android:id="@+id/tv_rank_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_live_rank_bg_gray"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:text="@string/rank_number"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <com.fanwe.library.view.CircleImageView
+            android:id="@+id/iv_player_head"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/ic_head" />
+
+        <TextView
+            android:id="@+id/tv_player_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:lines="1"
+            android:text="好哦啊减肥!!"
+            android:textColor="@color/live_text_color_light"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_rank_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:textColor="@color/live_orange"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_total_number"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:lines="1"
+            android:text="8813"
+            android:textColor="@color/live_text_color_light"
+            android:textSize="12sp" />
+    </LinearLayout>
+</FrameLayout>

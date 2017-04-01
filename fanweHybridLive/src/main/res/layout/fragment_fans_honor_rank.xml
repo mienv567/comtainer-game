@@ -1,0 +1,201 @@
+<com.fanwe.live.view.SDProgressPullToRefreshScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pull_to_refresh_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:id="@+id/ll_top2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/fl_player_header_top2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.fanwe.library.view.CircleImageView
+                        android:id="@+id/iv_player_head_top2"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/ic_live_ring_purple"
+                        android:padding="5dp"
+                        android:src="@mipmap/ic_female_head" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:background="@drawable/ic_live_top_ribbon_purple"
+                        android:gravity="center"
+                        android:text="TOP 2"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tv_player_name_top2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/live_text_color_light"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_score_top2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_stroke_purple_solid_translucent_corners_half_circle"
+                    android:drawableLeft="@drawable/ic_live_honor_purple"
+                    android:drawablePadding="5dp"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="3dp"
+                    android:textColor="@color/live_rank_purple"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_top1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/fl_player_header_top1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.fanwe.library.view.CircleImageView
+                        android:id="@+id/iv_player_head_top1"
+                        android:layout_width="102dp"
+                        android:layout_height="102dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="15dp"
+                        android:background="@drawable/ic_live_ring_red"
+                        android:padding="6dp"
+                        android:src="@mipmap/ic_female_head" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:background="@drawable/ic_live_top_ribbon_red"
+                        android:gravity="center"
+                        android:text="TOP 1"
+                        android:textColor="@color/white" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tv_player_name_top1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/live_text_color_light" />
+
+                <TextView
+                    android:id="@+id/tv_score_top1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_stroke_red_solid_translucent_corners_half_circle"
+                    android:drawableLeft="@drawable/ic_live_honor_red"
+                    android:drawablePadding="5dp"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="3dp"
+                    android:textColor="@color/live_rank_red"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_top3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/fl_player_header_top3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.fanwe.library.view.CircleImageView
+                        android:id="@+id/iv_player_head_top3"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/ic_live_ring_cyan"
+                        android:padding="5dp"
+                        android:src="@mipmap/ic_female_head" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:background="@drawable/ic_live_top_ribbon_cyan"
+                        android:gravity="center"
+                        android:text="TOP 3"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tv_player_name_top3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/live_text_color_light"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_score_top3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_stroke_cyan_solid_translucent_corners_half_circle"
+                    android:drawableLeft="@drawable/ic_live_honor_cyan"
+                    android:drawablePadding="5dp"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="3dp"
+                    android:textColor="@color/live_rank_cyan"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.fanwe.live.appview.NoScrollListView
+            android:id="@+id/lv_players_rank"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/live_divider_color_light"
+            android:dividerHeight="@dimen/base_stroke_1dp" />
+    </LinearLayout>
+</com.fanwe.live.view.SDProgressPullToRefreshScrollView>

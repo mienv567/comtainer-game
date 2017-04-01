@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SlidingDrawer">
+        <attr name="s_orientation">
+    
+        　　            <enum name="horizontal" value="0" />
+    
+        　　            <enum name="vertical" value="1" />
+    
+    　　</attr>
+        <attr name="s_content" format="reference" />
+        <attr name="s_handle" format="reference" />
+        <attr name="s_bottomOffset" format="dimension" />
+        <attr name="s_topOffset" format="dimension" />
+        <attr name="s_allowSingleTap" format="boolean" />
+        <attr name="s_animateOnClick" format="boolean" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,122 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="AppThemeAnimation" parent="AppTheme">
+        <item name="android:windowAnimationStyle">@style/AppAnimation</item>
+        <item name="android:windowBackground" >@color/live_bg_normal</item>
+    </style>
+
+    <style name="AppAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/anim_slide_in_from_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/anim_slide_out_to_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/anim_slide_in_from_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/anim_slide_out_to_right</item>
+    </style>
+
+
+    <style name="weight_length_horizontal">
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+
+    <style name="room_eq_middle_item" parent="@style/weight_length_horizontal">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
+    <style name="wrap_wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="room_eq_effect_name" parent="@style/wrap_wrap">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">#ff3d4658</item>
+    </style>
+
+    <style name="room_eq_adjust_img" parent="@style/wrap_wrap">
+        <item name="android:padding">10.0dip</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+
+    <style name="room_eq_vertical_seekbar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">150dp</item>
+        <item name="android:layout_marginTop">10.0dip</item>
+        <item name="android:layout_marginBottom">12.0dip</item>
+        <item name="android:minHeight">3dp</item>
+        <item name="android:maxHeight">3dp</item>
+        <item name="android:progressDrawable">@drawable/room_effect_ver_seekbar</item>
+        <item name="android:thumbOffset">0dp</item>
+    </style>
+
+    <style name="dialogWindowAnim" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/anim_scale_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_scale_out</item>
+    </style>
+
+    <style name="text_home_big_icons">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">75dp</item>
+    </style>
+
+    <style name="horizontal_divider_light">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/base_stroke_1dp</item>
+        <item name="android:background">@color/live_divider_color_light</item>
+    </style>
+
+    <style name="horizontal_divider_dark">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/base_stroke_1dp</item>
+        <item name="android:background">@color/live_divider_color_dark</item>
+    </style>
+
+    <style name="mine_icon">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:textColor">@color/live_text_color_dark</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="mine_item">
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:textColor">@color/live_text_color_light</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+</resources>

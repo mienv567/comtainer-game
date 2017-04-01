@@ -1,0 +1,36 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <FrameLayout
+        android:id="@+id/fl_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_mission_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/live_gray"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/tv_handle_task"
+            android:layout_width="60dp"
+            android:layout_height="28dp"
+            android:gravity="center"
+            android:layout_gravity="center|end"
+            android:background="@drawable/selector_live_button" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_no_tasks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="任务暂未指派"
+        android:textColor="@color/gray"
+        android:visibility="gone" />
+</FrameLayout>

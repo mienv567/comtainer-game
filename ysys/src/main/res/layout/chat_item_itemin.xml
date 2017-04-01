@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="5dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="5dp"
+
+    >
+
+    <com.qy.ysys.yishengyishi.views.customviews.CircleImageView
+        android:id="@+id/icon_in"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@mipmap/ic_head" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toEndOf="@+id/icon_in"
+        android:layout_toRightOf="@+id/icon_in"
+        android:lines="1"
+        android:text="座山雕"
+        android:textColor="@color/colorTitleTextGray"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/text_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_toEndOf="@+id/icon_in"
+        android:layout_toRightOf="@+id/icon_in"
+        android:background="@drawable/chatitem_in_bg"
+        android:gravity="center"
+        android:text="天王盖地虎,小鸡炖蘑菇;"
+        android:textSize="15sp" />
+    </RelativeLayout>

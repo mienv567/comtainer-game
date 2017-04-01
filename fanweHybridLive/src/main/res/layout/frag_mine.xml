@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/live_bg_normal"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:id="@+id/tv_video_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:drawableLeft="@drawable/ic_live_mine_eye"
+                    android:drawablePadding="3dp"
+                    android:text="12831"
+                    android:textColor="@color/live_text_color_dark" />
+
+                <TextView
+                    android:id="@+id/tv_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:drawableLeft="@drawable/ic_live_mine_setting"
+                    android:drawablePadding="3dp"
+                    android:text="@string/setting"
+                    android:textColor="@color/live_text_color_dark" />
+
+
+                <com.fanwe.library.view.CircleImageView
+                    android:id="@+id/iv_head_image"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:src="@mipmap/ic_head" />
+
+                <TextView
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_head_image"
+                    android:layout_centerHorizontal="true"
+                    android:text="轻轻nico"
+                    android:textColor="@color/live_text_color_light" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_fans_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:drawableLeft="@drawable/ic_live_mine_user"
+                    android:text="12353"
+                    android:textColor="@color/live_text_color_light" />
+
+                <TextView
+                    android:id="@+id/tv_like_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:drawableLeft="@drawable/ic_live_mine_honor"
+                    android:text="1145"
+                    android:textColor="@color/live_text_color_light" />
+
+                <TextView
+                    android:id="@+id/tv_diamonds_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:drawableLeft="@drawable/ic_live_mine_money"
+                    android:text="6094"
+                    android:textColor="@color/live_text_color_light" />
+
+            </LinearLayout>
+
+            <View style="@style/horizontal_divider_light" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_msg"
+                    style="@style/mine_icon"
+                    android:drawableTop="@drawable/ic_live_mine_msg"
+                    android:text="@string/msg" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/live_divider_color_light" />
+
+                <TextView
+                    android:id="@+id/tv_my_task"
+                    style="@style/mine_icon"
+                    android:drawableTop="@drawable/ic_live_mine_task"
+                    android:text="@string/my_task" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/live_divider_color_light" />
+
+                <TextView
+                    android:id="@+id/tv_vip"
+                    style="@style/mine_icon"
+                    android:drawableTop="@drawable/ic_live_mine_vip"
+                    android:text="@string/vip" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/live_divider_color_light" />
+
+                <TextView
+                    android:id="@+id/tv_recharge"
+                    style="@style/mine_icon"
+                    android:drawableTop="@drawable/ic_live_mine_rechare"
+                    android:text="@string/recharge" />
+
+
+            </LinearLayout>
+
+            <View style="@style/horizontal_divider_light" />
+
+            <View
+                style="@style/horizontal_divider_light"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/tv_my_live"
+                style="@style/mine_item"
+                android:drawableLeft="@drawable/ic_live_mine_tv"
+                android:text="@string/my_live" />
+
+            <View style="@style/horizontal_divider_light" />
+
+            <TextView
+                style="@style/mine_item"
+                android:drawableLeft="@drawable/ic_live_mine_box"
+                android:text="箱吧" />
+
+            <View style="@style/horizontal_divider_light" />
+
+            <TextView
+                android:id="@+id/tv_props_list"
+                style="@style/mine_item"
+                android:drawableLeft="@drawable/ic_live_mine_list"
+                android:text="@string/items_list" />
+
+            <View style="@style/horizontal_divider_light" />
+
+            <View
+                style="@style/horizontal_divider_light"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                style="@style/mine_item"
+                android:drawableLeft="@drawable/ic_live_mine_about_player"
+                android:text="参赛者相关" />
+
+            <View style="@style/horizontal_divider_light" />
+
+            <TextView
+                android:id="@+id/tv_rank_list"
+                style="@style/mine_item"
+                android:drawableLeft="@drawable/ic_live_mine_top"
+                android:text="@string/ranking_list" />
+
+            <View style="@style/horizontal_divider_light" />
+
+            <View
+                style="@style/horizontal_divider_light"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/tv_my_account"
+                style="@style/mine_item"
+                android:drawableLeft="@drawable/ic_live_mine_account"
+                android:text="@string/my_account" />
+
+            <View style="@style/horizontal_divider_light" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

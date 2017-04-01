@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_portrait"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:src="@drawable/ic_live_close" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/iv_back"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选手任务倒计时 "
+            android:textColor="@color/white"
+            android:textSize="@dimen/base_textsize_12" />
+
+        <TextView
+            android:id="@+id/tv_task_count_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20 : 15 : 36"
+            android:textColor="@color/live_orange" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_room_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/room_id_is"
+            android:textColor="@color/white"
+            android:textSize="@dimen/base_textsize_12" />
+
+        <TextView
+            android:id="@+id/tv_viewer_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:drawableLeft="@drawable/ic_viewer_number"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:text="123456"
+            android:textColor="@color/live_orange"
+            android:textSize="@dimen/base_textsize_12" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_fullscreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:padding="5dp"
+        android:src="@drawable/ic_enter_fullscreen" />
+</RelativeLayout>

@@ -1,0 +1,153 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/live_chat_root_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_creator_info"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:visibility="gone">
+
+            <com.fanwe.library.view.CircleImageView
+                android:id="@+id/iv_head"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="11dp"
+                android:src="@drawable/ic_default_head"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="0dp" />
+
+            <TextView
+                android:id="@+id/tv_nick_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/iv_head"
+                android:layout_toRightOf="@id/iv_head"
+                android:paddingTop="@dimen/base_p_m_5"
+                android:text="@string/loading"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/popular_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/iv_head"
+                android:layout_toRightOf="@id/iv_head"
+                android:paddingBottom="@dimen/base_p_m_5"
+                android:text="@string/loading"
+                android:textColor="@color/live_gray"
+                android:textSize="@dimen/base_textsize_12" />
+
+            <TextView
+                android:id="@+id/follow_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/iv_head"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/popular_number"
+                android:paddingBottom="@dimen/base_p_m_5"
+                android:text="@string/loading"
+                android:textColor="@color/live_gray"
+                android:textSize="@dimen/base_textsize_12" />
+
+            <ImageView
+                android:id="@+id/iv_hide_creater_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="11dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_arrow_right_white" />
+
+            <TextView
+                android:id="@+id/tv_follow"
+                android:layout_width="60dp"
+                android:layout_height="28dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/iv_hide_creater_info"
+                android:background="@drawable/selector_live_button"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="@string/follow" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/base_stroke_1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/live_gray" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_live_msg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/ll_chat_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/live_bg_dark"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:id="@+id/iv_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@drawable/ic_live_share" />
+
+            <TextView
+                android:id="@+id/tv_msg"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_input_rect"
+                android:gravity="center_vertical"
+                android:hint="@string/live_send_msg_hint_normal"
+                android:imeOptions="actionSend"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/base_textsize_12" />
+
+            <ImageView
+                android:id="@+id/iv_gift"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@drawable/ic_live_gift" />
+
+            <ImageView
+                android:id="@+id/iv_recharge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@drawable/ic_live_recharge" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 送礼物 -->
+    <FrameLayout
+        android:id="@+id/fl_live_send_gift"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
+</FrameLayout>

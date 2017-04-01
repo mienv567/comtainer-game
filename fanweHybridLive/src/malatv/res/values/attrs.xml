@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleProgressBar">
+        <attr name="hitCountSizeTextSize" format="dimension"/>
+        <attr name="hitCount" format="integer"/>
+        <attr name="hitCountSizeTextColor" format="color"/>
+        <attr name="strokeWidth" format="dimension"/>
+        <attr name="strokeColor" format="color"/>
+        <attr name="innerCircleRadius" format="dimension"/>
+        <attr name="innerCircleColor" format="color"/>
+        <attr name="outterCircleRadius" format="dimension"/>
+        <attr name="outterCircleColor" format="color"/>
+        <attr name="circleArcRadius" format="dimension"/>
+        <attr name="circleArcColor" format="color"/>
+        <attr name="strokeProgress" format="integer"/>
+        <attr name="circleArcProgress" format="integer"/>
+    </declare-styleable>
+</resources>

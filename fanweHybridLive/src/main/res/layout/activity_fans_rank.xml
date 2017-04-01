@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_fans_rank_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:fitsSystemWindows="true"
+        android:gravity="center"
+        android:text="粉丝排行榜"
+        android:textSize="18sp"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/live_text_color_light" />
+
+    <com.flyco.tablayout.SegmentTabLayout
+        android:id="@+id/segment_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        tl:paddingEnd="30dp"
+        tl:paddingStart="30dp"
+        tl:tl_bar_color="@color/transparent_white"
+        tl:tl_bar_stroke_width="0dp"
+        tl:tl_indicator_anim_enable="true"
+        tl:tl_indicator_bounce_enable="false"
+        tl:tl_indicator_color="@color/live_orange"
+        tl:tl_indicator_margin_bottom="2dp"
+        tl:tl_indicator_margin_left="2dp"
+        tl:tl_indicator_margin_right="2dp"
+        tl:tl_indicator_margin_top="2dp"
+        tl:tl_tab_space_equal="true"
+        tl:tl_textBold="SELECT"
+        tl:tl_textSelectColor="@color/live_text_color_dark"
+        tl:tl_textUnselectColor="@color/live_text_color_light" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp" />
+
+    <!--<FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp" />-->
+
+</LinearLayout>

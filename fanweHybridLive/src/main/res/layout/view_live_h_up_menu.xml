@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_gravity="left"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="35dp" />
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_back" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="35dp" />
+
+        <ImageView
+            android:id="@+id/iv_barrage"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:padding="5dp"
+            android:src="@drawable/selector_live_up_menu_danmu"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="35dp" />
+
+        <ImageView
+            android:id="@+id/iv_mute"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:padding="5dp"
+            android:src="@drawable/selector_live_up_menu_microphone" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="35dp" />
+
+        <ImageView
+            android:id="@+id/iv_turn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_turn" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="35dp" />
+
+        <ImageView
+            android:id="@+id/iv_flash"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:padding="5dp"
+            android:src="@drawable/selector_live_up_menu_flash" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_panel_container_t"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom" />
+</FrameLayout>

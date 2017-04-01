@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <com.qy.ysys.yishengyishi.views.customviews.CircleImageView
+        android:id="@+id/cir_head"
+        android:layout_width="@dimen/icon_head_middle_width"
+        android:layout_height="@dimen/icon_head_middle_height"
+    />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:id="@+id/tv_username"
+        android:text="杰伦"
+        android:textColor="@color/colorTitleTextGray" />
+
+</LinearLayout>

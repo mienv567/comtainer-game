@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="width_live_bottom_menu">40dp</dimen>
+    <dimen name="height_live_bottom_menu">40dp</dimen>
+
+    <dimen name="height_live_search_bar">40dp</dimen>
+
+    <dimen name="height_photo_view">10dip</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="slidingmenu_offset">60dp</dimen>
+    <dimen name="shadow_width">15dp</dimen>
+    <dimen name="category_more_pop_top">100dp</dimen>
+    <dimen name="create_room_category_pop_top">125dp</dimen>
+    <dimen name="main_small_item_height">244dp</dimen>
+    <dimen name="main_small_item_width">140dp</dimen>
+    <dimen name="category_head_item_top_height">420dp</dimen>
+    <dimen name="main_big_item_width">288dp</dimen>
+    <dimen name="menu_me_width">300dp</dimen>
+    <dimen name="level_top_height">220dp</dimen>
+    <dimen name="category_item_img_width_height">150dp</dimen>
+    <dimen name="category_item_width">170dp</dimen>
+    <dimen name="login_icon_diameter">28dp</dimen>
+</resources>

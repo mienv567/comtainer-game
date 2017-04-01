@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="108dp"
+        android:background="@android:color/black"
+        android:paddingRight="20dp">
+
+        <ImageView
+            android:id="@+id/iv_head_image"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="24dp"
+            android:scaleType="centerCrop"
+            android:layout_centerVertical="true"
+            android:src="@drawable/bg_default" />
+
+        <TextView
+            android:id="@+id/tv_player_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-1dp"
+            android:layout_alignTop="@id/iv_head_image"
+            android:layout_toRightOf="@id/iv_head_image"
+            android:text="杀马特丶炫酷狂拽"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/iv_head_image"
+            android:layout_below="@id/tv_player_name"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/iv_head_image"
+            android:ellipsize="end"
+            android:lines="4"
+            android:text="像我这么吊的还有107个像我这么吊的还有107个像我这么吊的还有107个像我这么吊的还有107个像我这么吊的还有107个像我这么吊的还有107个像我这么吊的还有107个像我这么吊的还有107个像我这么吊的还有107个"
+            android:textColor="@color/live_text_color_dark"
+            android:textSize="10sp" />
+
+        <View
+            android:layout_alignParentBottom="true"
+            style="@style/horizontal_divider_dark"/>
+    </RelativeLayout>
+
+</RelativeLayout>

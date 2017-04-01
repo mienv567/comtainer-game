@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/ll_push_manage_header"
+              android:layout_width="match_parent"
+              android:background="@color/bg_activity"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_round_rect_pushmanage"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/icon_setting_push"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="15dp"
+            android:paddingLeft="9dp"
+            android:paddingTop="15dp"
+            android:text="@string/live_msg_remind"
+            android:textColor="@color/text_title"/>
+
+        <com.fanwe.live.view.SDSlidingButton
+            android:id="@+id/sl_btn"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+
+                android:src="@drawable/switch_setting_white_corner_track"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+
+                android:src="@drawable/switch_setting_main_color_corner_track_orange"/>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/switch_setting_white_round_thumb"/>
+        </com.fanwe.live.view.SDSlidingButton>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:paddingBottom="6dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="6dp"
+        android:text="@string/you_can_close_remind"
+        android:textColor="#B9B9B9"
+        android:visibility="gone"/>
+
+</LinearLayout>

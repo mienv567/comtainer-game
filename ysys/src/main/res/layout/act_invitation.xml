@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/colorTitleBackground"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:background="@color/bg_frag_deepen"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+        <TextView
+            android:lines="1"
+            android:textColor="@color/colorTitleTextGray"
+            android:text="@string/text_invitation_code"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_invite_code"
+            android:layout_marginTop="5dp"
+            android:lines="1"
+            android:textColor="@color/colorTitleTextGray"
+            android:text="加载中"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_invite_code"
+        android:background="@color/bg_frag_deepen"
+        android:layout_marginTop="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textSize="16sp"
+        android:paddingLeft="10dp"
+        android:textColorHint="@color/colorTitleTextGray"
+        android:hint="请输入邀请码添加组员"
+        android:maxLength="6"
+        android:textColor="@color/colorTitleTextGray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        android:id="@+id/has_invite_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textColor="@color/colorTitleTextGray"
+        android:textSize="18sp"
+        android:text="@string/has_invite_code"
+        android:visibility="gone"/>
+    <LinearLayout
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_clean"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_share_roundedrectangle_gray"
+            android:padding="10dp"
+            android:text="清空"
+            android:layout_marginRight="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/button_text_size" />
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_share_roundedrectangle_orange"
+            android:padding="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="添加"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/button_text_size" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

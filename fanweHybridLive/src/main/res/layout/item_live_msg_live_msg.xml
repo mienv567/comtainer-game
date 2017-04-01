@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:gravity="center_vertical"
+              android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_room_msg">
+
+    <com.fanwe.live.view.LiveMsgSpanTextView
+        android:id="@+id/tv_content"
+        style="@style/text_base_shadow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textSize="15sp"/>
+
+</LinearLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="10dp">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="30%sw"
+        app:layout_widthPercent="30%sw">
+
+
+        <ImageView
+            android:id="@+id/iv_head_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:id="@+id/iv_ringgirl_logo"
+            android:layout_width="34dp"
+            android:layout_height="13dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_ringgirl_logo"
+            android:visibility="gone"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="2dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!--<ImageView-->
+            <!--android:id="@+id/iv_level"-->
+            <!--android:layout_width="24dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/rank_1"/>-->
+
+            <ImageView
+                android:id="@+id/iv_position"
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/create_room_position_open"/>
+
+
+            <TextView
+                android:id="@+id/tv_city"
+                style="@style/text_item_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="@string/mala_star"
+                android:textColor="#ffffff"
+                android:textSize="11sp"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_vediostate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/bg_live_tabnew_vediostate"
+            android:paddingBottom="3dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="3dp"
+            android:textColor="#ffffff"
+            android:textSize="8sp"
+            android:visibility="invisible"
+            />
+
+    </RelativeLayout>
+
+
+</com.zhy.android.percent.support.PercentLinearLayout>

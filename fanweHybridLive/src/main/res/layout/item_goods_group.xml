@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+    <ImageView
+        android:id="@+id/iv_goods_type"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_survice_props"/>
+
+    <TextView
+        android:id="@+id/tv_goods_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_toRightOf="@id/iv_goods_type"
+        android:layout_marginLeft="10dp"
+        android:text="任务道具"
+        android:textColor="@color/white"/>
+
+    <ImageView
+        android:id="@+id/iv_goods_type_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center|end"
+        android:src="@drawable/ic_arrow_right_white"/>
+</RelativeLayout>

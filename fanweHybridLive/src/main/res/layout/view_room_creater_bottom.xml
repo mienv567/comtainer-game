@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_lrs_channel_choose"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="bottom">
+
+        <!-- 打开发送布局 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom_open_send"
+            android:layout_width="@dimen/width_live_bottom_menu"
+            android:layout_height="@dimen/height_live_bottom_menu"
+            android:layout_alignParentLeft="true">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/ic_live_bottom_open_send" />
+        </RelativeLayout>
+
+        <!-- 星店订单 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom_podcast_order"
+            android:layout_width="80dp"
+            android:layout_height="@dimen/width_live_bottom_menu"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+
+                android:src="@drawable/ic_live_bottom_podcast_order" />
+
+            <com.fanwe.live.view.LiveUnReadNumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:inputType="number"
+                android:text="00"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <!-- 创建竞拍 -->
+        <RelativeLayout
+            android:id="@+id/rl_bottom_create_auction"
+            android:layout_width="@dimen/width_live_bottom_menu"
+            android:layout_height="@dimen/height_live_bottom_menu"
+            android:visibility="gone">
+
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/ic_live_bottom_create_auction" />
+
+            <TextView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/bg_circle_red"
+                android:gravity="center"
+                android:text="+"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+        </RelativeLayout>
+
+        <!-- 狼人杀游戏频道切换-->
+        <RelativeLayout
+            android:id="@+id/rl_bottom_lrs_channel"
+            android:layout_width="@dimen/width_live_bottom_menu"
+            android:layout_height="@dimen/height_live_bottom_menu"
+            android:layout_toRightOf="@id/rl_bottom_open_send"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/img_bottom_lrs_channel"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/ic_live_bottom_game_public" />
+
+        </RelativeLayout>
+
+        <!-- 狼人杀游戏-->
+        <RelativeLayout
+            android:id="@+id/rl_bottom_lrs"
+            android:layout_width="@dimen/width_live_bottom_menu"
+            android:layout_height="@dimen/height_live_bottom_menu"
+            android:layout_toRightOf="@id/rl_bottom_lrs_channel">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/ic_live_bottom_game" />
+
+        </RelativeLayout>
+
+        <!-- 查看消息 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom_msg"
+            android:layout_width="@dimen/width_live_bottom_menu"
+            android:layout_height="@dimen/height_live_bottom_menu"
+            android:layout_toRightOf="@id/rl_bottom_lrs">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/ic_live_bottom_msg" />
+
+            <TextView
+                android:id="@+id/tv_unread_number"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/bg_circle_red"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <!-- 音乐 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom_music"
+            android:layout_width="@dimen/width_live_bottom_menu"
+            android:layout_height="@dimen/height_live_bottom_menu"
+            android:layout_toRightOf="@id/rl_bottom_msg"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/ic_live_bottom_music" />
+        </RelativeLayout>
+
+        <!-- 更多 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom_more"
+            android:layout_width="@dimen/width_live_bottom_menu"
+            android:layout_height="@dimen/height_live_bottom_menu"
+            android:layout_toRightOf="@id/rl_bottom_music">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/ic_live_bottom_more" />
+        </RelativeLayout>
+
+        <!-- 狼人杀收起和打开开关-->
+        <RelativeLayout
+            android:id="@+id/rl_bottom_game_open_close"
+            android:layout_width="@dimen/width_live_bottom_menu"
+            android:layout_height="@dimen/height_live_bottom_menu"
+            android:layout_alignParentRight="true"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/img_game_open_close"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/ic_game_close" />
+        </RelativeLayout>
+
+        <!-- 退出游戏-->
+        <RelativeLayout
+            android:id="@+id/rl_bottom_game_out"
+            android:layout_width="@dimen/width_live_bottom_menu"
+            android:layout_height="@dimen/height_live_bottom_menu"
+            android:layout_toLeftOf="@id/rl_bottom_game_open_close"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/ic_game_out" />
+        </RelativeLayout>
+
+
+        <!-- 过麦-->
+        <RelativeLayout
+            android:id="@+id/rl_bottom_game_pass"
+            android:layout_width="@dimen/width_live_bottom_menu"
+            android:layout_height="@dimen/height_live_bottom_menu"
+            android:layout_toLeftOf="@id/rl_bottom_game_out"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/ic_game_mic_off" />
+        </RelativeLayout>
+
+
+        <!-- 关闭 -->
+        <RelativeLayout
+            android:id="@+id/rl_bottom_close"
+            android:layout_width="@dimen/width_live_bottom_menu"
+            android:layout_height="@dimen/height_live_bottom_menu"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/ic_live_bottom_close" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

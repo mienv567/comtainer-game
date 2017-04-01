@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_frag_deepen"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <com.qy.ysys.yishengyishi.views.customviews.CircleImageView
+        android:layout_width="@dimen/icon_head_middle_width"
+        android:layout_height="@dimen/icon_head_middle_height"
+        android:src="@mipmap/ic_head" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="亲亲小bady"
+            android:textColor="@color/colorTitleTextGray" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_username"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/icon_left_width"
+                android:layout_height="@dimen/icon_left_height"
+                android:src="@mipmap/ic_group" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="父母"
+                android:textColor="@color/colorTitleTextGray"
+                android:textSize="10sp" />
+
+
+            <ImageView
+                android:layout_width="@dimen/icon_left_width"
+                android:layout_height="@dimen/icon_left_height"
+                android:layout_marginLeft="20dp"
+                android:src="@mipmap/ic_local" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="广东 深圳"
+                android:textColor="@color/colorTitleTextGray"
+                android:textSize="10sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/icon_left_big_width"
+                android:layout_height="@dimen/icon_left_big_height"
+                android:src="@mipmap/ic_common" />
+
+            <ImageView
+                android:layout_width="@dimen/icon_left_big_width"
+                android:layout_height="@dimen/icon_left_big_height"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/ic_heart" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="2dp"
+            android:background="@color/colorTitleBarSeparator" />
+    </RelativeLayout>
+
+</LinearLayout>

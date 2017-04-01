@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="5dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="5dp">
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="80dp"
+        android:gravity="right"
+        android:lines="1"
+        android:text="杨子荣"
+        android:textColor="@color/colorTitleTextGray"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/text_in"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_toLeftOf="@+id/icon_in"
+        android:layout_toStartOf="@+id/icon_in"
+        android:background="@drawable/chatitem_out_bg"
+        android:gravity="center"
+        android:text="紧三天，慢三天，怎么看不见天王山?"
+        android:textSize="15sp" />
+
+
+    <com.qy.ysys.yishengyishi.views.customviews.CircleImageView
+
+        android:id="@+id/icon_in"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_title"
+        android:src="@mipmap/ic_head" />
+</RelativeLayout>

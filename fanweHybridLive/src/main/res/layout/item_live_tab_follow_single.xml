@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="10dp">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="46%sw"
+        app:layout_widthPercent="46%sw">
+
+
+        <ImageView
+            android:id="@+id/iv_head_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:id="@+id/iv_ringgirl_logo"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_ringgirl_logo"
+            />
+
+        <TextView
+            android:id="@id/tv_name"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:layout_alignParentBottom="true"/>
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_marginLeft="2dp"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/iv_level"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="24dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:src="@drawable/rank_1"/>&ndash;&gt;-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/iv_position"-->
+                <!--android:layout_width="8dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:src="@drawable/create_room_position_open"/>-->
+
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_city"-->
+                <!--style="@style/text_item_content"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="3dp"-->
+                <!--android:text="难道在火星?"-->
+                <!--android:textColor="#ffffff"-->
+                <!--android:textSize="11sp"/>-->
+
+
+        <!--</LinearLayout>-->
+
+        <TextView
+            android:id="@+id/tv_vediostate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/shape_round_rect_live_hot"
+            android:gravity="center"
+            android:paddingBottom="2dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="2dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:visibility="invisible"/>
+    </RelativeLayout>
+
+
+</com.zhy.android.percent.support.PercentLinearLayout>

@@ -1,0 +1,172 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#131313"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_search_top"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/black"
+        android:gravity="center_vertical"
+        android:paddingBottom="3dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"
+        android:paddingTop="3dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="集装箱GAME"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_search" />
+
+    </RelativeLayout>
+
+    <com.fanwe.live.view.SDProgressPullToRefreshScrollView
+        android:id="@+id/ptrsv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_search_top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.bigkoo.convenientbanner.ConvenientBanner xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/convenientBanner"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                app:canLoop="true" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pool"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+                <com.fanwe.live.view.BonusPoolView
+                    android:id="@+id/tv_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="463,895,658"
+                    android:background="@color/live_bg_normal"
+                    android:textColor="@color/live_orange"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#212121"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_pool"
+                    style="@style/text_home_big_icons"
+                    android:drawableTop="@drawable/ic_reward_pool"
+                    android:text="奖金池" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tv_player_rank"
+                    style="@style/text_home_big_icons"
+                    android:drawableTop="@drawable/ic_player_rank"
+                    android:text="选手排行榜" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tv_fans_rank"
+                    style="@style/text_home_big_icons"
+                    android:drawableTop="@drawable/ic_fans_rank"
+                    android:text="粉丝排行榜" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tv_news"
+                    style="@style/text_home_big_icons"
+                    android:drawableTop="@drawable/ic_news"
+                    android:text="最新动态" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="活动专区"
+                    android:textColor="@android:color/white" />
+
+                <ImageView
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="14dp"
+                    android:src="@drawable/ic_right_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+
+            <com.fanwe.library.view.SDRecyclerView
+                android:id="@+id/list_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+
+
+        </LinearLayout>
+
+    </com.fanwe.live.view.SDProgressPullToRefreshScrollView>
+
+    <ImageView
+        android:id="@+id/iv_start_live"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:padding="10dp"
+        android:src="@drawable/ic_start_live" />
+
+</RelativeLayout>

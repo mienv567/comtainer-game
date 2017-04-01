@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="38dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="5dp">
+
+    <com.fanwe.live.view.SDSlidingButton
+        android:id="@+id/sl_btn"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        android:gravity="center_vertical">
+
+        <!--<ImageView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="35dp"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:src="@drawable/shape_round_rect_live_msg_normal"/>-->
+
+        <!--<ImageView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="35dp"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:src="@drawable/shape_round_rect_live_msg_selected"-->
+            <!--/>-->
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+
+            android:src="@drawable/switch_setting_white_corner_track"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+
+            android:src="@drawable/switch_setting_main_color_corner_track_orange"/>
+
+        <ImageView
+            android:id="@+id/iv_pop_msg_handle"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/bg_live_pop_msg_handle_normal"/>
+    </com.fanwe.live.view.SDSlidingButton>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <EditText
+            android:id="@+id/et_content"
+            style="@style/edit_base"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_live_pop_msg"
+            android:hint="@string/live_send_msg_hint_normal"
+            android:imeOptions="flagNoExtractUi"
+            android:minHeight="31dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="50dp"/>
+
+        <TextView
+            android:id="@+id/tv_send"
+            style="@style/btn_base"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/send"
+            android:textColor="#E95520"
+            android:textSize="12sp"/>
+    </RelativeLayout>
+</LinearLayout>

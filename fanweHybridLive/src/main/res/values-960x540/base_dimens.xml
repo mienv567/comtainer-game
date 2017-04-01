@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!-- 关注banner高度 -->
+    <dimen name="base_image_banner_h">120dp</dimen>
+</resources>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lr_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <RelativeLayout
+        android:id="@+id/rl_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layer_black_corner_15dp">
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp">
+
+
+            <LinearLayout
+                android:id="@+id/ll_close"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_second"
+            android:layout_below="@id/rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:textColor="#8d8d8d"
+                android:textSize="16sp"
+                android:text="@string/please_input_invite_code_colon"/>
+            <com.fanwe.live.view.LineEditText
+                android:id="@+id/et_input_invite"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:maxLength="6"
+                android:background="@null"
+                android:textColor="#8d8d8d"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_one"
+            android:layout_below="@id/ll_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#606060"
+            android:text="@string/bind_friends_invite_code"/>
+
+        <TextView
+            android:id="@+id/tv_two"
+            android:layout_below="@id/tv_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textColor="#606060"
+            android:text="@string/every_one_can_bind"/>
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="20dp"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/tv_two"
+            android:background="@drawable/bg_task_detail_confirm"
+            android:gravity="center"
+            android:minHeight="40dp"
+            android:text="@string/confirm"
+            android:textColor="@color/main_color"
+            android:textSize="17sp" />
+    </RelativeLayout>
+    <View
+        android:id="@+id/v_line"
+        android:layout_width="1dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/rl_one"
+        android:layout_centerHorizontal="true"
+        android:background="#8d8b8b" />
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="56dp"
+        android:layout_below="@id/rl_one"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_sign_close" />
+</RelativeLayout>

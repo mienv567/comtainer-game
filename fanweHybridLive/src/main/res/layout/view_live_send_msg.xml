@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_chat_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/live_bg_dark"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:id="@+id/iv_share_pop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/ic_live_share" />
+
+        <EditText
+            android:id="@+id/et_msg_pop"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_input_rect"
+            android:gravity="center_vertical"
+            android:hint="@string/live_send_msg_hint_normal"
+            android:imeOptions="actionSend"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/base_textsize_12" />
+
+        <ImageView
+            android:id="@+id/iv_gift_pop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/ic_live_gift" />
+
+        <ImageView
+            android:id="@+id/iv_recharge_pop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/ic_live_recharge" />
+    </LinearLayout>
+</FrameLayout>

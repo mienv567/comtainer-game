@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/bg_activity"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp">
+
+            <RelativeLayout
+                android:layout_width="44dp"
+                android:layout_height="44dp">
+
+                <com.fanwe.library.view.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/iv_head"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_default_head"/>
+
+                <com.fanwe.library.view.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/iv_head_small"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginRight="2dp"
+                    android:src="@drawable/ic_default_head"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_nickname"
+                    style="@style/text_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textColor="#595757"
+                    android:textSize="16sp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <!--<ImageView-->
+                    <!--android:layout_width="10dp"-->
+                    <!--android:layout_height="10dp"-->
+
+                    <!--android:src="@drawable/ic_user_location"/>-->
+
+                    <TextView
+                        android:id="@+id/tv_city"
+                        style="@style/text_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:textColor="#bababa"
+                        android:textSize="11sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:id="@+id/tv_watch_number"
+                    style="@style/text_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#bababa"
+                    android:textSize="17sp"/>
+
+                <TextView
+                    style="@style/text_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:text="@string/some_is_watching"
+                    android:textColor="#bababa"
+                    android:textSize="11sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_room_image"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                app:layout_heightPercent="100%w"
+                app:layout_widthPercent="100%w"/>
+
+            <TextView
+                android:id="@+id/tv_live_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignRight="@+id/iv_room_image"
+                android:layout_alignTop="@+id/iv_room_image"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/shape_round_rect_live_hot"
+                android:gravity="center"
+                android:paddingBottom="2dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="2dp"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/iv_ringgirl_logo"
+                android:layout_width="120dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible"
+                />
+
+            <TextView
+                android:id="@+id/tv_topic"
+                style="@style/text_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:minHeight="40dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/ll_askfocus"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_round_rect_live_hot_focus"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:paddingTop="2dp"
+                    android:text="关注"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"/>
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="23dp"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/ic_live_hot_focus"
+                    />
+
+
+            </LinearLayout>
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
