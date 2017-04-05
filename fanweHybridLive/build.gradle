@@ -139,5 +139,7 @@ dependencies {
     compile 'com.bigkoo:convenientbanner:2.0.5'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha9'
     compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.3'
+    compile 'com.jakewharton:butterknife:8.5.1'
     testCompile 'junit:junit:4.12'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
 }

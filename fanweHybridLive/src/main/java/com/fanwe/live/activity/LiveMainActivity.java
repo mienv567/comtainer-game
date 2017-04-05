@@ -35,6 +35,7 @@ import com.fanwe.live.dialog.UserSignAwardDialog;
 import com.fanwe.live.event.EImOnForceOffline;
 import com.fanwe.live.event.ELiveMainOpenLeft;
 import com.fanwe.live.event.EStartContextComplete;
+import com.fanwe.live.fragment.BoxBarFragment;
 import com.fanwe.live.fragment.LiveChatRoomFragment;
 import com.fanwe.live.fragment.LiveGuideFragment;
 import com.fanwe.live.fragment.LiveMainFragment;
@@ -45,7 +46,6 @@ import com.fanwe.live.model.UserModel;
 import com.fanwe.live.utils.LiveUtils;
 import com.fanwe.live.utils.LiveVideoChecker;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
-import com.qy.ysys.yishengyishi.views.customviews.FragFamily;
 import com.umeng.analytics.MobclickAgent;
 
 import org.xutils.view.annotation.ViewInject;
@@ -81,7 +81,7 @@ public class LiveMainActivity extends BaseActivity {
     private FragmentTransaction mFragmentTrasaction;
     private LiveMainFragment mMainFragment;
     private SlidingMenu mMenu;
-    private FragFamily mLiveFragFamily;
+    private BoxBarFragment mLiveFragFamily;
     private LiveGuideFragment mGuideFragment;
     private LiveChatRoomFragment mChatRoomFragment;
     private LiveMineFragment mMineFragment;
@@ -143,7 +143,7 @@ public class LiveMainActivity extends BaseActivity {
                 break;
             case R.id.rb_box_bar:
                 if (mLiveFragFamily == null) {
-                    mLiveFragFamily = new FragFamily();
+                    mLiveFragFamily = new BoxBarFragment();
                 }
                 transact(mLiveFragFamily);
                 break;

@@ -1,7 +1,6 @@
 package com.fanwe.live.fragment;
 
 import android.content.Intent;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -11,10 +10,12 @@ import com.chad.library.adapter.base.BaseViewHolder;
 import com.fanwe.hybrid.fragment.BaseFragment;
 import com.fanwe.hybrid.http.AppRequestCallback;
 import com.fanwe.library.adapter.http.model.SDResponse;
+import com.fanwe.library.utils.SDViewBinder;
 import com.fanwe.live.R;
 import com.fanwe.live.activity.PlayerInfoActivity;
 import com.fanwe.live.common.CommonInterface;
-import com.fanwe.live.model.PlayerIntrodutionModel;
+import com.fanwe.live.model.PlayerIntroductionModel;
+import com.fanwe.live.model.PlayerListModel;
 import com.fanwe.live.view.SDProgressPullToRefreshRecyclerView;
 
 import org.xutils.view.annotation.ViewInject;
@@ -40,6 +41,9 @@ public class LiveGuideFragment extends BaseFragment {
     @ViewInject(R.id.list_guide)
     SDProgressPullToRefreshRecyclerView list_guide;
 
+    List<PlayerIntroductionModel> mModels;
+    private BaseQuickAdapter mAdapter;
+
     @Override
     protected int onCreateContentView() {
         return R.layout.frag_guide;
@@ -50,35 +54,48 @@ public class LiveGuideFragment extends BaseFragment {
         tv_title.setText("指引");
         tv_right.setVisibility(View.GONE);
         iv_left.setVisibility(View.GONE);
-        List<String> data = new ArrayList();
-        for (int i = 0; i < 10; i++) {
-            data.add("111");
-        }
-        BaseQuickAdapter adapter = new BaseQuickAdapter<String, BaseViewHolder>(R.layout.item_guide, data) {
+
+        mModels = new ArrayList<>();
+
+        mAdapter = new BaseQuickAdapter<PlayerIntroductionModel,
+                BaseViewHolder>(R.layout.item_guide, mModels) {
 
             @Override
-            protected void convert(BaseViewHolder helper, String item) {
-
+            protected void convert(BaseViewHolder helper, PlayerIntroductionModel item) {
+                ImageView playerHead = helper.getView(R.id.iv_head_image);
+                SDViewBinder.setImageView(getActivity(), playerHead, item.headImage);
+                helper.setText(R.id.tv_player_name, item.nickName);
+                helper.setText(R.id.tv_introduce, item.introduce);
             }
         };
         View view = View.inflate(getActivity(), R.layout.layout_task_guide_header, null);
-        adapter.addHeaderView(view);
+        mAdapter.addHeaderView(view);
         list_guide.getRefreshableView().setLinearVertical();
-        list_guide.getRefreshableView().setAdapter(adapter);
-        adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+        list_guide.getRefreshableView().setAdapter(mAdapter);
+        mAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
                 Intent intent = new Intent(getActivity(), PlayerInfoActivity.class);
+                intent.putExtra("player_info", (PlayerIntroductionModel) adapter.getItem(position));
                 getActivity().startActivity(intent);
             }
         });
 
-        CommonInterface.requestPlayerList(new AppRequestCallback<List<PlayerIntrodutionModel>>() {
+        requestPlayerList();
+    }
+
+    private void requestPlayerList() {
+        CommonInterface.requestPlayerList(new AppRequestCallback<PlayerListModel>() {
             @Override
             protected void onSuccess(SDResponse sdResponse) {
-                Log.d("LiveGuideFragment", "onSuccess: ");
+                if (actModel.isOk()) {
+                    if (actModel.players != null) {
+                        mModels = actModel.players;
+                        mAdapter.setNewData(mModels);
+                    }
+                }
             }
         });
     }
-    
+
 }

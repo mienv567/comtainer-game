@@ -650,4 +650,5 @@
     <string name="search_friend">搜索好友</string>
     <string name="verify">验证</string>
     <string name="props_list">道具清单</string>
+    <string name="feedback_hint">你有什么好的意见，或者遇到什么问题，都可以在这里反馈给我们噢~</string>
 </resources>

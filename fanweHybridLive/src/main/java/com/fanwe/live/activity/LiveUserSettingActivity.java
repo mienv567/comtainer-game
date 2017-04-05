@@ -1,7 +1,6 @@
 package com.fanwe.live.activity;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -18,7 +17,6 @@ import com.fanwe.library.utils.SDPackageUtil;
 import com.fanwe.library.utils.SDViewUtil;
 import com.fanwe.live.R;
 import com.fanwe.live.model.App_InitH5Model;
-import com.handmark.pulltorefresh.library.internal.SDUtils;
 import com.umeng.analytics.MobclickAgent;
 
 import org.xutils.view.annotation.ViewInject;
@@ -26,8 +24,7 @@ import org.xutils.view.annotation.ViewInject;
 /**
  * Created by Administrator on 2016/7/11.
  */
-public class LiveUserSettingActivity extends BaseTitleActivity
-{
+public class LiveUserSettingActivity extends BaseTitleActivity {
 
     @ViewInject(R.id.ll_account_and_safety)
     private LinearLayout ll_account_and_safety;
@@ -53,15 +50,13 @@ public class LiveUserSettingActivity extends BaseTitleActivity
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_live_user_setting);
         initView();
     }
 
-    private void initView()
-    {
+    private void initView() {
         initTitle();
         ll_account_and_safety.setOnClickListener(this);
         ll_black_list.setOnClickListener(this);
@@ -71,16 +66,14 @@ public class LiveUserSettingActivity extends BaseTitleActivity
         ll_about_us.setOnClickListener(this);
         ll_change_server.setOnClickListener(this);
         tv_logout.setOnClickListener(this);
-        if (ApkConstant.DEBUG)
-        {
+        if (ApkConstant.DEBUG) {
             tv_start_test_activity.setOnClickListener(this);
             SDViewUtil.show(tv_start_test_activity);
         }
         getLocalVersion();
     }
 
-    private void initTitle()
-    {
+    private void initTitle() {
         mTitle.setMiddleTextTop("设置");
         mTitle.setOnClickListener(this);
     }
@@ -88,17 +81,14 @@ public class LiveUserSettingActivity extends BaseTitleActivity
     /**
      * 获取本地版本号
      */
-    private void getLocalVersion()
-    {
+    private void getLocalVersion() {
         tv_version_name.setText(SDPackageUtil.getVersionName());
     }
 
     @Override
-    public void onClick(View v)
-    {
+    public void onClick(View v) {
         super.onClick(v);
-        switch (v.getId())
-        {
+        switch (v.getId()) {
             case R.id.ll_account_and_safety:
                 openAccountCenter();
                 break;
@@ -136,20 +126,16 @@ public class LiveUserSettingActivity extends BaseTitleActivity
         startActivity(intent);
     }
 
-    private void clickLogout()
-    {
+    private void clickLogout() {
         App.getApplication().logout(true);
         MobclickAgent.onProfileSignOff();
     }
 
-    private void openAboutUs()
-    {
+    private void openAboutUs() {
         InitActModel initActModel = InitActModelDao.query();
-        if (initActModel != null)
-        {
+        if (initActModel != null) {
             App_InitH5Model h5Model = initActModel.getH5_url();
-            if (h5Model != null)
-            {
+            if (h5Model != null) {
                 String url = h5Model.getUrl_about_we();
                 Intent intent = new Intent(this, LiveWebViewActivity.class);
                 intent.putExtra(LiveWebViewActivity.EXTRA_URL, url);
@@ -159,9 +145,8 @@ public class LiveUserSettingActivity extends BaseTitleActivity
         }
     }
 
-    private void openHelpAndFeedback()
-    {
-        InitActModel initActModel = InitActModelDao.query();
+    private void openHelpAndFeedback() {
+        /*InitActModel initActModel = InitActModelDao.query();
         if (initActModel != null)
         {
             App_InitH5Model h5Model = initActModel.getH5_url();
@@ -173,14 +158,15 @@ public class LiveUserSettingActivity extends BaseTitleActivity
                 intent.putExtra(LiveWebViewActivity.EXTRA_TITLE,getString(R.string.my_service));
                 startActivity(intent);
             }
-        }
+        }*/
+        Intent intent = new Intent(this, LiveMyServiceActivity.class);
+        startActivity(intent);
     }
 
     /**
      * 打开账号安全中心
      */
-    private void openAccountCenter()
-    {
+    private void openAccountCenter() {
         Intent intent = new Intent(this, LiveAccountCenterActivity.class);
         startActivity(intent);
     }
@@ -188,8 +174,7 @@ public class LiveUserSettingActivity extends BaseTitleActivity
     /**
      * 前往黑名单界面
      */
-    private void openBlackList()
-    {
+    private void openBlackList() {
         Intent intent = new Intent(this, LiveBlackListActivity.class);
         startActivity(intent);
     }
@@ -197,8 +182,7 @@ public class LiveUserSettingActivity extends BaseTitleActivity
     /**
      * 检查版本
      */
-    private void checkVersion()
-    {
+    private void checkVersion() {
         Intent updateIntent = new Intent(this, AppUpgradeService.class);
         updateIntent.putExtra(AppUpgradeService.EXTRA_SERVICE_START_TYPE, 1);
         startService(updateIntent);
@@ -207,15 +191,13 @@ public class LiveUserSettingActivity extends BaseTitleActivity
     /**
      * 打开推送管理界面
      */
-    private void openPushManage()
-    {
+    private void openPushManage() {
         Intent intent = new Intent(this, LivePushManageActivity.class);
         startActivity(intent);
     }
 
     /*测试页面*/
-    private void clickTvStartTestActivity()
-    {
+    private void clickTvStartTestActivity() {
         Intent intent = new Intent(this, AuctionTestCrossingActivity.class);
         startActivity(intent);
     }

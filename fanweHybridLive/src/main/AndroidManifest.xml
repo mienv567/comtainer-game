@@ -919,7 +919,11 @@
         <activity android:name=".activity.PlayersRankActivity" />
         <activity android:name=".activity.PlayerInfoActivity" />
         <activity android:name=".activity.MyTaskActivity" />
-        <activity android:name=".activity.PropsListActivity"></activity>
+        <activity android:name=".activity.PropsListActivity" />
+        <activity android:name=".activity.LiveMyServiceActivity" />
+        <activity
+            android:name=".activity.LiveFeedBackActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
     </application>
 
 </manifest>

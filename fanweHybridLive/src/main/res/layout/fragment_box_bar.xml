@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@android:color/black">
+
+        <ImageView
+            android:id="@+id/iv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_share" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/box_bar"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="@string/republic"
+            android:textColor="@color/live_text_color_light" />
+    </FrameLayout>
+
+    <com.fanwe.live.view.SDProgressPullToRefreshRecyclerView
+        android:id="@+id/recyclerView_box_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/live_bg_normal"
+        android:scrollbars="none" />
+
+</LinearLayout>

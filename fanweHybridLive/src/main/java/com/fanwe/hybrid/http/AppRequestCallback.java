@@ -2,6 +2,7 @@ package com.fanwe.hybrid.http;
 
 import android.text.TextUtils;
 
+import com.alibaba.fastjson.JSON;
 import com.fanwe.hybrid.app.App;
 import com.fanwe.hybrid.dao.JsonDbModelDao;
 import com.fanwe.hybrid.event.EUnLogin;
@@ -16,9 +17,6 @@ import com.fanwe.library.utils.LogUtil;
 import com.fanwe.library.utils.SDJsonUtil;
 import com.fanwe.live.model.App_root_model;
 import com.sunday.eventbus.SDEventManager;
-
-import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
 
 public abstract class AppRequestCallback<D> extends SDModelRequestCallback<D> {
 
@@ -94,11 +92,11 @@ public abstract class AppRequestCallback<D> extends SDModelRequestCallback<D> {
                         break;
                 }
                 // 解密后的result赋值回去
-//                try {
-//                    result = URLDecoder.decode(result,"UTF-8");
-//                } catch (UnsupportedEncodingException e) {
-//                    e.printStackTrace();
-//                }
+                //                try {
+                //                    result = URLDecoder.decode(result,"UTF-8");
+                //                } catch (UnsupportedEncodingException e) {
+                //                    e.printStackTrace();
+                //                }
                 resp.setResult(result);
 
             }
@@ -123,7 +121,11 @@ public abstract class AppRequestCallback<D> extends SDModelRequestCallback<D> {
                 }
             }
         } else
-            actModel = SDJsonUtil.json2Object(rootModel.getReturnObj(), clazz);
+        //actModel = SDJsonUtil.json2Object(rootModel.getReturnObj(), clazz);
+        {
+            actModel = JSON.parseObject(rootModel.getReturnObj(), getType(this.getClass(), 0));
+
+        }
         if ("0000".equals(rootModel.getCode())) {
             ((BaseActModel) actModel).setStatus(1);
         } else {

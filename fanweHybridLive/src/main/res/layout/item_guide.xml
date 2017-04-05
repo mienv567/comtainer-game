@@ -6,7 +6,6 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="108dp"
-        android:background="@android:color/black"
         android:paddingRight="20dp">
 
         <ImageView
@@ -31,6 +30,7 @@
             android:textSize="14sp" />
 
         <TextView
+            android:id="@+id/tv_introduce"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@id/iv_head_image"

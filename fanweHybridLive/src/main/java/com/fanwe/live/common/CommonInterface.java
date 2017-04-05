@@ -79,6 +79,7 @@ import com.fanwe.live.model.CategoryDetailModel;
 import com.fanwe.live.model.CategoryListModel;
 import com.fanwe.live.model.CategoryNameListModel;
 import com.fanwe.live.model.Deal_send_propActModel;
+import com.fanwe.live.model.FamilyDataListModel;
 import com.fanwe.live.model.GoodsHistoryListModel;
 import com.fanwe.live.model.GoodsListModel;
 import com.fanwe.live.model.IndexSearch_areaActModel;
@@ -91,7 +92,7 @@ import com.fanwe.live.model.Login_test_loginActModel;
 import com.fanwe.live.model.Music_downurlActModel;
 import com.fanwe.live.model.Music_searchActModel;
 import com.fanwe.live.model.Music_user_musicActModel;
-import com.fanwe.live.model.PlayerIntrodutionModel;
+import com.fanwe.live.model.PlayerListModel;
 import com.fanwe.live.model.RankModel;
 import com.fanwe.live.model.SettingsSecurityActModel;
 import com.fanwe.live.model.Settings_black_listActModel;
@@ -2487,10 +2488,28 @@ public class CommonInterface {
         AppHttpUtil.getInstance().post(params, listener);
     }
 
-    public static void requestPlayerList(AppRequestCallback<List<PlayerIntrodutionModel>> listener) {
+    /**
+     * 主播列表
+     */
+    public static void requestPlayerList(AppRequestCallback<PlayerListModel> listener) {
         AppRequestParams params = new AppRequestParams();
         params.putCtl("guide");
         params.putAct("playerList");
+        AppHttpUtil.getInstance().post(params, listener);
+    }
+
+    /**
+     * 箱吧 - 动态列表
+     *
+     * @param page     当前页 默认值1
+     * @param pageSize 每页显示记录条数
+     */
+    public static void queryFamilyList(int page, int pageSize, AppRequestCallback<List<FamilyDataListModel>> listener) {
+        AppRequestParams params = new AppRequestParams();
+        params.putCtl("boxZone");
+        params.putAct("queryList");
+        params.put("page", page);
+        params.put("pageSize", pageSize);
         AppHttpUtil.getInstance().post(params, listener);
     }
 }
