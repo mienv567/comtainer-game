@@ -74,7 +74,7 @@ public class UserInviteDialog extends SDDialogBase {
                     CommonInterface.submitUserInvite(inputCode, new AppRequestCallback<UserInviteModel>() {
                         @Override
                         protected void onSuccess(SDResponse sdResponse) {
-                            if (actModel.getStatus() == 1) {
+                            if (rootModel.getStatus() == 1) {
                                 SDToast.showToast(SDResourcesUtil.getString(R.string.bind_success));
                                 mBindSuccess = true;
                             } else {

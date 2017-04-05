@@ -101,7 +101,7 @@ public class LiveSelectLiveView extends BaseAppView
             @Override
             protected void onSuccess(SDResponse resp)
             {
-                if (actModel.isOk())
+                if (rootModel.isOk())
                 {
                     listModel.clear();
 

@@ -89,7 +89,7 @@ public class LiveUserProfitRecordActivity extends BaseTitleActivity
             @Override
             protected void onSuccess(SDResponse resp)
             {
-                if (actModel.isOk())
+                if (rootModel.isOk())
                 {
                     tv_summary.setText(actModel.getTotal_money() + "元");
                     mListRecord = actModel.getList();

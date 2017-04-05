@@ -179,7 +179,7 @@ public class UserTaskActivity extends BaseTitleActivity {
         CommonInterface.requestMyTask(NOT_COMPLETED_TASK, new AppRequestCallback<UserTaskModel>() {
             @Override
             protected void onSuccess(SDResponse sdResponse) {
-                if (actModel.isOk()) {
+                if (rootModel.isOk()) {
                     divideTasks(actModel.getMain_task());
                     mMainTaskFragment.setData(mMainTasks);
                     mDayTaskFragment.setData(mDayTasks);

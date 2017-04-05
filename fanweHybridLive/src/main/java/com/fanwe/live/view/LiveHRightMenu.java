@@ -182,7 +182,7 @@ public class LiveHRightMenu extends RoomView implements View.OnClickListener {
                  }
                  }
                  }*/
-                if (actModel.isOk()) {
+                if (rootModel.isOk()) {
                     showTaskPanel(v);
                     mTaskPanel.setAppTaskModel(actModel);
                 } else {

@@ -291,7 +291,7 @@ public class LiveSongDownloadManager {
 					
 					@Override
 					protected void onSuccess(SDResponse resp) {
-						if (actModel.isOk()) {
+						if (rootModel.isOk()) {
 							statusDownloadSucc(model);
 						}else {
 							statusDownloadErr(model);

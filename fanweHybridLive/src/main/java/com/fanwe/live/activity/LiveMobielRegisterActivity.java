@@ -39,8 +39,7 @@ import java.io.Serializable;
 /**
  * Created by Administrator on 2016/7/5.
  */
-public class LiveMobielRegisterActivity extends BaseTitleActivity
-{
+public class LiveMobielRegisterActivity extends BaseTitleActivity {
 
     @ViewInject(R.id.ll_image_code)
     private LinearLayout ll_image_code;
@@ -64,35 +63,30 @@ public class LiveMobielRegisterActivity extends BaseTitleActivity
     private String strImageCode;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_live_mobile_register);
         init();
     }
 
-    private void init()
-    {
+    private void init() {
         register();
         initTitle();
         reqeustIsUserVerify();
         initSDSendValidateButton();
     }
 
-    private void register()
-    {
+    private void register() {
         tv_login.setOnClickListener(this);
         iv_image_code.setOnClickListener(this);
     }
 
-    private void initTitle()
-    {
+    private void initTitle() {
         mTitle.setMiddleTextTop(getString(R.string.mobile_register));
     }
 
 
-    private void initSDSendValidateButton()
-    {
+    private void initSDSendValidateButton() {
         btn_send_code.setmListener(new SDSendValidateButton.SDSendValidateButtonListener() {
             @Override
             public void onTick() {
@@ -105,12 +99,11 @@ public class LiveMobielRegisterActivity extends BaseTitleActivity
         });
     }
 
-    private void reqeustIsUserVerify()
-    {
+    private void reqeustIsUserVerify() {
         CommonInterface.requestIsUserVerify(new AppRequestCallback<App_is_user_verifyActModel>() {
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.getStatus() == 1) {
+                if (rootModel.getStatus() == 1) {
                     SDViewUtil.show(ll_image_code);
                     SDViewBinder.setImageView(LiveMobielRegisterActivity.this, actModel.getVerify_url(), iv_image_code);
                 } else {
@@ -126,20 +119,16 @@ public class LiveMobielRegisterActivity extends BaseTitleActivity
     }
 
 
-    private void requestSendCode()
-    {
+    private void requestSendCode() {
         strMobile = et_mobile.getText().toString();
         strImageCode = et_image_code.getText().toString();
 
-        if (TextUtils.isEmpty(strMobile))
-        {
+        if (TextUtils.isEmpty(strMobile)) {
             SDToast.showToast(getString(R.string.please_input_phone_number));
             return;
         }
-        if (ll_image_code.getVisibility() == View.VISIBLE)
-        {
-            if (TextUtils.isEmpty(strImageCode))
-            {
+        if (ll_image_code.getVisibility() == View.VISIBLE) {
+            if (TextUtils.isEmpty(strImageCode)) {
                 SDToast.showToast(getString(R.string.please_input_pic_ver_code));
                 return;
             }
@@ -149,7 +138,7 @@ public class LiveMobielRegisterActivity extends BaseTitleActivity
         CommonInterface.requestSendMobileVerify(0, strMobile, strImageCode, new AppRequestCallback<App_send_mobile_verifyActModel>() {
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.getStatus() == 1) {
+                if (rootModel.getStatus() == 1) {
                     btn_send_code.setmDisableTime(actModel.getTime());
                     btn_send_code.startTickWork();
                 }
@@ -164,11 +153,9 @@ public class LiveMobielRegisterActivity extends BaseTitleActivity
     }
 
     @Override
-    public void onClick(View v)
-    {
+    public void onClick(View v) {
         super.onClick(v);
-        switch (v.getId())
-        {
+        switch (v.getId()) {
             case R.id.iv_image_code:
                 reqeustIsUserVerify();
                 break;
@@ -178,17 +165,14 @@ public class LiveMobielRegisterActivity extends BaseTitleActivity
         }
     }
 
-    private void clickTvLogin()
-    {
+    private void clickTvLogin() {
         strMobile = et_mobile.getText().toString();
-        if (TextUtils.isEmpty(strMobile))
-        {
+        if (TextUtils.isEmpty(strMobile)) {
             SDToast.showToast(getString(R.string.please_input_phone_number));
             return;
         }
         String code = et_code.getText().toString();
-        if (TextUtils.isEmpty(code))
-        {
+        if (TextUtils.isEmpty(code)) {
             SDToast.showToast(getString(R.string.please_input_ver_code));
             return;
         }
@@ -201,7 +185,7 @@ public class LiveMobielRegisterActivity extends BaseTitleActivity
 
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.getStatus() == 1) {
+                if (rootModel.getStatus() == 1) {
                     dealSuccess(actModel);
                     if (actModel.getUser() != null) {
                         MobclickAgent.onProfileSignIn("MOBILE", actModel.getUser().getUserId());
@@ -210,7 +194,9 @@ public class LiveMobielRegisterActivity extends BaseTitleActivity
                     CommonInterface.requestRedPoint(new AppRequestCallback<RedPointModel>() {
                         @Override
                         protected void onSuccess(SDResponse sdResponse) {
-                            RedPointUtil.postRedPointEvent(actModel);
+                            if (rootModel.getStatus() == 1) {
+                                RedPointUtil.postRedPointEvent(actModel);
+                            }
                         }
                     });
                 }
@@ -224,55 +210,45 @@ public class LiveMobielRegisterActivity extends BaseTitleActivity
         });
     }
 
-    private void dealSuccess(App_do_loginActModel actModel)
-    {
+    private void dealSuccess(App_do_loginActModel actModel) {
         UserModel user = actModel.getUser();
-        if (user != null)
-        {
-            if (actModel.getIsLack() == 1)
-            {
+        if (user != null) {
+            if (actModel.getIsLack() == 1) {
                 Intent intent = new Intent(this, LiveDoUpdateActivity.class);
                 intent.putExtra(LiveDoUpdateActivity.EXTRA_USER_MODEL, (Serializable) user);
                 startActivity(intent);
-            } else
-            {
-                if (UserModel.dealLoginSuccess(user, true))
-                {
-                    if(AppRuntimeWorker.hasRecommendRoom()){
+            } else {
+                if (UserModel.dealLoginSuccess(user, true)) {
+                    if (AppRuntimeWorker.hasRecommendRoom()) {
                         AppRuntimeWorker.startContext();
-                    }else{
+                    } else {
                         Intent intent = new Intent(LiveMobielRegisterActivity.this, LiveMainActivity.class);
                         startActivity(intent);
                         finish();
                     }
-                } else
-                {
+                } else {
                     SDToast.showToast(getString(R.string.save_user_info_fail));
                 }
             }
-        } else
-        {
+        } else {
             SDToast.showToast(getString(R.string.get_user_info_fail));
         }
     }
 
-    public void onEventMainThread(EStartContextComplete event)
-    {
-        if (!LiveUtils.isResultOk(event.result))
-        {
+    public void onEventMainThread(EStartContextComplete event) {
+        if (!LiveUtils.isResultOk(event.result)) {
             LogUtil.e("启动sdk失败:" + event.result);
             Intent intent = new Intent(this, LiveMainActivity.class);
             startActivity(intent);
             finish();
-        }else{
+        } else {
             AppRuntimeWorker.joinRecommendRoom(LiveMobielRegisterActivity.this);
         }
     }
 
     /*登录成功接收事件*/
-    public void onEventMainThread(EUserLoginSuccess event)
-    {
-        if(!AppRuntimeWorker.hasRecommendRoom()){
+    public void onEventMainThread(EUserLoginSuccess event) {
+        if (!AppRuntimeWorker.hasRecommendRoom()) {
             finish();
         }
     }

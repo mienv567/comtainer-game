@@ -108,7 +108,7 @@ public class LiveVideoChecker
             @Override
             protected void onSuccess(SDResponse resp)
             {
-                if (actModel.isOk())
+                if (rootModel.isOk())
                 {
                     showCheckDialog(actModel);
                 }

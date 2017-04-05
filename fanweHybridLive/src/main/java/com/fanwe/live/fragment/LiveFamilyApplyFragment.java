@@ -146,9 +146,9 @@ public class LiveFamilyApplyFragment extends BaseFragment
             @Override
             protected void onSuccess(SDResponse resp)
             {
-                if (actModel.isOk())
+                if (rootModel.isOk())
                 {
-                    if (actModel.getStatus() == 1)
+                    if (rootModel.getStatus() == 1)
                     {
                         tab_live_apply.setTextTitle("成员申请(" + actModel.getRs_count() + ")");
                         pageModel = actModel.getPage();
@@ -183,7 +183,7 @@ public class LiveFamilyApplyFragment extends BaseFragment
             @Override
             protected void onSuccess(SDResponse sdResponse)
             {
-                if (actModel.getStatus() == 1)
+                if (rootModel.getStatus() == 1)
                 {
                     SDToast.showToast(actModel.getError().toString());
                     adapter.removeData(item);

@@ -147,7 +147,7 @@ public class LiveSongSearchActivity extends BaseActivity implements SearchViewLi
 
 			@Override
 			protected void onSuccess(SDResponse resp) {
-				if (actModel.isOk()) {
+				if (rootModel.isOk()) {
 					model.setAudio_link(actModel.getAudio().getAudio_link());
 					model.setTime_len(actModel.getAudio().getTime_len());
 					model.setLrc_content(actModel.getAudio().getLrc_content());
@@ -163,7 +163,7 @@ public class LiveSongSearchActivity extends BaseActivity implements SearchViewLi
 
 			@Override
 			protected void onSuccess(SDResponse resp) {
-				if (actModel.isOk()) {
+				if (rootModel.isOk()) {
 					model.setAudio_link(actModel.getAudio().getAudio_link());
 					model.setTime_len(actModel.getAudio().getTime_len());
 					model.setLrc_content(actModel.getAudio().getLrc_content());
@@ -198,7 +198,7 @@ public class LiveSongSearchActivity extends BaseActivity implements SearchViewLi
 			@Override
 			protected void onSuccess(SDResponse resp) {
 				
-				if (actModel.isOk()) {
+				if (rootModel.isOk()) {
 					mHistoryListView.setVisibility(View.GONE);
 					if (mPage == 1) {
 						mSongAdapter.updateData(actModel.getList());

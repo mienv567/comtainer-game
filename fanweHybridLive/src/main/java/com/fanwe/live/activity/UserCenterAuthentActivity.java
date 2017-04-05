@@ -254,7 +254,7 @@ public class UserCenterAuthentActivity extends BaseTitleActivity
             @Override
             protected void onSuccess(SDResponse resp)
             {
-                if (actModel.isOk())
+                if (rootModel.isOk())
                 {
                     app_AuthentActModel = actModel;
                     bindActModel(actModel);
@@ -387,7 +387,7 @@ public class UserCenterAuthentActivity extends BaseTitleActivity
             @Override
             protected void onSuccess(SDResponse resp)
             {
-                if (actModel.isOk())
+                if (rootModel.isOk())
                 {
                     finish();
                 }

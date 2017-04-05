@@ -150,7 +150,7 @@ public class LiveBlackListActivity extends BaseTitleActivity
                 @Override
                 protected void onSuccess(SDResponse resp)
                 {
-                    if (actModel.isOk())
+                    if (rootModel.isOk())
                     {
                         requestData(false);
                     }
@@ -182,7 +182,7 @@ public class LiveBlackListActivity extends BaseTitleActivity
             @Override
             protected void onSuccess(SDResponse resp)
             {
-                if (actModel.isOk())
+                if (rootModel.isOk())
                 {
                     has_next = actModel.getHas_next();
 

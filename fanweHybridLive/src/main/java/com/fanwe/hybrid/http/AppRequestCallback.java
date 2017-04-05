@@ -23,6 +23,7 @@ public abstract class AppRequestCallback<D> extends SDModelRequestCallback<D> {
     protected AppRequestParams requestParams;
     protected BaseActModel baseActModel;
     protected boolean isCache;
+    protected App_root_model rootModel;
 
     @Override
     protected void onStartAfter() {
@@ -108,7 +109,7 @@ public abstract class AppRequestCallback<D> extends SDModelRequestCallback<D> {
 
         String result = resp.getResult();
         // 后台切换之后，返回数据的格式变了，此时先将返回的obj从rootModel中取出，再返给resp的result，这样可以保证super的onSuccessBefore可以正常处理
-        App_root_model rootModel = SDJsonUtil.json2Object(result, App_root_model.class);
+        rootModel = SDJsonUtil.json2Object(result, App_root_model.class);
 
         if (rootModel.getReturnObj() == null) {
             if (this.clazz != null) {
@@ -127,9 +128,9 @@ public abstract class AppRequestCallback<D> extends SDModelRequestCallback<D> {
 
         }
         if ("0000".equals(rootModel.getCode())) {
-            ((BaseActModel) actModel).setStatus(1);
+            rootModel.setStatus(1);
         } else {
-            ((BaseActModel) actModel).setError(rootModel.getMessage());
+            rootModel.setError(rootModel.getMessage());
         }
 
         if (actModel != null) {

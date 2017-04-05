@@ -23,7 +23,6 @@ import com.fanwe.live.activity.LiveRechargeActivity;
 import com.fanwe.live.activity.LiveWebViewActivity;
 import com.fanwe.live.common.CommonInterface;
 import com.fanwe.live.model.App_InitH5Model;
-import com.fanwe.live.model.App_userinfoActModel;
 import com.fanwe.live.model.UserModel;
 import com.sunday.eventbus.SDEventManager;
 
@@ -118,7 +117,7 @@ public class GinsengShootMarginActivity extends BaseTitleActivity
             @Override
             protected void onSuccess(SDResponse resp)
             {
-                if (actModel.isOk())
+                if (rootModel.isOk())
                 {
                     UserModel user = actModel;
 
@@ -161,7 +160,7 @@ public class GinsengShootMarginActivity extends BaseTitleActivity
             @Override
             protected void onSuccess(SDResponse resp)
             {
-                if (actModel.isOk())
+                if (rootModel.isOk())
                 {
                     //缴纳保证金后刷新余额
                     CommonInterface.requestMyUserInfoJava(null);

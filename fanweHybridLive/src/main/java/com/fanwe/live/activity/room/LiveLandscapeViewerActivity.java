@@ -148,7 +148,7 @@ public class LiveLandscapeViewerActivity extends LiveLayoutViewerActivity {
         CommonInterface.requestToken(getRoomId(), new AppRequestCallback<App_get_tokenActModel>() {
                     @Override
                     protected void onSuccess(SDResponse sdResponse) {
-                        if (actModel.isOk()) {
+                        if (rootModel.isOk()) {
                             tooken = actModel.getRoomToken();
                             if (null == tooken || "".equals(tooken)) {
                                 showToast(getString(R.string.can_not_get_room_info), Toast.LENGTH_SHORT);
@@ -553,7 +553,7 @@ public class LiveLandscapeViewerActivity extends LiveLayoutViewerActivity {
             CommonInterface.requestToken(getRoomId(), new AppRequestCallback<App_get_tokenActModel>() {
                 @Override
                 protected void onSuccess(SDResponse sdResponse) {
-                    if (actModel.isOk()) {
+                    if (rootModel.isOk()) {
                         tooken = actModel.getRoomToken();
                         if (null == tooken || "".equals(tooken)) {
                             showToast(getString(R.string.can_not_get_room_info), Toast.LENGTH_SHORT);
@@ -651,7 +651,7 @@ public class LiveLandscapeViewerActivity extends LiveLayoutViewerActivity {
         /*CommonInterface.requestToken(getRoomId(), new AppRequestCallback<App_get_tokenActModel>() {
                     @Override
                     protected void onSuccess(SDResponse sdResponse) {
-                        if (actModel.isOk()) {
+                        if (rootModel.isOk()) {
                             tooken = actModel.getRoomToken();
                             if (null == tooken || "".equals(tooken)) {
                                 SDToast.showToast(getString(R.string.can_not_get_room_info), Toast.LENGTH_SHORT);
@@ -1987,7 +1987,7 @@ public class LiveLandscapeViewerActivity extends LiveLayoutViewerActivity {
         //                            CommonInterface.requestUserInfo(null, names.get(0), new AppRequestCallback<App_userinfoActModel>() {
         //                                @Override
         //                                protected void onSuccess(SDResponse resp) {
-        //                                    if (actModel.getStatus() == 1) {
+        //                                    if (rootModel.getStatus() == 1) {
         //                                        userANickName.setText(actModel.getUser().getNickName());
         //                                    }
         //                                }
@@ -2003,7 +2003,7 @@ public class LiveLandscapeViewerActivity extends LiveLayoutViewerActivity {
         //                            CommonInterface.requestUserInfo(null, names.get(1), new AppRequestCallback<App_userinfoActModel>() {
         //                                @Override
         //                                protected void onSuccess(SDResponse resp) {
-        //                                    if (actModel.getStatus() == 1) {
+        //                                    if (rootModel.getStatus() == 1) {
         //                                        userBNickName.setText(actModel.getUser().getNickName());
         //                                    }
         //                                }
@@ -2019,7 +2019,7 @@ public class LiveLandscapeViewerActivity extends LiveLayoutViewerActivity {
         //                            CommonInterface.requestUserInfo(null, names.get(2), new AppRequestCallback<App_userinfoActModel>() {
         //                                @Override
         //                                protected void onSuccess(SDResponse resp) {
-        //                                    if (actModel.getStatus() == 1) {
+        //                                    if (rootModel.getStatus() == 1) {
         //                                        userCNickName.setText(actModel.getUser().getNickName());
         //                                    }
         //                                }

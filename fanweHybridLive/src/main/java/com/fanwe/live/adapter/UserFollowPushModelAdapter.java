@@ -82,7 +82,7 @@ public class UserFollowPushModelAdapter extends SDSimpleAdapter<UserModel>
                         CommonInterface.requestChangePush(model.getUserId(), new AppRequestCallback<BaseActModel>() {
                             @Override
                             protected void onSuccess(SDResponse sdResponse) {
-                                if(actModel.isOk()){
+                                if(rootModel.isOk()){
                                     if(model.getIsUnpush() == 0){
                                         model.setIsUnpush(1);
                                     }else{

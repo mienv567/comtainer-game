@@ -316,7 +316,7 @@ public class ShoppingAddGoodsView extends AuctionGoodsBaseView implements TextVi
         ShoppingCommonInterface.requestShopAddGoods(user_id, getEtContent(et_goods_name), SDJsonUtil.object2Json(mapPic), Float.valueOf(getEtContent(et_goods_price)), Float.valueOf(getEtContent(et_kd_cost)), getEtContent(et_goods_detail_url), getEtContent(et_goods_des), new AppRequestCallback<App_shop_goodsActModel>() {
             @Override
             protected void onSuccess(SDResponse sdResponse) {
-                if(actModel.isOk()) {
+                if(rootModel.isOk()) {
                     SDToast.showToast("发布商品成功！");
                     getActivity().finish();
                 }
@@ -335,7 +335,7 @@ public class ShoppingAddGoodsView extends AuctionGoodsBaseView implements TextVi
         ShoppingCommonInterface.requestShopEditGoods(mModel.getId(),user_id, getEtContent(et_goods_name), SDJsonUtil.object2Json(mapPic), Float.valueOf(getEtContent(et_goods_price)), Float.valueOf(getEtContent(et_kd_cost)), getEtContent(et_goods_detail_url), getEtContent(et_goods_des), new AppRequestCallback<App_shop_goodsActModel>() {
             @Override
             protected void onSuccess(SDResponse sdResponse) {
-                if(actModel.isOk()) {
+                if(rootModel.isOk()) {
                     SDToast.showToast("编辑商品成功！");
                     getActivity().finish();
                 }

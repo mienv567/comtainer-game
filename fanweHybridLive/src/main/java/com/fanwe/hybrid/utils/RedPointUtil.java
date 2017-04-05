@@ -8,7 +8,6 @@ import com.sunday.eventbus.SDEventManager;
 
 public class RedPointUtil {
     public static void postRedPointEvent(RedPointModel actModel){
-        if(actModel.getStatus() == 1){
             if(actModel.getSign() == 0){
                 App.mShowSignRedPoint = true;
             }else{
@@ -20,6 +19,5 @@ public class RedPointUtil {
                 App.mShowTaskRedPoint = true;
             }
             SDEventManager.post(new ERedPointChange());
-        }
     }
 }

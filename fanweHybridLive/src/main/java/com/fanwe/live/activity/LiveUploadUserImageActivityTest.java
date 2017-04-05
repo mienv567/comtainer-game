@@ -190,7 +190,7 @@ public class LiveUploadUserImageActivityTest extends BaseTitleActivity
             @Override
             protected void onSuccess(SDResponse sdResponse)
             {
-                if (actModel.getStatus() == 1)
+                if (rootModel.getStatus() == 1)
                 {
                     String accessKeyId = actModel.getAccessKeyId();
                     String accessKeySecret = actModel.getAccessKeySecret();

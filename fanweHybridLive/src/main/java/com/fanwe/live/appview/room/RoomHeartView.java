@@ -87,7 +87,7 @@ public class RoomHeartView extends RoomLooperMainView<CustomMsgLight> {
             CommonInterface.requestLike(getLiveInfo().getRoomId(), new AppRequestCallback<BaseActModel>() {
                 @Override
                 protected void onSuccess(SDResponse sdResponse) {
-                    if (actModel.isOk()) {
+                    if (rootModel.isOk()) {
                         LogUtil.i("request like success");
                     }
                 }

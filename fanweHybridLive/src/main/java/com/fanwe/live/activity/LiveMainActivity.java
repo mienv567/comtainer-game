@@ -175,7 +175,7 @@ public class LiveMainActivity extends BaseActivity {
         CommonInterface.requestAppSign(new AppRequestCallback<UserSubmitSignModel>() {
             @Override
             protected void onSuccess(SDResponse sdResponse) {
-                if (actModel.isOk()) {
+                if (rootModel.isOk()) {
                     UserSignAwardDialog dialog = new UserSignAwardDialog(LiveMainActivity.this, actModel);
                     dialog.show();
                     SDViewUtil.show(iv_bg_sign);
@@ -221,7 +221,7 @@ public class LiveMainActivity extends BaseActivity {
 
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.getStatus() == 1) {
+                if (rootModel.getStatus() == 1) {
                     UserModel user = actModel;
 //                    mMainFragment.setUserModel(user);
                     menu_me.setUserModel(user);

@@ -54,7 +54,7 @@ public class LivePropsFragment extends BaseFragment {
         CommonInterface.requestGoodsList(new AppRequestCallback<GoodsListModel>() {
             @Override
             protected void onSuccess(SDResponse sdResponse) {
-                if (actModel.isOk()) {
+                if (rootModel.isOk()) {
                     for (GoodsTypeModel typeModel : actModel.getTypes()) {
                         typeModel.isTitle =true;
                         goodsList.add(typeModel);

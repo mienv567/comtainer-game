@@ -111,7 +111,7 @@ public class LiveTabFollowFragment extends LiveTabBaseFragment
                         CommonInterface.requestMutilFollow(selectdUserIds, new AppRequestCallback<BaseActModel>() {
                             @Override
                             protected void onSuccess(SDResponse sdResponse) {
-                                if(actModel.isOk()){
+                                if(rootModel.isOk()){
                                     requestData();
                                 }
                             }
@@ -159,7 +159,7 @@ public class LiveTabFollowFragment extends LiveTabBaseFragment
         CommonInterface.requestFocusVideo(new AppRequestCallback<Index_focus_videoActModel>() {
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.isOk()) {
+                if (rootModel.isOk()) {
                     synchronized (LiveTabFollowFragment.this) {
                         listRoom = actModel.getList();
                         listFollow = actModel.getRecommend_follow_list();

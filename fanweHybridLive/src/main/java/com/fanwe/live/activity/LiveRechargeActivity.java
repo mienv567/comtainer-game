@@ -248,7 +248,7 @@ public class LiveRechargeActivity extends BaseTitleActivity {
 
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.isOk()) {
+                if (rootModel.isOk()) {
                     PayModel payModel = actModel.getPay();
                     if (payModel != null) {
                         PaySdkModel paySdkModel = payModel.getSdk_code();
@@ -370,7 +370,7 @@ public class LiveRechargeActivity extends BaseTitleActivity {
         CommonInterface.requestRecharge(new AppRequestCallback<App_rechargeActModel>() {
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.isOk()) {
+                if (rootModel.isOk()) {
                     exchangeRate = actModel.getRate();
 
                     if (actModel.getShow_other() == 1) {

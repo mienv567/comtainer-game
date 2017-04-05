@@ -69,7 +69,7 @@ public class LiveAccountCenterActivity extends BaseTitleActivity
             @Override
             protected void onSuccess(SDResponse resp)
             {
-                if (actModel.isOk())
+                if (rootModel.isOk())
                 {
                     bindData(actModel);
                 }

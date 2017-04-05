@@ -1044,7 +1044,7 @@ public class LiveVideoActivity extends LiveLayoutActivity implements View.OnClic
 
                     @Override
                     protected void onSuccess(SDResponse sdResponse) {
-                        if (actModel.isOk()) {
+                        if (rootModel.isOk()) {
                             token = actModel.getRoomToken();
                             if (TextUtils.isEmpty(token)) {
                                 SDToast.showToast(getString(R.string.can_not_get_room_info), Toast.LENGTH_SHORT);
@@ -1158,7 +1158,7 @@ public class LiveVideoActivity extends LiveLayoutActivity implements View.OnClic
             protected void onSuccess(SDResponse resp) {
                 setRoomInfo(actModel);
                 //SDViewBinder.setTextView(scollView.getTv_user_number_left(), String.valueOf(getRoomInfo().getPodcast().getUserId()));
-                if (actModel.isOk()) {
+                if (rootModel.isOk()) {
                     onSuccessRequestRoomInfo(actModel);
                 } else {
                     onErrorRequestRoomInfo(actModel);

@@ -133,7 +133,8 @@ public class PlayerRankFragment extends BaseFragment {
     AppRequestCallback<RankModel> requestCallback = new AppRequestCallback<RankModel>() {
         @Override
         protected void onSuccess(SDResponse sdResponse) {
-            handleData(actModel);
+            if (rootModel.isOk()) {
+            handleData(actModel);}
             pull_to_refresh_view.onRefreshComplete();
         }
 
@@ -145,7 +146,6 @@ public class PlayerRankFragment extends BaseFragment {
     };
 
     private void handleData(RankModel actModel) {
-        if (actModel.isOk()) {
             List<PlayerRankModel> models = actModel.rankingList;
             if (models == null || models.size() == 0) {
                 return;
@@ -164,7 +164,6 @@ public class PlayerRankFragment extends BaseFragment {
                 mSubList.addAll(models);
                 mRankAdapter.setData(mSubList);
             }
-        }
     }
 
     /**

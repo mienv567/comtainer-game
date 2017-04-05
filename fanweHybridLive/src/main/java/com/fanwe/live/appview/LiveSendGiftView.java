@@ -486,7 +486,7 @@ public class LiveSendGiftView extends BaseAppView implements ILivePrivateChatMor
                 CommonInterface.requestGift(mTopicId, new AppRequestCallback<App_propActModel>() {
                     @Override
                     protected void onSuccess(SDResponse resp) {
-                        if (actModel.isOk()) {
+                        if (rootModel.isOk()) {
                             listModel = actModel.getClassification();
                             preLoadGif(listModel);
                             showGiftAdapter();
@@ -512,7 +512,7 @@ public class LiveSendGiftView extends BaseAppView implements ILivePrivateChatMor
         CommonInterface.requestGift(mTopicId, new AppRequestCallback<App_propActModel>() {
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.isOk()) {
+                if (rootModel.isOk()) {
                     List<LiveGiftModel> newListModel = actModel.getClassification();
                     preLoadGif(newListModel);
                     if (listModel != null && listModel.size() > 0 && newListModel != null && newListModel.size() > 0) {

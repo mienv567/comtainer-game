@@ -94,24 +94,25 @@ public class LiveFansRankFragment extends BaseFragment {
                 new AppRequestCallback<RankModel>() {
                     @Override
                     protected void onSuccess(SDResponse sdResponse) {
-                        handleData(actModel);
-                        lv_rank_list.onRefreshComplete();
+
+                        if (rootModel.isOk()) {
+                            handleData(actModel);
+                            lv_rank_list.onRefreshComplete();
+                        }
                     }
                 });
     }
 
     private void handleData(RankModel actModel) {
-        if (actModel.isOk()) {
-            List<PlayerRankModel> models = actModel.rankingList;
-            if (models == null || models.size() == 0) {
-                return;
-            }
-            if (isRefresh) {
-                mRankAdapter.setData(mModels);
-            } else {
-                mModels.addAll(models);
-                mRankAdapter.setData(mModels);
-            }
+        List<PlayerRankModel> models = actModel.rankingList;
+        if (models == null || models.size() == 0) {
+            return;
+        }
+        if (isRefresh) {
+            mRankAdapter.setData(mModels);
+        } else {
+            mModels.addAll(models);
+            mRankAdapter.setData(mModels);
         }
     }
 

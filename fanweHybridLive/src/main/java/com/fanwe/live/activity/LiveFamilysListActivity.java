@@ -144,7 +144,7 @@ public class LiveFamilysListActivity extends BaseTitleActivity implements LiveSo
             @Override
             protected void onSuccess(SDResponse resp)
             {
-                if (actModel.getStatus() == 1)
+                if (rootModel.getStatus() == 1)
                 {
                     has_next = actModel.getPage().getHas_next();
                     SDViewUtil.updateAdapterByList(listModel, actModel.getList(), adapter, isLoadMore);
@@ -214,7 +214,7 @@ public class LiveFamilysListActivity extends BaseTitleActivity implements LiveSo
             @Override
             protected void onSuccess(SDResponse sdResponse)
             {
-                if (actModel.getStatus() == 1)
+                if (rootModel.getStatus() == 1)
                     SDToast.showToast(actModel.getError().toString());
             }
         });

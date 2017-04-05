@@ -83,7 +83,7 @@ public class LivePropsRecyclerAdapter extends SDSimpleRecyclerAdapter<GoodsDetai
         CommonInterface.requestGoodsBuy(activity.getRoomId(), model.getGoodsId(), new AppRequestCallback<BaseActModel>() {
             @Override
             protected void onSuccess(SDResponse sdResponse) {
-                if (actModel.getStatus() == 1) {
+                if (rootModel.getStatus() == 1) {
                     SDToast.showToast("购买成功");
                 } else {
                     SDToast.showToast(actModel.getError());

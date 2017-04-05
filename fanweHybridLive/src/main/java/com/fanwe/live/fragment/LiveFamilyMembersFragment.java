@@ -129,9 +129,9 @@ public class LiveFamilyMembersFragment extends BaseFragment
             @Override
             protected void onSuccess(SDResponse resp)
             {
-                if (actModel.isOk())
+                if (rootModel.isOk())
                 {
-                    if (actModel.getStatus() == 1)
+                    if (rootModel.getStatus() == 1)
                     {
                         tab_live_menb.setTextTitle("家族成员(" + actModel.getRs_count() + ")");
                         pageModel = actModel.getPage();
@@ -165,7 +165,7 @@ public class LiveFamilyMembersFragment extends BaseFragment
             @Override
             protected void onSuccess(SDResponse sdResponse)
             {
-                if (actModel.getStatus() == 1)
+                if (rootModel.getStatus() == 1)
                 {
                     SDToast.showToast("该家族成员已踢出家族");
                     adapter.removeData(item);

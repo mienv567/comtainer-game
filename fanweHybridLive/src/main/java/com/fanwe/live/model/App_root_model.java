@@ -1,7 +1,5 @@
 package com.fanwe.live.model;
 
-import java.util.List;
-
 /**
  * Created by kevin.liu on 2017/2/17.
  */
@@ -18,6 +16,9 @@ public class App_root_model
     private String code;
     private String message;
     private String returnObj;
+
+    protected int status; // 接口返回状态，1-成功，其他值失败，或者其他业务
+    protected String error; // 接口返回的提示信息
 
     public String getCode() {
         return code;
@@ -43,4 +44,23 @@ public class App_root_model
         this.returnObj = returnObj;
     }
 
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
+    public String getError() {
+        return error;
+    }
+
+    public void setError(String error) {
+        this.error = error;
+    }
+
+    public boolean isOk() {
+        return this.status == 1;
+    }
 }

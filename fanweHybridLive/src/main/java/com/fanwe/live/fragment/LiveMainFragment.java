@@ -107,7 +107,7 @@ public class LiveMainFragment extends BaseFragment {
         CommonInterface.requestCategory("1", new AppRequestCallback<CategoryDetailModel>() {
             @Override
             protected void onSuccess(SDResponse sdResponse) {
-                if (actModel.isOk()) {
+                if (rootModel.isOk()) {
                     //                    for (int i = 0; i < 10; i++) {
                     List<LiveRoomModel> liveList = actModel.getLiveList();
                     if (liveList != null) {

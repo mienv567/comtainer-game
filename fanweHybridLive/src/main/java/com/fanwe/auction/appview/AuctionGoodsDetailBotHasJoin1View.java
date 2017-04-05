@@ -110,7 +110,7 @@ public class AuctionGoodsDetailBotHasJoin1View extends BaseAppView
                 @Override
                 protected void onSuccess(SDResponse sdResponse)
                 {
-                    if (actModel.getStatus() == 1)
+                    if (rootModel.getStatus() == 1)
                     {
                         JoinLiveData joinLiveData = new JoinLiveData();
 

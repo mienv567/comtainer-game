@@ -133,7 +133,7 @@ public class LiveUploadImageActivity extends BaseTitleActivity
             @Override
             protected void onSuccess(SDResponse resp)
             {
-                if (actModel.getStatus() == 1)
+                if (rootModel.getStatus() == 1)
                 {
                     String path = actModel.getPath();
                     if (!TextUtils.isEmpty(path))

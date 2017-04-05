@@ -267,7 +267,7 @@ public class App extends Application implements TANetChangeObserver {
         CommonInterface.requestMyUserInfoJava(new AppRequestCallback<UserModel>() {
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.getStatus() == 1) {
+                if (rootModel.getStatus() == 1) {
                     CommonInterface.requestUsersig(null);
                 }
             }

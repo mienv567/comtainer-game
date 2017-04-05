@@ -94,7 +94,7 @@ public class LiveSongChooseActivity extends BaseActivity implements LiveSongList
 			
 			@Override
 			protected void onSuccess(SDResponse resp) {
-				if (actModel.isOk()) {
+				if (rootModel.isOk()) {
 					if (mPage == 1) {
 						mAdapter.updateData(actModel.getList());
 //						LiveUserSongManager.getInstance().setManageList(actModel.getManageList());
@@ -152,7 +152,7 @@ public class LiveSongChooseActivity extends BaseActivity implements LiveSongList
 			
 			@Override
 			protected void onSuccess(SDResponse resp) {
-				if (actModel.isOk()) {
+				if (rootModel.isOk()) {
 					mAdapter.removeItem(model);
 				}else {
 					if (!TextUtils.isEmpty(actModel.getError())) {
@@ -233,7 +233,7 @@ public class LiveSongChooseActivity extends BaseActivity implements LiveSongList
 
 			@Override
 			protected void onSuccess(SDResponse resp) {
-				if (actModel.isOk()) {
+				if (rootModel.isOk()) {
 					model.setAudio_link(actModel.getAudio().getAudio_link());
 					model.setTime_len(actModel.getAudio().getTime_len());
 					model.setLrc_content(actModel.getAudio().getLrc_content());

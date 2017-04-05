@@ -270,7 +270,7 @@ public class LiveUserEditActivity extends BaseTitleActivity implements OnDateSet
             @Override
             protected void onSuccess(SDResponse resp) {
                 UserModel user;
-                if (actModel.isOk()) {
+                if (rootModel.isOk()) {
                     user = actModel;
                 } else {
                     user = UserModelDao.query();
@@ -408,7 +408,7 @@ public class LiveUserEditActivity extends BaseTitleActivity implements OnDateSet
             CommonInterface.requestCommitUserInfo(mModifyElement, new AppRequestCallback<BaseActModel>() {
                 @Override
                 protected void onSuccess(SDResponse resp) {
-                    if (actModel.getStatus() == 1) {
+                    if (rootModel.getStatus() == 1) {
                         finish();
                     }
                 }
@@ -547,7 +547,7 @@ public class LiveUserEditActivity extends BaseTitleActivity implements OnDateSet
             CommonInterface.requestRegionList(new AppRequestCallback<App_RegionListActModel>() {
                 @Override
                 protected void onSuccess(SDResponse resp) {
-                    if (actModel.isOk()) {
+                    if (rootModel.isOk()) {
                         SDConfig.getInstance().setObject(actModel);
                         SDConfig.getInstance().setInt(R.string.config_region_version, actModel.getRegion_versions());
                         handleCityData(actModel.getRegion_list());

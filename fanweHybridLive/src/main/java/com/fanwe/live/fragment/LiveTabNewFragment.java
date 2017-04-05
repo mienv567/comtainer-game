@@ -143,7 +143,7 @@ public class LiveTabNewFragment extends LiveTabBaseFragment
             @Override
             protected void onSuccess(SDResponse resp)
             {
-                if (actModel.isOk())
+                if (rootModel.isOk())
                 {
                     has_next = actModel.getHas_next();
 

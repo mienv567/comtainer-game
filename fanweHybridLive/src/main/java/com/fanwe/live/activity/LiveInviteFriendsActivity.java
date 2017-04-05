@@ -77,7 +77,7 @@ public class LiveInviteFriendsActivity extends BaseActivity implements OnItemCli
 		CommonInterface.requestFriends(room_id, page, new AppRequestCallback<User_friendsActModel>() {
 			@Override
 			protected void onSuccess(SDResponse resp) {
-				if(actModel.getStatus() == 1) {
+				if(rootModel.getStatus() == 1) {
 					currentModels = actModel;
 					//获取好友数量大于0才更新数据
 					mAdapter.appendData(actModel.getList());
@@ -156,7 +156,7 @@ public class LiveInviteFriendsActivity extends BaseActivity implements OnItemCli
 			
 			@Override
 			protected void onSuccess(SDResponse resp) {
-				if(actModel.isOk()) {
+				if(rootModel.isOk()) {
 				}
 			}
 		});

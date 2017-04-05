@@ -367,7 +367,7 @@ public class LiveUserHomeActivity extends BaseActivity {
 
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.getStatus() == 1) {
+                if (rootModel.getStatus() == 1) {
                     // 已关注则刷新接口
                     setIsFollow(actModel.getRelationship());
                     requestUser_home(true);
@@ -382,7 +382,7 @@ public class LiveUserHomeActivity extends BaseActivity {
 
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.getStatus() == 1) {
+                if (rootModel.getStatus() == 1) {
                     // 已拉黑则刷新接口
                     setIsSet_black(actModel.getRelationship());
                     requestUser_home(true);
@@ -418,7 +418,7 @@ public class LiveUserHomeActivity extends BaseActivity {
 
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.getStatus() == 1) {
+                if (rootModel.getStatus() == 1) {
                     app_user_homeActModel = actModel;
 
                     if (!isRefresh) {

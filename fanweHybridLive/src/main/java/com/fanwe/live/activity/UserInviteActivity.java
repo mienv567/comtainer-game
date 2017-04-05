@@ -79,7 +79,7 @@ public class UserInviteActivity extends BaseActivity {
 
             @Override
             protected void onSuccess(SDResponse sdResponse) {
-                if (actModel.getStatus() == 1) {
+                if (rootModel.getStatus() == 1) {
                     mUserInviteModel = actModel;
                     invite_code.setText(actModel.getInvite_code());
                     if(TextUtils.isEmpty(actModel.getBind_invite_code())){
@@ -158,7 +158,7 @@ public class UserInviteActivity extends BaseActivity {
 //                    CommonInterface.submitUserInvite(inputCode, new AppRequestCallback<UserInviteModel>() {
 //                        @Override
 //                        protected void onSuccess(SDResponse sdResponse) {
-//                            if (actModel.getStatus() == 1) {
+//                            if (rootModel.getStatus() == 1) {
 //                                SDViewUtil.hide(invite_no_bind);
 //                                SDViewUtil.show(invite_bind);
 //                                bind_user.setText(String.format(getResources().getString(R.string.invete_bined_user), actModel.getBind_invite_user_name(), actModel.getBind_invite_user_id()));

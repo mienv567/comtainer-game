@@ -123,7 +123,7 @@ public class LiveUserModelAdapter extends SDSimpleAdapter<UserModel>
                     CommonInterface.requestChangePush(model.getUserId(), new AppRequestCallback<BaseActModel>() {
                         @Override
                         protected void onSuccess(SDResponse sdResponse) {
-                            if (actModel.isOk()) {
+                            if (rootModel.isOk()) {
                                 if (model.getIsUnpush() == 0) {
                                     model.setIsUnpush(1);
                                     img_push.setImageDrawable(mActivity.getResources().getDrawable(R.drawable.ic_push_close));
@@ -173,7 +173,7 @@ public class LiveUserModelAdapter extends SDSimpleAdapter<UserModel>
         CommonInterface.requestFollow(model.getUserId(), model, new AppRequestCallback<App_followActModel>() {
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.isOk()) {
+                if (rootModel.isOk()) {
                     if (actModel.getRelationship() == 1) {
                         SDViewUtil.show(has_follow);
                         SDViewUtil.hide(follow);

@@ -132,7 +132,7 @@ public class LiveUploadUserImageActivity extends BaseTitleActivity
             @Override
             protected void onSuccess(SDResponse resp)
             {
-                if (actModel.getStatus() == 1)
+                if (rootModel.getStatus() == 1)
                 {
                     UserModel user = actModel;
                     if (user != null)

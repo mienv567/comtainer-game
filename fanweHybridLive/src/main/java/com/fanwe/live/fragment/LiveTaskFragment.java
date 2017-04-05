@@ -93,7 +93,7 @@ public class LiveTaskFragment extends BaseFragment {
             protected void onSuccess(SDResponse sdResponse) {
                 LogUtil.d(actModel.toString());
                 tv_no_tasks.setVisibility(View.GONE);
-                if (actModel.isOk()) {
+                if (rootModel.isOk()) {
                     if (actModel != null) {
                         fl_task.setVisibility(View.VISIBLE);
                         mMissionInfo = actModel.missionInfo;

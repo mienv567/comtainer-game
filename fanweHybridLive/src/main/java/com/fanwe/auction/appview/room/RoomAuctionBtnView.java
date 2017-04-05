@@ -132,10 +132,10 @@ public class RoomAuctionBtnView extends RoomView
             @Override
             protected void onSuccess(SDResponse resp)
             {
-                if (actModel.getStatus() == 1)
+                if (rootModel.getStatus() == 1)
                 {
 
-                } else if (actModel.getStatus() == 10052)
+                } else if (rootModel.getStatus() == 10052)
                 {
                     startGinsengShootMarginActivity();
                 }

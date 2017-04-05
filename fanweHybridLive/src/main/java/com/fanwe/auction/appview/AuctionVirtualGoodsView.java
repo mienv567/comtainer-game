@@ -259,7 +259,7 @@ public class AuctionVirtualGoodsView extends AuctionGoodsBaseView implements Tex
         AuctionCommonInterface.requestAddAuction(mapParams, new AppRequestCallback<App_auction_createAuctionModel>() {
             @Override
             protected void onSuccess(SDResponse resp) {
-                if(actModel.isOk()) {
+                if(rootModel.isOk()) {
                     ECreateAuctionSuccess event = new ECreateAuctionSuccess();
                     event.pai_id = actModel.getPai_id();
                     SDEventManager.post(event);
@@ -414,7 +414,7 @@ public class AuctionVirtualGoodsView extends AuctionGoodsBaseView implements Tex
         AuctionCommonInterface.requestVirtualGoodsTag(new AppRequestCallback<App_auction_goodsTagsModel>() {
             @Override
             protected void onSuccess(SDResponse resp) {
-                if(actModel.isOk()) {
+                if(rootModel.isOk()) {
                     mListLabel = actModel.getData().getList();
                     if(mListLabel != null && mListLabel.size() > 0) {
                         ll_layout_label.setVisibility(View.VISIBLE);

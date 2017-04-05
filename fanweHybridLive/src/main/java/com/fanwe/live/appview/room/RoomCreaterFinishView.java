@@ -119,7 +119,7 @@ public class RoomCreaterFinishView extends RoomView
 
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.getStatus() == 1) {
+                if (rootModel.getStatus() == 1) {
                     getActivity().finish();
                 }
             }
@@ -139,7 +139,7 @@ public class RoomCreaterFinishView extends RoomView
 
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.getStatus() == 1) {
+                if (rootModel.getStatus() == 1) {
                     SDViewBinder.setImageView(getActivity(), headImgUrl, iv_head_image,R.drawable.ic_default_head);
                     SDViewBinder.setTextView(tv_money, String.valueOf(floatFormat(actModel.getAdd_rmb())));
                     SDViewBinder.setTextView(tv_viewer_number, String.valueOf(actModel.getWatch_number()));

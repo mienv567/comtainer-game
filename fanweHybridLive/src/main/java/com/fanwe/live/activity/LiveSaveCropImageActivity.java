@@ -158,7 +158,7 @@ public class LiveSaveCropImageActivity extends BaseTitleActivity
             @Override
             protected void onSuccess(SDResponse resp)
             {
-                if (actModel.getStatus() == 1)
+                if (rootModel.getStatus() == 1)
                 {
                     EUpLoadImageComplete event = new EUpLoadImageComplete();
                     event.server_path = actModel.getServer_path();

@@ -152,7 +152,7 @@ public class RoomSendMsgView extends RoomView {
             AppHttpUtil.getInstance().post(params, new AppRequestCallback<App_pop_msgActModel>() {
                 @Override
                 protected void onSuccess(SDResponse resp) {
-                    if (actModel.isOk()) {
+                    if (rootModel.isOk()) {
                         if (!getLiveInfo().isCreater()) {
                             // 扣费
                             final UserModel user = UserModelDao.query();

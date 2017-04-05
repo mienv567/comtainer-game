@@ -231,7 +231,7 @@ public class LiveUserHomeRightFragment extends LiveUserHomeBaseFragment implemen
             @Override
             protected void onSuccess(SDResponse resp)
             {
-                if (actModel.getStatus() == 1)
+                if (rootModel.getStatus() == 1)
                 {
                     app_user_reviewActModel = actModel;
 

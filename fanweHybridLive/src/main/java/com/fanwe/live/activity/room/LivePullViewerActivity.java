@@ -156,7 +156,7 @@ public class LivePullViewerActivity extends LiveLayoutViewerActivity implements 
             protected void onSuccess(SDResponse resp) {
                 setRoomInfo(actModel);
                 SDViewBinder.setTextView(scollView.getTv_user_number_left(), String.valueOf(getRoomInfo().getPodcast().getUserId()));
-                if (actModel.isOk()) {
+                if (rootModel.isOk()) {
                     onSuccessRequestRoomInfo(actModel);
                 } else {
                     onErrorRequestRoomInfo(actModel);

@@ -85,7 +85,7 @@ public class LiveMobileBindActivity extends BaseTitleActivity
             @Override
             protected void onSuccess(SDResponse resp)
             {
-                if (actModel.isOk())
+                if (rootModel.isOk())
                 {
                     finish();
                 }
@@ -120,7 +120,7 @@ public class LiveMobileBindActivity extends BaseTitleActivity
         CommonInterface.requestSendMobileVerify(1, strMobile, null, new AppRequestCallback<App_send_mobile_verifyActModel>() {
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.isOk()) {
+                if (rootModel.isOk()) {
                     btn_send_code.setmDisableTime(actModel.getTime());
                     btn_send_code.startTickWork();
                 }

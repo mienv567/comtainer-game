@@ -226,7 +226,7 @@ public class LiveFamilyUpdateEditActivity extends BaseTitleActivity
             @Override
             protected void onSuccess(SDResponse sdResponse)
             {
-                if (actModel.getStatus() == 1)
+                if (rootModel.getStatus() == 1)
                 {
                     finish();
                 }
@@ -254,7 +254,7 @@ public class LiveFamilyUpdateEditActivity extends BaseTitleActivity
             @Override
             protected void onSuccess(SDResponse sdResponse)
             {
-                if (actModel.getStatus() == 1)
+                if (rootModel.getStatus() == 1)
                 {
                     SDToast.showToast("修改成功");
                     finish();

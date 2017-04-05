@@ -253,7 +253,7 @@ public class LiveUserHomeReplayActivity extends BaseTitleActivity
             @Override
             protected void onSuccess(SDResponse resp)
             {
-                if (actModel.isOk())
+                if (rootModel.isOk())
                 {
                     app_user_reviewActModel = actModel;
 
@@ -329,7 +329,7 @@ public class LiveUserHomeReplayActivity extends BaseTitleActivity
             @Override
             protected void onSuccess(SDResponse resp)
             {
-                if (actModel.getStatus() == 1)
+                if (rootModel.getStatus() == 1)
                 {
                     refreshViewer();
                 }

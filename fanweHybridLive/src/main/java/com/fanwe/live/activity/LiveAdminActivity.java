@@ -80,7 +80,7 @@ public class LiveAdminActivity extends BaseTitleActivity {
         CommonInterface.requestUser_admin(new AppRequestCallback<App_user_adminActModel>() {
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.getStatus() == 1) {
+                if (rootModel.getStatus() == 1) {
                     bindData(actModel);
                 }
             }
@@ -143,7 +143,7 @@ public class LiveAdminActivity extends BaseTitleActivity {
         CommonInterface.requestSet_admin(to_user_id, mode, new AppRequestCallback<App_set_adminActModel>() {
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.getStatus() == 1) {
+                if (rootModel.getStatus() == 1) {
                     if (actModel.getIsManage() == 1) {
                         SDToast.showToast(getString(R.string.setting_admin_success));
                     } else {

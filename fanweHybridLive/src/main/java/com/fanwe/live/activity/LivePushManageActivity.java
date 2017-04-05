@@ -87,7 +87,7 @@ public class LivePushManageActivity extends BaseTitleActivity {
         CommonInterface.requestUser_follow(page, "", new AppRequestCallback<App_focus_follow_ActModel>() {
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.getStatus() == 1) {
+                if (rootModel.getStatus() == 1) {
                     app_my_focusActModel = actModel;
                     SDViewUtil.updateAdapterByList(listModel, actModel.getRelationshipList(), adapter, isLoadMore);
                 }

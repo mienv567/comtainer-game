@@ -127,7 +127,7 @@ public class LiveFamilyDetailsActivity extends BaseTitleActivity
             @Override
             protected void onSuccess(SDResponse sdResponse)
             {
-                if (actModel.getStatus() == 1)
+                if (rootModel.getStatus() == 1)
                 {
                     family_logo = actModel.getFamily_info().getFamily_logo();
                     family_name = actModel.getFamily_info().getFamily_name();

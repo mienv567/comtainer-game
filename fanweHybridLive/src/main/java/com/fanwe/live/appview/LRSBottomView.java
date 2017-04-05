@@ -167,7 +167,7 @@ public class LRSBottomView extends BaseAppView
                     CommonInterface.requestLRSSign(mRoomId, new AppRequestCallback<BaseActModel>() {
                         @Override
                         protected void onSuccess(SDResponse sdResponse) {
-                            if (actModel.isOk()) {
+                            if (rootModel.isOk()) {
                                 if (mDialog != null) {
                                     mDialog.dismiss();
                                 }

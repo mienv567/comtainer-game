@@ -194,7 +194,7 @@ public class LiveChatFragment extends BaseFragment implements TextView.OnEditorA
         CommonInterface.requestFollow(mActivity.getCreaterId(), new AppRequestCallback<App_followActModel>() {
             @Override
             protected void onSuccess(SDResponse sdResponse) {
-                if (actModel.isOk()) {
+                if (rootModel.isOk()) {
                     SDToast.showToast("关注成功");
                     hideCreaterInfo();
                 } else {

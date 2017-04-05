@@ -234,7 +234,7 @@ public class LiveCreateRoomActivity extends BaseActivity implements TextWatcher,
         CommonInterface.requestCategoryNameList(new AppRequestCallback<CategoryNameListModel>() {
             @Override
             protected void onSuccess(SDResponse sdResponse) {
-                if (actModel.isOk()) {
+                if (rootModel.isOk()) {
                     mPopWindow.setList(actModel.getCategory_name_list());
                 }
             }
@@ -326,7 +326,7 @@ public class LiveCreateRoomActivity extends BaseActivity implements TextWatcher,
             @Override
             protected void onSuccess(SDResponse resp) {
                 dismissProgressDialog();
-                if (actModel.isOk()) {
+                if (rootModel.isOk()) {
                     Log.i("invite", "getroomid success");
 //                    TIMGroupManager.getInstance().createAVChatroomGroup(actModel.getRoomId() + "", new TIMValueCallBack<String>() {
 //

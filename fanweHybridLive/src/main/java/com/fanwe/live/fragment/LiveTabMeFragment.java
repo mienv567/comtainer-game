@@ -297,7 +297,7 @@ public class LiveTabMeFragment extends BaseFragment {
 
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.getStatus() == 1) {
+                if (rootModel.getStatus() == 1) {
                     app_userinfoActModel = actModel;
                     bindData(actModel);
                 }

@@ -101,7 +101,7 @@ public class LiveTopicView extends BaseAppView
         return CommonInterface.requestToptic(keyword, page, new AppRequestCallback<Index_topicActModel>() {
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.isOk()) {
+                if (rootModel.isOk()) {
                     has_next = actModel.getHas_next();
                     SDViewUtil.updateAdapterByList(listModel, actModel.getList(), adapter, isLoadMore);
                 }

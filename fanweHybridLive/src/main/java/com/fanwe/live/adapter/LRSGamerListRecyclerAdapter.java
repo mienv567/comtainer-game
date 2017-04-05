@@ -182,7 +182,7 @@ public class LRSGamerListRecyclerAdapter extends SDSimpleRecyclerAdapter<LRSUser
                         CommonInterface.requestLRSWitch(mRoomId, LRSManager.WITCH_POISON, mUserModel.getUser_id(), new AppRequestCallback<BaseActModel>() {
                             @Override
                             protected void onSuccess(SDResponse sdResponse) {
-                                if (actModel.isOk()) {
+                                if (rootModel.isOk()) {
                                     SDToast.showToast("毒杀" + LRSManager.getInstance().getUserIndex(mUserModel.getUser_id()) + "号玩家成功");
                                     SDEventManager.post(new ELRSWitchOperate(ELRSWitchOperate.DONE_POISON,null));
                                 }
@@ -198,7 +198,7 @@ public class LRSGamerListRecyclerAdapter extends SDSimpleRecyclerAdapter<LRSUser
                         CommonInterface.requestLRSHunter(mRoomId, 2, mUserModel.getUser_id(), new AppRequestCallback<BaseActModel>() {
                             @Override
                             protected void onSuccess(SDResponse sdResponse) {
-                                if(actModel.isOk()){
+                                if(rootModel.isOk()){
                                     SDToast.showToast("射杀" + LRSManager.getInstance().getUserIndex(mUserModel.getUser_id()) + "号玩家成功");
                                 }
                             }
@@ -213,7 +213,7 @@ public class LRSGamerListRecyclerAdapter extends SDSimpleRecyclerAdapter<LRSUser
                         CommonInterface.requestLRSVote(mRoomId, mUserModel.getUser_id(), new AppRequestCallback<BaseActModel>() {
                             @Override
                             protected void onSuccess(SDResponse sdResponse) {
-                                if(actModel.isOk()){
+                                if(rootModel.isOk()){
                                     SDToast.showToast("投票给" + LRSManager.getInstance().getUserIndex(mUserModel.getUser_id()) + "号玩家成功");
                                 }
                             }

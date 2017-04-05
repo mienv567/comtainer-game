@@ -513,7 +513,9 @@ public class LiveLoginActivity extends BaseActivity {
 
                 @Override
                 protected void onSuccess(SDResponse resp) {
-                    handLoginSuccess(actModel, "WEIXIN");
+                    if (rootModel.getStatus() == 1) {
+                        handLoginSuccess(actModel, "WEIXIN");
+                    }
                 }
             });
         }
@@ -541,7 +543,9 @@ public class LiveLoginActivity extends BaseActivity {
 
             @Override
             protected void onSuccess(SDResponse resp) {
-                handLoginSuccess(actModel, "QQ");
+                if (rootModel.getStatus() == 1) {
+                    handLoginSuccess(actModel, "QQ");
+                }
             }
 
             @Override
@@ -575,7 +579,9 @@ public class LiveLoginActivity extends BaseActivity {
 
             @Override
             protected void onSuccess(SDResponse resp) {
-                handLoginSuccess(actModel, "SINA");
+                if (rootModel.getStatus() == 1) {
+                    handLoginSuccess(actModel, "SINA");
+                }
             }
         });
     }
@@ -659,7 +665,9 @@ public class LiveLoginActivity extends BaseActivity {
         CommonInterface.requestVkLogin(userId, accessToken, new AppRequestCallback<App_do_updateActModel>() {
             @Override
             protected void onSuccess(SDResponse sdResponse) {
-                handLoginSuccess(actModel, "VK");
+                if (rootModel.getStatus() == 1) {
+                    handLoginSuccess(actModel, "VK");
+                }
             }
         });
     }
@@ -682,7 +690,7 @@ public class LiveLoginActivity extends BaseActivity {
 
             @Override
             protected void onSuccess(SDResponse sdResponse) {
-                if (actModel.isOk()) {
+                if (rootModel.isOk()) {
                     handLoginSuccess(actModel, "NAVER");
                 } else {
                     SDToast.showToast(actModel.getError());
@@ -711,7 +719,7 @@ public class LiveLoginActivity extends BaseActivity {
         CommonInterface.requestKakaoLogin(accessToken, new AppRequestCallback<App_do_updateActModel>() {
             @Override
             protected void onSuccess(SDResponse sdResponse) {
-                if (actModel.isOk()) {
+                if (rootModel.isOk()) {
                     handLoginSuccess(actModel, "KAKAO");
                 } else {
                     SDToast.showToast(actModel.getError());
@@ -722,27 +730,27 @@ public class LiveLoginActivity extends BaseActivity {
 
     // 登陆成功之后的跳转方法
     private void handLoginSuccess(App_do_updateActModel actModel, String platform) {
-        if (actModel.getStatus() == 1) {
-            startMainActivity(actModel);
-            if (actModel.getUser() != null) {
-                MobclickAgent.onProfileSignIn(platform, actModel.getUser().getUserId());
-            }
-            CommonInterface.requestLoginStatistic(null);
-            CommonInterface.requestRedPoint(new AppRequestCallback<RedPointModel>() {
-                @Override
-                protected void onSuccess(SDResponse sdResponse) {
-                    RedPointUtil.postRedPointEvent(actModel);
-                }
-            });
-            // 将malatv的cookie设置到一生一世的网络请求实现框架中
-            // 将登陆成功之后的cookie从malatv的请求实现体中拿出来，置入retrofit中（艹，让我这一顿找，
-            // 断点把手都要打断了，验证可以直接去看HttpRequest的sendRequest方法142行）
-            List<HttpCookie> cookies = DbCookieStore.INSTANCE.getCookies();
-            setUser2YSYS(actModel.getUser());
-            setCookie2YSYS(cookies);
-            // 将cookie存到本地数据库
-            saveCookie();
+
+        startMainActivity(actModel);
+        if (actModel.getUser() != null) {
+            MobclickAgent.onProfileSignIn(platform, actModel.getUser().getUserId());
         }
+        CommonInterface.requestLoginStatistic(null);
+        CommonInterface.requestRedPoint(new AppRequestCallback<RedPointModel>() {
+            @Override
+            protected void onSuccess(SDResponse sdResponse) {
+                if(rootModel.getStatus() == 1){
+                RedPointUtil.postRedPointEvent(actModel);}
+            }
+        });
+        // 将malatv的cookie设置到一生一世的网络请求实现框架中
+        // 将登陆成功之后的cookie从malatv的请求实现体中拿出来，置入retrofit中（艹，让我这一顿找，
+        // 断点把手都要打断了，验证可以直接去看HttpRequest的sendRequest方法142行）
+        List<HttpCookie> cookies = DbCookieStore.INSTANCE.getCookies();
+        setUser2YSYS(actModel.getUser());
+        setCookie2YSYS(cookies);
+        // 将cookie存到本地数据库
+        saveCookie();
     }
 
     private void saveCookie() {

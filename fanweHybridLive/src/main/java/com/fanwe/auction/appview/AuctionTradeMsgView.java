@@ -113,7 +113,7 @@ public class AuctionTradeMsgView extends BaseAppView
             @Override
             protected void onSuccess(SDResponse resp)
             {
-                if (actModel.isOk())
+                if (rootModel.isOk())
                 {
                     if (actModel.getData() != null)
                     {

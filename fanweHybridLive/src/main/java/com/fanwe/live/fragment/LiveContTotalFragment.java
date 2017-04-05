@@ -106,7 +106,7 @@ public class LiveContTotalFragment extends LiveContBaseFragment
             @Override
             protected void onSuccess(SDResponse resp)
             {
-                if (actModel.getStatus() == 1)
+                if (rootModel.getStatus() == 1)
                 {
                     app_ContActModel = actModel;
                     bindheadData(actModel);

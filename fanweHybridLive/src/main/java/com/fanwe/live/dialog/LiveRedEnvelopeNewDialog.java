@@ -150,7 +150,7 @@ public class LiveRedEnvelopeNewDialog extends LiveBaseDialog
             protected void onSuccess(SDResponse resp)
             {
                 String red_info;
-                if (actModel.getStatus() == 1)
+                if (rootModel.getStatus() == 1)
                 {
                     if (actModel.getDiamonds() > 0)
                     {
@@ -182,7 +182,7 @@ public class LiveRedEnvelopeNewDialog extends LiveBaseDialog
             @Override
             protected void onSuccess(SDResponse resp)
             {
-                if (actModel.getStatus() == 1)
+                if (rootModel.getStatus() == 1)
                 {
                     liveRedEnvelopeOpenView.setViewShowOrHide();//设置试图的显示与隐藏
 

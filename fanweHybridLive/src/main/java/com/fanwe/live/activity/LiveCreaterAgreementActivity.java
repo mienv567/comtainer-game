@@ -78,7 +78,7 @@ public class LiveCreaterAgreementActivity extends BaseTitleActivity {
         CommonInterface.requestAgree(new AppRequestCallback<BaseActModel>() {
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.isOk()) {
+                if (rootModel.isOk()) {
                     UserModel user = UserModelDao.query();
                     if (user != null) {
                         user.setIsAgree(1);

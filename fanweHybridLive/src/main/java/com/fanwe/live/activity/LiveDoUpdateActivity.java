@@ -340,7 +340,7 @@ public class LiveDoUpdateActivity extends BaseTitleActivity
 
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.getStatus() == 1) {
+                if (rootModel.getStatus() == 1) {
 
                     UserModel user = actModel.getUser();
                     if (user != null) {

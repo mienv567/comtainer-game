@@ -147,7 +147,7 @@ public class AuctionSucPayDialog extends SDDialogBase
                 @Override
                 protected void onSuccess(SDResponse sdResponse)
                 {
-                    if (actModel.getStatus() == 1)
+                    if (rootModel.getStatus() == 1)
                     {
                         //付款成功刷新余额
                         CommonInterface.requestMyUserInfoJava(null);

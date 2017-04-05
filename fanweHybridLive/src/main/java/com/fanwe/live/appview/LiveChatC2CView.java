@@ -393,7 +393,7 @@ public class LiveChatC2CView extends BaseAppView
             @Override
             protected void onSuccess(SDResponse resp)
             {
-                if (actModel.getStatus() == 1)
+                if (rootModel.getStatus() == 1)
                 {
                     focusListModel = actModel.getList();
                 }
@@ -624,7 +624,7 @@ public class LiveChatC2CView extends BaseAppView
                 @Override
                 protected void onSuccess(SDResponse resp)
                 {
-                    if (actModel.getStatus() == 1)
+                    if (rootModel.getStatus() == 1)
                     {
                         List<UserModel> list = actModel.getList();
                         if (list != null && list.size() > 0 && list.size() == r_list.size())

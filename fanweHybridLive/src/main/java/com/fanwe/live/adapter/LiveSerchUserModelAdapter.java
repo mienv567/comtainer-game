@@ -129,7 +129,7 @@ public class LiveSerchUserModelAdapter extends SDSimpleAdapter<UserModel>
             @Override
             protected void onSuccess(SDResponse resp)
             {
-                if (actModel.isOk())
+                if (rootModel.isOk())
                 {
                     if (actModel.getRelationship() == 1)
                     {

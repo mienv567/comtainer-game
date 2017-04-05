@@ -76,7 +76,7 @@ public class UserSignInActivity extends BaseTitleActivity
                 CommonInterface.submitUserSign(new AppRequestCallback<UserSubmitSignModel>() {
                     @Override
                     protected void onSuccess(SDResponse sdResponse) {
-                        if (actModel.getStatus() == 1) {
+                        if (rootModel.getStatus() == 1) {
                             mTitle.post(new Runnable() {
                                 @Override
                                 public void run() {
@@ -156,7 +156,7 @@ public class UserSignInActivity extends BaseTitleActivity
         CommonInterface.requestUserSignData(new AppRequestCallback<UserSignInModel>() {
             @Override
             protected void onSuccess(SDResponse sdResponse) {
-                if (actModel.getStatus() == 1) {
+                if (rootModel.getStatus() == 1) {
                     mUserSignInModel = actModel;
                     List<UserSignInItem> itemList = mUserSignInModel.getList();
                     if (itemList != null && itemList.size() == 7) {

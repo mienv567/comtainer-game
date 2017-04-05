@@ -73,7 +73,7 @@ public class RoomSendGiftView extends RoomView {
                     CommonInterface.requestThumbsUp(getLiveInfo().getCreaterId(), new AppRequestCallback<BaseActModel>() {
                         @Override
                         protected void onSuccess(SDResponse sdResponse) {
-                            if (actModel.isOk()) {
+                            if (rootModel.isOk()) {
                                 SDToast.showToast("点赞成功");
                             } else {
                                 SDToast.showToast("点赞失败");
@@ -135,7 +135,7 @@ public class RoomSendGiftView extends RoomView {
                     CommonInterface.requestSendGiftPrivateJava(giftModel.getPropId(), giftNumber, createrId, roomId, groupId, new AppRequestCallback<Deal_send_propActModel>() {
                         @Override
                         protected void onSuccess(SDResponse resp) {
-                            if (actModel.isOk()) {
+                            if (rootModel.isOk()) {
                                 view_send_gift.sendGiftSuccess(giftModel);
 
                                 // 发送私聊消息给主播
@@ -167,7 +167,7 @@ public class RoomSendGiftView extends RoomView {
                     @Override
                     protected void onSuccess(SDResponse resp) {
                         // 扣费
-                        if (actModel.isOk()) {
+                        if (rootModel.isOk()) {
                             //                            if(giftNumber>1){
                             view_send_gift.sendGiftSuccess(giftModel, giftNumber);
                             //                            }else {

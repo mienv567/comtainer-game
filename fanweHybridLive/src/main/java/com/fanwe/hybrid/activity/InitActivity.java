@@ -83,7 +83,7 @@ public class InitActivity extends BaseActivity {
         });
 
         final String aid = AIDUtil.getAID(this);
-        if(!TextUtils.isEmpty(aid)){
+        if (!TextUtils.isEmpty(aid)) {
             if (!AIDUtil.isAIdExist(aid)) {
                 CommonInterface.requestActiveStatistic(new AppRequestCallback<BaseActModel>() {
                     @Override
@@ -167,7 +167,6 @@ public class InitActivity extends BaseActivity {
     }
 
 
-
     private void startLiveMainActivity() {
         boolean is_open_webview_main = getResources().getBoolean(R.bool.is_open_webview_main);
         if (is_open_webview_main) {
@@ -186,12 +185,14 @@ public class InitActivity extends BaseActivity {
             CommonInterface.requestRedPoint(new AppRequestCallback<RedPointModel>() {
                 @Override
                 protected void onSuccess(SDResponse sdResponse) {
-                    RedPointUtil.postRedPointEvent(actModel);
+                    if (rootModel.getStatus() == 1) {
+                        RedPointUtil.postRedPointEvent(actModel);
+                    }
                 }
             });
-            if(AppRuntimeWorker.hasRecommendRoom()){
+            if (AppRuntimeWorker.hasRecommendRoom()) {
                 AppRuntimeWorker.startContext();
-            }else{
+            } else {
                 Intent intent = new Intent(this, LiveMainActivity.class);
                 startActivity(intent);
                 finish();
@@ -201,7 +202,7 @@ public class InitActivity extends BaseActivity {
                 CommonInterface.requestTestLogin(new AppRequestCallback<Login_test_loginActModel>() {
                     @Override
                     protected void onSuccess(SDResponse resp) {
-                        if (actModel.isOk()) {
+                        if (rootModel.isOk()) {
                             Intent intent = new Intent(InitActivity.this, LiveMainActivity.class);
                             startActivity(intent);
                             finish();
@@ -216,15 +217,13 @@ public class InitActivity extends BaseActivity {
         }
     }
 
-    public void onEventMainThread(EStartContextComplete event)
-    {
-        if (!LiveUtils.isResultOk(event.result))
-        {
+    public void onEventMainThread(EStartContextComplete event) {
+        if (!LiveUtils.isResultOk(event.result)) {
             LogUtil.e("启动sdk失败:" + event.result);
             Intent intent = new Intent(this, LiveMainActivity.class);
             startActivity(intent);
             finish();
-        }else{
+        } else {
             AppRuntimeWorker.joinRecommendRoom(InitActivity.this);
         }
     }

@@ -86,7 +86,7 @@ public class UserSignAwardDialog extends BaseDialog<UserSignAwardDialog>
                 CommonInterface.submitUserSign(new AppRequestCallback<UserSubmitSignModel>() {
                     @Override
                     protected void onSuccess(SDResponse sdResponse) {
-                        if (actModel.getStatus() == 1) {
+                        if (rootModel.getStatus() == 1) {
                             iv_close.post(new Runnable() {
                                 @Override
                                 public void run() {

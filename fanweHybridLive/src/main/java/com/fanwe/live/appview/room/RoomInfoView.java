@@ -567,7 +567,7 @@ public class RoomInfoView extends RoomView {
 
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.getStatus() == 1) {
+                if (rootModel.getStatus() == 1) {
                     bindHasFollow(actModel.getRelationship(), true);
                 }
             }
@@ -725,7 +725,7 @@ public class RoomInfoView extends RoomView {
 
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.getStatus() == 1) {
+                if (rootModel.getStatus() == 1) {
                     //                    onRequestViewerSuccess(actModel, isLoadMore);
                 }
             }

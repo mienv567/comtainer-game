@@ -681,7 +681,7 @@ public class LiveLayoutCreaterActivity extends LiveLayoutActivity {
         AuctionCommonInterface.requestCreateAuctionAuthority(new AppRequestCallback<BaseActModel>() {
             @Override
             protected void onSuccess(SDResponse resp) {
-                //                if(actModel.isOk()) {
+                //                if(rootModel.isOk()) {
                 //                    showCreateAuctionDialog();
                 //                } else {
                 //                    showErrorMsg(actModel.getError());
@@ -845,7 +845,7 @@ public class LiveLayoutCreaterActivity extends LiveLayoutActivity {
         //            @Override
         //            protected void onSuccess(SDResponse resp) {
         //                setRoomInfo(actModel);
-        //                if (actModel.isOk()) {
+        //                if (rootModel.isOk()) {
         //                    onSuccessRequestRoomInfo(actModel);
         //                } else {
         //                    onErrorRequestRoomInfo(actModel);
@@ -970,7 +970,7 @@ public class LiveLayoutCreaterActivity extends LiveLayoutActivity {
         AuctionCommonInterface.requestPaiUserGetVideo(pai_id, new AppRequestCallback<App_pai_user_get_videoActModel>() {
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.getStatus() == 1) {
+                if (rootModel.getStatus() == 1) {
                     bindData();
                 }
             }

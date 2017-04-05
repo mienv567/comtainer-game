@@ -40,7 +40,7 @@ public class LiveMyFocusActivity extends LiveFocusFollowBaseActivity {
         CommonInterface.requestMy_focus(page, to_user_id, new AppRequestCallback<App_focus_follow_ActModel>() {
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.getStatus() == 1) {
+                if (rootModel.getStatus() == 1) {
                     List<UserModel> relationshipList = actModel.getRelationshipList();
                     app_my_focusActModel = actModel;
                     SDViewUtil.updateAdapterByList(listModel, relationshipList, adapter, isLoadMore);

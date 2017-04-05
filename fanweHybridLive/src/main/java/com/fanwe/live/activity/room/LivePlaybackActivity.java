@@ -119,7 +119,7 @@ public class LivePlaybackActivity extends LiveLayoutViewerActivity {
                 //                actModel.getResource().setFloat_pic_url(null);
                 setRoomInfo(nullModel);
                 SDViewBinder.setTextView(scollView.getTv_user_number_left(), String.valueOf(actModel.getPodcast().getUserId()));
-                if (actModel.isOk()) {
+                if (rootModel.isOk()) {
                     onSuccessRequestRoomInfo(nullModel);
                 } else {
                     onErrorRequestRoomInfo(nullModel);

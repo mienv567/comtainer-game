@@ -213,7 +213,7 @@ public class LiveRechargeDialog extends LiveBaseDialog
             @Override
             protected void onSuccess(SDResponse resp)
             {
-                if (actModel.getStatus() == 1)
+                if (rootModel.getStatus() == 1)
                 {
                     app_rechargeActModel = actModel;
                     if (isOnlyRefreshAccout)
@@ -286,7 +286,7 @@ public class LiveRechargeDialog extends LiveBaseDialog
             @Override
             protected void onSuccess(SDResponse resp)
             {
-                if (actModel.getStatus() == 1)
+                if (rootModel.getStatus() == 1)
                 {
                     if (actModel.getPay() != null)
                     {

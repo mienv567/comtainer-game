@@ -42,7 +42,7 @@ public class UserCompletedActivity extends BaseTitleActivity {
         CommonInterface.requestMyTask(HAS_COMPLETED_TASK, new AppRequestCallback<UserTaskModel>() {
             @Override
             protected void onSuccess(SDResponse sdResponse) {
-                if (actModel.isOk()) {
+                if (rootModel.isOk()) {
                     mAdapter.updateData(actModel.getMain_task());
                 }
             }

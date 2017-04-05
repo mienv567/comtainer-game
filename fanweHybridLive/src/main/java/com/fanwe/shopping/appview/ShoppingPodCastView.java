@@ -230,7 +230,7 @@ public class ShoppingPodCastView extends BaseAppView
             @Override
             protected void onSuccess(SDResponse sdResponse)
             {
-                if (actModel.isOk())
+                if (rootModel.isOk())
                 {
                     if (actModel.getList() != null)
                     {

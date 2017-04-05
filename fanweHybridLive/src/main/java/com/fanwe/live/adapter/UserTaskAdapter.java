@@ -224,7 +224,7 @@ public class UserTaskAdapter extends BaseExpandableListAdapter {
                         CommonInterface.requestGetTaskReward(item.getTask_id(),item.getTask_type(), new AppRequestCallback<UserSubmitSignModel>() {
                             @Override
                             protected void onSuccess(SDResponse sdResponse) {
-                                if (actModel.isOk()) {
+                                if (rootModel.isOk()) {
                                     if (item.getTask_type() == UserTaskItem.TYPE_MAIN) {
                                         ((UserTaskActivity) mActivity).requestData();
                                     } else {

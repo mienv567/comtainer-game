@@ -131,7 +131,7 @@ public class LiveGiftView extends RoomView {
                             createrId, roomId, groupId, new AppRequestCallback<Deal_send_propActModel>() {
                         @Override
                         protected void onSuccess(SDResponse resp) {
-                            if (actModel.isOk()) {
+                            if (rootModel.isOk()) {
                                 sendGiftSuccess(selectedGiftModel);
                                 // 发送私聊消息给主播
                                 final CustomMsgPrivateGift msg = new CustomMsgPrivateGift();
@@ -163,7 +163,7 @@ public class LiveGiftView extends RoomView {
                     @Override
                     protected void onSuccess(SDResponse resp) {
                         // 扣费
-                        if (actModel.isOk()) {
+                        if (rootModel.isOk()) {
                             sendGiftSuccess(selectedGiftModel);
                         }
                     }

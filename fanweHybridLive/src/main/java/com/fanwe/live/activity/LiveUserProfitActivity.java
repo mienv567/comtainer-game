@@ -132,7 +132,7 @@ public class LiveUserProfitActivity extends BaseTitleActivity implements SDDialo
         CommonInterface.requestProfit(new AppRequestCallback<App_profitActModel>() {
             @Override
             protected void onSuccess(SDResponse resp) {
-                if(actModel.isOk()) {
+                if(rootModel.isOk()) {
 
 //                    tv_useable_ticket.setText(actModel.getUseableTicket());
                     tv_reward.setText(getString(R.string.money_kind)+actModel.getMoney());
@@ -327,7 +327,7 @@ public class LiveUserProfitActivity extends BaseTitleActivity implements SDDialo
         CommonInterface.requestBindingWz(code, new AppRequestCallback<App_ProfitBindingActModel>() {
             @Override
             protected void onSuccess(SDResponse resp) {
-                if(actModel.isOk()) {
+                if(rootModel.isOk()) {
                     subscribe = actModel.getSubscribe();
                     mobile_exist = actModel.getMobile_exist();
                     binding_wx = actModel.getBinding_wx();

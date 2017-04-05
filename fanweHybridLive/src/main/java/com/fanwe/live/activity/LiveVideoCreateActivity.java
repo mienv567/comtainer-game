@@ -93,7 +93,7 @@ public class LiveVideoCreateActivity extends BaseActivity {
                     @Override
                     protected void onSuccess(SDResponse resp) {
                         dismissProgressDialog();
-                        if (actModel.isOk()) {
+                        if (rootModel.isOk()) {
 
                             CreateLiveData data = new CreateLiveData();
                             data.setRoomId(actModel.getRoomId());

@@ -124,7 +124,7 @@ public class RoomPrivateRemoveViewerView extends RoomView implements OnItemClick
         CommonInterface.requestPrivateRoomFriends(room_id, page, new AppRequestCallback<Video_private_room_friendsActModel>() {
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.isOk()) {
+                if (rootModel.isOk()) {
                     has_next = actModel.getHas_next();
                     SDViewUtil.updateAdapterByList(mListUser, actModel.getList(), mAdapter, isLoadMore);
                 }

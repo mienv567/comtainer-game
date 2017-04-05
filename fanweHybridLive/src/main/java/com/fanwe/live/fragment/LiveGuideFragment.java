@@ -88,7 +88,7 @@ public class LiveGuideFragment extends BaseFragment {
         CommonInterface.requestPlayerList(new AppRequestCallback<PlayerListModel>() {
             @Override
             protected void onSuccess(SDResponse sdResponse) {
-                if (actModel.isOk()) {
+                if (rootModel.isOk()) {
                     if (actModel.players != null) {
                         mModels = actModel.players;
                         mAdapter.setNewData(mModels);

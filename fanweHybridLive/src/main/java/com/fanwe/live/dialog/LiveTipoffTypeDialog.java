@@ -87,7 +87,7 @@ public class LiveTipoffTypeDialog extends LiveBaseDialog {
         CommonInterface.requestTipoff_type(new AppRequestCallback<App_tipoff_typeActModel>() {
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.getStatus() == 1) {
+                if (rootModel.getStatus() == 1) {
                     List<App_tipoff_typeModel> list = actModel.getTipoffTypes();
                     if (list != null && list.size() > 0) {
                         bindData(list);
@@ -108,7 +108,7 @@ public class LiveTipoffTypeDialog extends LiveBaseDialog {
         CommonInterface.requestTipoff(getLiveInfo().getRoomId(), to_user_id, id, "", new AppRequestCallback<BaseActModel>() {
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.getStatus() == 1) {
+                if (rootModel.getStatus() == 1) {
                     SDToast.showToast(SDResourcesUtil.getString(R.string.already_get_tipoff_msg));
                     dismiss();
                 }

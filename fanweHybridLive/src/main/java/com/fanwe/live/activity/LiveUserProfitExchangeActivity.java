@@ -119,7 +119,7 @@ public class LiveUserProfitExchangeActivity extends BaseTitleActivity implements
 
             @Override
             protected void onSuccess(SDResponse resp) {
-                if(actModel.isOk()) {
+                if(rootModel.isOk()) {
                     mTicket = actModel.getUseable_ticket();
                     tv_useable_ticket.setText(String.valueOf(actModel.getUseable_ticket()));
 
@@ -141,7 +141,7 @@ public class LiveUserProfitExchangeActivity extends BaseTitleActivity implements
 
             @Override
             protected void onSuccess(SDResponse resp) {
-                if(actModel.isOk()) {
+                if(rootModel.isOk()) {
                     mTicket = actModel.getUseable_ticket();
                     tv_useable_ticket.setText(String.valueOf(actModel.getUseable_ticket()));
                     mList = actModel.getExchange_rules();

@@ -997,7 +997,7 @@ public class LiveLayoutViewerActivity extends LiveLayoutActivity implements Circ
             protected void onSuccess(SDResponse resp) {
                 setRoomInfo(actModel);
                 SDViewBinder.setTextView(scollView.getTv_user_number_left(), String.valueOf(getRoomInfo().getPodcast().getUserId()));
-                if (actModel.isOk()) {
+                if (rootModel.isOk()) {
                     onSuccessRequestRoomInfo(actModel);
                 } else {
                     onErrorRequestRoomInfo(actModel);
@@ -1211,7 +1211,7 @@ public class LiveLayoutViewerActivity extends LiveLayoutActivity implements Circ
             *//*CommonInterface.requestCheckLianmai(getRoomId(), new AppRequestCallback<App_check_lianmaiActModel>() {
                 @Override
                 protected void onSuccess(SDResponse resp) {
-                    if (actModel.getStatus() == 1) {
+                    if (rootModel.getStatus() == 1) {
                         showInviteVideoDialog();
                     }
                 }
@@ -1293,7 +1293,7 @@ public class LiveLayoutViewerActivity extends LiveLayoutActivity implements Circ
             AuctionCommonInterface.requestPaiUserGetVideo(pai_id, new AppRequestCallback<App_pai_user_get_videoActModel>() {
                 @Override
                 protected void onSuccess(SDResponse resp) {
-                    if (actModel.getStatus() == 1) {
+                    if (rootModel.getStatus() == 1) {
                         //设置直播处于竞拍中
                         getRoomInfo().setAuctioning(true);
                         //绑定顶部竞拍信息

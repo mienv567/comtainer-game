@@ -105,7 +105,7 @@ public class LiveCategoryActivity extends BaseActivity {
             CommonInterface.requestCategory(mCategoryId, new AppRequestCallback<CategoryDetailModel>() {
                 @Override
                 protected void onSuccess(SDResponse sdResponse) {
-                    if (actModel.isOk()) {
+                    if (rootModel.isOk()) {
                         mCategoryDetailModel = actModel;
                         bindData();
                     }

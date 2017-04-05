@@ -96,7 +96,7 @@ public class BaseActivity extends SDBaseActivity implements TANetChangeObserver
             @Override
             protected void onSuccess(SDResponse sdResponse)
             {
-                if (actModel.isOk())
+                if (rootModel.isOk())
                 {
                     LogUtil.i("requestStateChangeLogout");
                 }
@@ -113,7 +113,7 @@ public class BaseActivity extends SDBaseActivity implements TANetChangeObserver
             @Override
             protected void onSuccess(SDResponse sdResponse)
             {
-                if (actModel.isOk())
+                if (rootModel.isOk())
                 {
                     LogUtil.i("requestStateChangeLogin");
                 }

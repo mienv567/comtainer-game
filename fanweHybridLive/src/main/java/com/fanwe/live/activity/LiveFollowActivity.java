@@ -68,7 +68,7 @@ public class LiveFollowActivity extends LiveFocusFollowBaseActivity
 			@Override
 			protected void onSuccess(SDResponse resp)
 			{
-				if (actModel.getStatus() == 1)
+				if (rootModel.getStatus() == 1)
 				{
 					app_my_focusActModel = actModel;
 					SDViewUtil.updateAdapterByList(listModel, actModel.getRelationshipList(), adapter, isLoadMore);

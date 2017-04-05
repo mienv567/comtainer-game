@@ -79,7 +79,6 @@ import com.fanwe.live.model.CategoryDetailModel;
 import com.fanwe.live.model.CategoryListModel;
 import com.fanwe.live.model.CategoryNameListModel;
 import com.fanwe.live.model.Deal_send_propActModel;
-import com.fanwe.live.model.FamilyDataListModel;
 import com.fanwe.live.model.GoodsHistoryListModel;
 import com.fanwe.live.model.GoodsListModel;
 import com.fanwe.live.model.IndexSearch_areaActModel;
@@ -103,6 +102,7 @@ import com.fanwe.live.model.Video_add_commitGroupId;
 import com.fanwe.live.model.Video_add_videoActModel;
 import com.fanwe.live.model.Video_check_statusActModel;
 import com.fanwe.live.model.Video_private_room_friendsActModel;
+import com.fanwe.live.model.item.FamilyDataItem;
 import com.fanwe.live.utils.AIDUtil;
 import com.fanwe.live.utils.DeviceUtil;
 import com.sunday.eventbus.SDEventManager;
@@ -125,7 +125,7 @@ public class CommonInterface {
         AppHttpUtil.getInstance().post(params, new AppRequestCallbackWrapper<Login_test_loginActModel>(listener) {
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.isOk()) {
+                if (rootModel.isOk()) {
                     UserModel userModel = actModel.getUser_info();
                     if (userModel != null) {
                         UserModel.dealLoginSuccess(userModel, true);
@@ -171,7 +171,7 @@ public class CommonInterface {
 
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.getStatus() == 1) {
+                if (rootModel.getStatus() == 1) {
                     String usersig = actModel.getUsersig();
                     AppRuntimeWorker.setUsersig(usersig);
                     AppRuntimeWorker.startContext();
@@ -209,7 +209,7 @@ public class CommonInterface {
 
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.getStatus() == 1) {
+                if (rootModel.getStatus() == 1) {
                     UserModel user = actModel.getUser();
                     UserModelDao.insertOrUpdate(user);
                 }
@@ -235,7 +235,7 @@ public class CommonInterface {
 
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.getStatus() == 1) {
+                if (rootModel.getStatus() == 1) {
                     UserModel user = actModel;
                     UserModelDao.insertOrUpdate(user);
                 }
@@ -373,7 +373,7 @@ public class CommonInterface {
         AppHttpUtil.getInstance().post(params, new AppRequestCallbackWrapper<App_followActModel>(listener) {
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.isOk()) {
+                if (rootModel.isOk()) {
                     ERequestFollowSuccess event = new ERequestFollowSuccess();
                     event.userId = to_user_id;
                     event.actModel = actModel;
@@ -398,7 +398,7 @@ public class CommonInterface {
         AppHttpUtil.getInstance().post(params, new AppRequestCallbackWrapper<App_followActModel>(listener) {
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.isOk()) {
+                if (rootModel.isOk()) {
                     ERequestFollowSuccess event = new ERequestFollowSuccess();
                     event.userId = to_user_id;
                     event.actModel = actModel;
@@ -1468,7 +1468,7 @@ public class CommonInterface {
         AppHttpUtil.getInstance().post(params, new AppRequestCallbackWrapper<BaseActModel>(listener) {
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.isOk()) {
+                if (rootModel.isOk()) {
                     UserModel user = UserModelDao.query();
                     user.setIsRemind(is_remind);
                     UserModelDao.insertOrUpdate(user);
@@ -2504,7 +2504,7 @@ public class CommonInterface {
      * @param page     当前页 默认值1
      * @param pageSize 每页显示记录条数
      */
-    public static void queryFamilyList(int page, int pageSize, AppRequestCallback<List<FamilyDataListModel>> listener) {
+    public static void queryFamilyList(int page, int pageSize, AppRequestCallback<List<FamilyDataItem>> listener) {
         AppRequestParams params = new AppRequestParams();
         params.putCtl("boxZone");
         params.putAct("queryList");

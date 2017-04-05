@@ -98,7 +98,7 @@ public class LiveSearchUserView extends BaseAppView {
         return CommonInterface.requestSearchUser(page, keyword, new AppRequestCallback<App_focus_follow_ActModel>() {
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.isOk()) {
+                if (rootModel.isOk()) {
                     has_next = actModel.getHas_next();
                     SDViewUtil.updateAdapterByList(listModel, actModel.getRelationshipList(), adapter, isLoadMore);
                 }

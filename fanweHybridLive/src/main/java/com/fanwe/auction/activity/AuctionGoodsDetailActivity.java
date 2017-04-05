@@ -162,7 +162,7 @@ public class AuctionGoodsDetailActivity extends BaseActivity
                 @Override
                 protected void onSuccess(SDResponse resp)
                 {
-                    if (actModel.isOk())
+                    if (rootModel.isOk())
                     {
                         bindData(actModel);
                     }
@@ -187,7 +187,7 @@ public class AuctionGoodsDetailActivity extends BaseActivity
                 @Override
                 protected void onSuccess(SDResponse resp)
                 {
-                    if (actModel.isOk())
+                    if (rootModel.isOk())
                     {
                         bindData(actModel);
                     }

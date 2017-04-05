@@ -594,7 +594,7 @@ public class LiveUserInfoDialog extends SDDialogBase {
         CommonInterface.requestUserInfoJava(getLiveInfo().getRoomId(), to_user_id, new AppRequestCallback<UserModel>() {
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.getStatus() == 1) {
+                if (rootModel.getStatus() == 1) {
                     app_userinfoActModel = actModel;
                     bindData(actModel);
                 }
@@ -607,7 +607,7 @@ public class LiveUserInfoDialog extends SDDialogBase {
         CommonInterface.requestFollow(to_user_id, app_userinfoActModel, new AppRequestCallback<App_followActModel>() {
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.getStatus() == 1) {
+                if (rootModel.getStatus() == 1) {
                     //                    setBtnFollow(actModel.getRelationship());
                     setTvFollow(actModel.getRelationship());
                 }
@@ -620,7 +620,7 @@ public class LiveUserInfoDialog extends SDDialogBase {
 
             @Override
             protected void onSuccess(SDResponse sdResponse) {
-                if (actModel.isOk()) {
+                if (rootModel.isOk()) {
                     if (app_userinfoActModel.getIsUnpush() == 0) {
                         app_userinfoActModel.setIsUnpush(1);
                         img_push.setImageDrawable(getOwnerActivity().getResources().getDrawable(R.drawable.ic_close_push_white));
@@ -656,7 +656,7 @@ public class LiveUserInfoDialog extends SDDialogBase {
         CommonInterface.requestSet_admin(to_user_id, Math.abs(app_userinfoActModel.getIsManage() - 1), new AppRequestCallback<App_set_adminActModel>() {
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.getStatus() == 1) {
+                if (rootModel.getStatus() == 1) {
                     final CustomMsgLiveMsg liveMsg = new CustomMsgLiveMsg();
                     String nickName = app_userinfoActModel.getNickName();
 
@@ -690,7 +690,7 @@ public class LiveUserInfoDialog extends SDDialogBase {
             @Override
             protected void onSuccess(SDResponse resp) {
                 String nickName = app_userinfoActModel.getNickName();
-                if (actModel.getStatus() == 1) {
+                if (rootModel.getStatus() == 1) {
                     final CustomMsgLiveMsg liveMsg = new CustomMsgLiveMsg();
                     liveMsg.setDesc(nickName + " " + SDResourcesUtil.getString(R.string.is_forbidden_send_msg));
                     IMHelper.sendMsgGroup(getLiveInfo().getGroupId(), liveMsg, new TIMValueCallBack<TIMMessage>() {

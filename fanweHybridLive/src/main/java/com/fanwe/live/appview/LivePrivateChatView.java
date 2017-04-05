@@ -479,7 +479,7 @@ public class LivePrivateChatView extends BaseAppView implements ScrollListener {
             CommonInterface.requestSendGiftPrivateJava(model.getPropId(), 1, userId, 0, "", new AppRequestCallback<Deal_send_propActModel>() {
                 @Override
                 protected void onSuccess(SDResponse resp) {
-                    if (actModel.isOk()) {
+                    if (rootModel.isOk()) {
                         view_gift.sendGiftSuccess(model);
                         sendGift(actModel);
                     }
@@ -883,7 +883,7 @@ public class LivePrivateChatView extends BaseAppView implements ScrollListener {
 
             @Override
             protected void onSuccess(SDResponse resp) {
-                if (actModel.isOk()) {
+                if (rootModel.isOk()) {
                     user = actModel;
                     title.setMiddleTextTop(user.getNickName());
                 }

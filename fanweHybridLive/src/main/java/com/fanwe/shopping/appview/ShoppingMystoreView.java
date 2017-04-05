@@ -169,7 +169,7 @@ public class ShoppingMystoreView extends BaseAppView {
         ShoppingCommonInterface.requestShopMystore(Integer.parseInt(dao.getUserId()), new AppRequestCallback<App_shop_mystoreActModel>() {
             @Override
             protected void onSuccess(SDResponse sdResponse) {
-                if (actModel.isOk()) {
+                if (rootModel.isOk()) {
                     if (actModel.getList() != null) {
                         SDViewUtil.updateAdapterByList(listModel, actModel.getList(), adapter, false);
                     }
